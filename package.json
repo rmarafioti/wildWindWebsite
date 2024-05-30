@@ -15,11 +15,13 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "concurrently": "4.1.2"
+    "concurrently": "4.1.2",
+    "vite": "^5.2.12"
   },
   "homepage": "http://localhost:3000",
   "proxy": "http://localhost:4242",
   "scripts": {
+    "dev": "vite",
     "start-client": "react-scripts start",
     "start-server": "node server.js",
     "build": "react-scripts build",

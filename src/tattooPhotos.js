@@ -1,47 +1,47 @@
 export const tattooPhotos = [
   {
     id: 1,
-    image: "../images/tattooPhotos/tigerAndLotus.jpeg",
+    image: "./images/tattooPhotos/tigerAndLotus.jpeg",
   },
   {
     id: 2,
-    image: "../images/tattooPhotos/nautilus.jpeg",
+    image: "./images/tattooPhotos/nautilus.jpeg",
   },
   {
     id: 3,
-    image: "../images/tattooPhotos/memphisStyle.jpeg",
+    image: "./images/tattooPhotos/memphisStyle.jpeg",
   },
   {
     id: 4,
-    image: "../images/tattooPhotos/skullFlower.jpeg",
+    image: "./images/tattooPhotos/skullFlower.jpeg",
   },
   {
     id: 5,
-    image: "../images/tattooPhotos/noneOfThis.jpeg",
+    image: "/images/tattooPhotos/noneOfThis.jpeg",
   },
   {
     id: 6,
-    image: "../images/tattooPhotos/pantherBackpiece.jpeg",
+    image: "./images/tattooPhotos/pantherBackpiece.jpeg",
   },
   {
     id: 7,
-    image: "../images/tattooPhotos/eyeBallFlower.jpeg",
+    image: "./images/tattooPhotos/eyeBallFlower.jpeg",
   },
   {
     id: 8,
-    image: "../images/tattooPhotos/picnicAnt.jpeg",
+    image: "./images/tattooPhotos/picnicAnt.jpeg",
   },
   {
     id: 9,
-    image: "../images/tattooPhotos/panther.jpeg",
+    image: "./images/tattooPhotos/panther.jpeg",
   },
   {
     id: 10,
-    image: "../images/tattooPhotos/plant.jpeg",
+    image: "./images/tattooPhotos/plant.jpeg",
   },
   {
     id: 11,
-    image: "../images/tattooPhotos/hyenaSleeve.jpeg",
+    image: "/images/tattooPhotos/hyenaSleeve.jpeg",
   },
   {
     id: 12,
