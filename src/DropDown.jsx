@@ -5,7 +5,7 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 const DropDown = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropDown = () => setIsOpen(!isOpen);
+  /*const toggleDropDown = () => setIsOpen(!isOpen);*/
 
   return (
     <>
