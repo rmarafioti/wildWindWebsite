@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Root from "./layout/Root";
-import Home from "./layout/Home";
-import Contact from "./layout/Contact";
-import Shop from "./layout/Shop";
-import Tattoos from "./layout/Tattoos";
-import GiftCards from "./layout/GiftCards";
-import Aftercare from "./layout/AfterCare";
-import Faq from "./layout/Faq";
+import Root from "./Root";
+import Home from "./Home";
+import Contact from "./Contact";
+import Shop from "./Shop";
+import Tattoos from "./Tattoos";
+import GiftCards from "./GiftCards";
+import Aftercare from "./AfterCare";
+import Faq from "./Faq";
 import Return from "./Return";
 import CheckoutForm from "./CheckoutForm";
 
