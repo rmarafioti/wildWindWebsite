@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Root from "./Root";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+/*import Root from "./Root";*/
 import Home from "./Home";
 import Contact from "./Contact";
 import Shop from "./Shop";
@@ -16,8 +18,9 @@ const App = () => {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Root />} />
+          {/*<Route path="/" element={<Root />} />*/}
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/shop" element={<Shop />} />
@@ -28,6 +31,7 @@ const App = () => {
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/return" element={<Return />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

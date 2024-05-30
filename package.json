@@ -2,9 +2,9 @@
   "name": "stripe-sample",
   "version": "0.1.0",
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^1.54.2",
-    "@emailjs/browser": "4.3.3",
     "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -17,7 +17,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "concurrently": "4.1.2"
   },
-  "homepage": "http://localhost:3000/checkout",
+  "homepage": "http://localhost:3000",
   "proxy": "http://localhost:4242",
   "scripts": {
     "start-client": "react-scripts start",
