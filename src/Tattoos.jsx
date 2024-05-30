@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
-import tattooPhotos from "./images/tattooPhotos";
+import { tattooPhotos } from "./tattooPhotos";
 
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);
