@@ -1,74 +1,92 @@
 export const tattooPhotos = [
   {
     id: 1,
-    image: "./images/tattooPhotos/tigerAndLotus.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295373/wildWindSite/tigerAndLotus_bwkp7d.jpg",
   },
   {
     id: 2,
-    image: "./images/tattooPhotos/nautilus.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295387/wildWindSite/nautilus_w9b6k3.jpg",
   },
   {
     id: 3,
-    image: "./images/tattooPhotos/memphisStyle.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295387/wildWindSite/memphisStyle_ztf3h7.jpg",
   },
   {
     id: 4,
-    image: "./images/tattooPhotos/skullFlower.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295388/wildWindSite/skullFlower_f4nzcs.jpg",
   },
   {
     id: 5,
-    image: "/images/tattooPhotos/noneOfThis.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295400/wildWindSite/noneOfThis_dduo9u.jpg",
   },
   {
     id: 6,
-    image: "./images/tattooPhotos/pantherBackpiece.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295399/wildWindSite/pantherBackpiece_ret5go.jpg",
   },
   {
     id: 7,
-    image: "./images/tattooPhotos/eyeBallFlower.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295399/wildWindSite/eyeBallFlower_abgbe7.jpg",
   },
   {
     id: 8,
-    image: "./images/tattooPhotos/picnicAnt.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295399/wildWindSite/picnicAnt_tdxwbk.jpg",
   },
   {
     id: 9,
-    image: "./images/tattooPhotos/panther.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295408/wildWindSite/panther_svoaqo.jpg",
   },
   {
     id: 10,
-    image: "./images/tattooPhotos/plant.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295408/wildWindSite/plant_m8dwya.jpg",
   },
   {
     id: 11,
-    image: "/images/tattooPhotos/hyenaSleeve.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295407/wildWindSite/hyenaSleeve_bvkzlo.jpg",
   },
   {
     id: 12,
-    image: "../images/tattooPhotos/gibsonGirl.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295407/wildWindSite/gibsonGirl_ma7ldx.jpg",
   },
   {
     id: 13,
-    image: "../images/tattooPhotos/reaper.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295420/wildWindSite/reaper_dfj12e.jpg",
   },
   {
     id: 14,
-    image: "../images/tattooPhotos/lionHead.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295421/wildWindSite/lionHead_jycw6h.jpg",
   },
   {
     id: 15,
-    image: "../images/tattooPhotos/diva.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295419/wildWindSite/diva_j5trva.jpg",
   },
   {
     id: 16,
-    image: "../images/tattooPhotos/wolf.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295420/wildWindSite/wolf_anrjxn.jpg",
   },
   {
     id: 17,
-    image: "../images/tattooPhotos/colorBlockForearms.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295419/wildWindSite/colorBlockForearms_fsrsvf.jpg",
   },
   {
     id: 18,
-    image: "../images/tattooPhotos/hotSauce.jpeg",
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295419/wildWindSite/hotSauce_ymbvyv.jpg",
   },
 ];
