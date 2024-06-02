@@ -107,3 +107,137 @@
       background-color: #f9f9f9;
     }
   }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Ensure this is 'center' to align items properly in the middle */
+    position: fixed;
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Stretch across the left edge */
+    right: 0; /* Stretch across the right edge */
+    z-index: 1000; /* High z-index to keep it above other content */
+  }
+
+  #hamMenu {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 50px;
+    position: relative;
+    margin-right: 2rem;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    transition: all .5s ease-in-out;
+    border: 3px solid green;
+  }
+  
+  .menuButtonBurger {
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background: green;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .menuButtonBurger::before, .menuButtonBurger::after {
+    content: '';
+    position:absolute;
+    width: 25px;
+    height: 3px;
+    background: rgb(162, 106, 105);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    left: 0;
+    transform-origin: center;
+    top: 10px;
+  }
+  
+  .menuButtonBurger::after {
+    top: -10px;
+  }
+  
+  .menuButtonBurger::before {
+    transform: translateY(-16px);
+  }
+  
+  .menuButtonBurger::after {
+    transform: translateY(16px);
+  }
+  
+  /* animation */
+  
+  .menuButtonBurger.open {
+    background: transparent;
+  }
+  
+  .menuButtonBurger.open::before {
+    transform: rotate(-45deg) translate(0, 0);
+    top: 0;
+  }
+  
+  .menuButtonBurger.open::after {
+    transform: rotate(45deg) translate(0, 0);
+    top: 0;
+  }
+  
+  .menu {
+    background-color: rgba(245, 248, 248, 0.958);
+    position: absolute;
+    margin-top: 2.5rem;
+    display: none;
+    top: 100%;
+    right: 0px;
+    width: 100px;
+    z-index: 1000;
+  }
+  
+  .menu.active {
+    display: block;  
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 310px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(162, 106, 105, 0.4); /* Semi-transparent reddish overlay */
+    z-index: 999; /* Ensure this is higher than page content but lower than the menu */
+    display: none;
+  }
+  
+  .navItem {
+    list-style-type: none;
+  }
+  
+  .navItem a {
+    border-radius: 10px;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .navItem a:link,
+  .navItem a:visited {
+    color: rgb(117, 106, 187);
+  }
+  
+  /*
+  Change this to underline items when hover or something like that
+  .navItem a:hover {
+    background-color: rgb(117, 106, 187);
+    color: white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  */
