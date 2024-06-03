@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { TbMessageCircleQuestion } from "react-icons/tb";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -11,8 +12,6 @@ export default function Navbar() {
 
   return (
     <nav>
-      <h3>Home Icon</h3>
-      <h1>WILD WIND TATTOO</h1>
       <div id="hamMenu" onClick={() => setMenuOpen(!menuOpen)}>
         <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
@@ -26,11 +25,24 @@ export default function Navbar() {
             <NavLink to="/contact">CONTACT</NavLink>
           </li>
           <li className="navItem">
-            <NavLink to="/faqs">FAQs</NavLink>
+            <NavLink to="/aftercare">AFTERCARE</NavLink>
+          </li>
+          <li className="navItem">
+            <NavLink to="/giftcards">GIFTCARDS</NavLink>
           </li>
         </menu>
         <div className={`overlay ${menuOpen ? "active" : ""}`}></div>
       </div>
+      <NavLink to="/">
+        <img
+          id="navLogo"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
+          alt="shop logo"
+        />
+      </NavLink>
+      <NavLink to="/faqs">
+        <TbMessageCircleQuestion id="faqIcon" />
+      </NavLink>
     </nav>
   );
 }
