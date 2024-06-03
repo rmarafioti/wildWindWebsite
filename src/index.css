@@ -64,11 +64,10 @@ button:focus-visible {
 }
 
 nav {
-  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items:center; /* Ensure this is 'center' to align items properly in the middle */
+  align-items:start; /* Ensure this is 'center' to align items properly in the middle */
   z-index: 1000; /* High z-index to keep it above other content */
   background-color: rgb(241, 234, 234);
 }
@@ -86,7 +85,8 @@ nav {
 #faqIcon {
   color: #7aa03f;
   font-size: 60px;
-  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-right: .5rem;
  
 }
 
@@ -97,8 +97,8 @@ nav {
 #hamMenu {
   color: #7aa03f;
   font-size: 50px;
+  margin-top: 1rem;
   margin-left: .5rem;
-  
 }
 
 #menuContainer {
@@ -138,6 +138,7 @@ nav {
 .navContainer {
   display: flex;
   justify-content: left;
+  text-decoration: none;
 }
 .navItem {
   list-style-type: none;
@@ -155,6 +156,7 @@ nav {
 }
 
 .navItem a:hover {
+  border-radius: 10px;
   background-color: aliceblue;
   transition: all;
 }
