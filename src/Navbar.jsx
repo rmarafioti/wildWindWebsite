@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { TbMessageCircleQuestion } from "react-icons/tb";
+import { IoSkullOutline } from "react-icons/io5";
+import { AiOutlineHome } from "react-icons/ai";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { IoHeartOutline } from "react-icons/io5";
+import { IoGiftOutline } from "react-icons/io5";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -12,26 +17,43 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div id="hamMenu" onClick={() => setMenuOpen(!menuOpen)}>
-        <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
-        <menu className={`menu ${menuOpen ? "active" : ""}`}>
-          <li className="navItem">
-            <NavLink to="/tattoos">TATTOOS</NavLink>
-          </li>
-          <li className="navItem">
-            <NavLink to="/shop">SHOP</NavLink>
-          </li>
-          <li className="navItem">
-            <NavLink to="/contact">CONTACT</NavLink>
-          </li>
-          <li className="navItem">
-            <NavLink to="/aftercare">AFTERCARE</NavLink>
-          </li>
-          <li className="navItem">
-            <NavLink to="/giftcards">GIFTCARDS</NavLink>
-          </li>
-        </menu>
-        <div className={`overlay ${menuOpen ? "active" : ""}`}></div>
+      <div>
+        <div id="hamMenu" onClick={() => setMenuOpen(!menuOpen)}>
+          <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
+          <menu className={`menu ${menuOpen ? "active" : ""}`}>
+            <li className="navItem">
+              <NavLink className="navContainer" to="/tattoos">
+                <IoSkullOutline />
+                TATTOOS
+              </NavLink>
+            </li>
+            <li className="navItem">
+              <NavLink className="navContainer" to="/shop">
+                <AiOutlineHome />
+                SHOP
+              </NavLink>
+            </li>
+            <li className="navItem">
+              <NavLink className="navContainer" to="/contact">
+                <HiOutlineEnvelope />
+                CONTACT
+              </NavLink>
+            </li>
+            <li className="navItem">
+              <NavLink className="navContainer" to="/aftercare">
+                <IoHeartOutline />
+                AFTERCARE
+              </NavLink>
+            </li>
+            <li className="navItem">
+              <NavLink className="navContainer" to="/giftcards">
+                <IoGiftOutline />
+                GIFTCARDS
+              </NavLink>
+            </li>
+          </menu>
+          <div className={`overlay ${menuOpen ? "active" : ""}`}></div>
+        </div>
       </div>
       <NavLink to="/">
         <img
@@ -40,7 +62,7 @@ export default function Navbar() {
           alt="shop logo"
         />
       </NavLink>
-      <NavLink to="/faqs">
+      <NavLink id="faqContainer" to="/faqs">
         <TbMessageCircleQuestion id="faqIcon" />
       </NavLink>
     </nav>
