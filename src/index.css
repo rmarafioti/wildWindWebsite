@@ -120,6 +120,17 @@
     z-index: 1000; /* High z-index to keep it above other content */
   }
 
+  #navLogo {
+    margin-top: 10px;
+    max-width: 400px;
+  }
+
+  #faqIcon {
+    color: #7AA03F;
+    font-size: 60px;
+    margin-right: 2rem;
+  }
+
   #hamMenu {
     display: flex;
     justify-content: center;
@@ -127,19 +138,19 @@
     color: white;
     border-radius: 50px;
     position: relative;
-    margin-right: 2rem;
+    margin-left: 2rem;
     align-items: center;
     width: 45px;
     height: 45px;
     transition: all .5s ease-in-out;
-    border: 3px solid green;
+    border: 5px solid #7AA03F;
   }
   
   .menuButtonBurger {
     position: relative;
     width: 25px;
     height: 3px;
-    background: green;
+    background: #7AA03F;
     border-radius: 5px;
     transition: all .5s ease-in-out;
     display: block;
@@ -151,7 +162,7 @@
     position:absolute;
     width: 25px;
     height: 3px;
-    background: rgb(162, 106, 105);
+    background: #7AA03F;
     border-radius: 5px;
     transition: all .5s ease-in-out;
     left: 0;
@@ -188,18 +199,19 @@
   }
   
   .menu {
-    background-color: rgba(245, 248, 248, 0.958);
+    height: 100vh;
+    background-color: white;
     position: absolute;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     display: none;
     top: 100%;
-    right: 0px;
-    width: 100px;
     z-index: 1000;
+    margin-left: 3rem;
   }
   
   .menu.active {
-    display: block;  
+    display: block;
+    margin-left: 0px;  
   }
   
   .overlay {
@@ -218,14 +230,14 @@
   }
   
   .navItem a {
-    border-radius: 10px;
     font-size: 18px;
     display: block;
     padding: 10px;
     margin: 10px;
-    margin-top: 0;
-    margin-right: 0;
-    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 20px;
+    text-align: justify;
   }
   
   .navItem a:link,
@@ -233,11 +245,9 @@
     color: rgb(117, 106, 187);
   }
   
-  /*
-  Change this to underline items when hover or something like that
   .navItem a:hover {
-    background-color: rgb(117, 106, 187);
-    color: white;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  border: solid #7AA03F;
+  background-color: aliceblue;
+  transition:all;
   }
-  */
+  
