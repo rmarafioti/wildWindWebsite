@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import { IoSkullOutline } from "react-icons/io5";
-import { AiOutlineHome } from "react-icons/ai";
+import { GoBook } from "react-icons/go";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
@@ -43,8 +43,8 @@ export default function Navbar() {
           </li>
           <li className="navItem">
             <NavLink className="navContainer" to="/shop">
-              <AiOutlineHome className="linkIcon" />
-              <h4 className="link">SHOP</h4>
+              <GoBook className="linkIcon" />
+              <h4 className="link">ABOUT US</h4>
             </NavLink>
           </li>
           <li className="navItem">
