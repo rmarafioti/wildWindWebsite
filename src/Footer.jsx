@@ -18,64 +18,63 @@ export default function Footer() {
   }, []);
   return (
     <footer>
-      <div id="footerHeader">
-        <NavLink to="/">
-          <img
-            id="footerLogo"
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
-            alt="shop logo"
-          />
+      <div id="footerHeaderContainer">
+        <NavLink id="header" to="/">
+          <header id="header">WILD WIND TATTOO</header>
         </NavLink>
       </div>
-      <ul>
+      <ul id="ulTop">
         <li>
-          <NavLink className="navItem" to="/">
-            HOME
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navItem" to="/tattoos">
+          <NavLink className="footerItem" to="/tattoos">
             TATTOOS
           </NavLink>
         </li>
         <li>
-          <NavLink className="navItem" to="/shop">
+          <NavLink className="footerItem" to="/shop">
             SHOP
           </NavLink>
         </li>
+      </ul>
+      <ul>
         <li>
-          <NavLink className="navItem" to="/contact">
+          <NavLink className="footerItem" to="/contact">
             CONTACT
           </NavLink>
         </li>
         <li>
-          <NavLink className="navItem" to="/faqs">
+          <NavLink className="footerItem" to="/faqs">
             FAQs
           </NavLink>
         </li>
+
         <li>
-          <NavLink className="navItem" to="/giftcards">
-            GIFT CARDS
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navItem" to="/aftercare">
+          <NavLink className="footerItem" to="/aftercare">
             AFTERCARE
           </NavLink>
         </li>
       </ul>
+      <ul id="ulBottom">
+        <li>
+          <NavLink className="footerItem" to="/giftcards">
+            GIFT CARDS
+          </NavLink>
+        </li>
+      </ul>
       <div id="footerIcons">
-        <li className="listIcons">
-          <a href="https://www.instagram.com/wildwindtattoo/?hl=en">
-            <FaInstagram />
-          </a>
-        </li>
-        <li className="listIcons">
-          <a href="https://www.facebook.com/wildwindtattoo/">
-            <FaFacebookSquare />
-          </a>
-        </li>
+        <a
+          className="footerIcon"
+          href="https://www.instagram.com/wildwindtattoo/?hl=en"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          className="footerIcon"
+          href="https://www.facebook.com/wildwindtattoo/"
+        >
+          <FaFacebookSquare />
+        </a>
       </div>
+      <p id="footerTag">copyright 2024 Marf inc.</p>
     </footer>
   );
 }
