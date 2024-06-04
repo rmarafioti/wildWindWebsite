@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import { IoSkullOutline } from "react-icons/io5";
 import { GoBook } from "react-icons/go";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
+
+import "./styling/navBar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -17,10 +18,10 @@ export default function Navbar() {
   }, [location.pathname]);
 
   return (
-    <div>
+    <>
       <nav>
         <div id="hamMenuContainer" onClick={() => setMenuOpen(!menuOpen)}>
-          <RxHamburgerMenu id="hamMenu" />
+          <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
         </div>
         <NavLink to="/">
           <img
@@ -67,6 +68,6 @@ export default function Navbar() {
           </li>
         </menu>
       </div>
-    </div>
+    </>
   );
 }

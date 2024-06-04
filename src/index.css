@@ -28,9 +28,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -63,112 +65,17 @@ button:focus-visible {
   width: 100vw;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items:start; /* Ensure this is 'center' to align items properly in the middle */
-  z-index: 1000; /* High z-index to keep it above other content */
-  background-color: rgb(241, 234, 234);
-}
 
-#navLogo {
-  margin-top: 10px;
-  max-width: 400px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 
-#faqContainer {
-  display: flex;
-}
-#faqIcon {
-  color: #7aa03f;
-  font-size: 60px;
-  margin-top: 1rem;
-  margin-right: .5rem;
- 
-}
 
-#hamMenuContainer {
-  display: flex;
-}
 
-#hamMenu {
-  color: #7aa03f;
-  font-size: 50px;
-  margin-top: 1rem;
-  margin-left: .5rem;
-}
 
-#menuContainer {
-  position: relative;
-}
 
-.menu {
- 
-  background-color: white;
-  display: none;
-  top: 0;
-  z-index: 1000;
-  border-bottom: solid 1px #7aa03f;
-}
 
-.menu.active {
-  display: flex;
-  justify-content: space-between;
-}
 
-/*.overlay {
-  position: fixed;
-  top: 310px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(
-    162,
-    106,
-    105,
-    0.4
-  ); 
-  z-index: 999; 
-  display: none;
-}*/
 
-.navContainer {
-  display: flex;
-  justify-content: left;
-  text-decoration: none;
-}
-.navItem {
-  list-style-type: none;
-}
 
-.navItem a {
-  padding: 10px;
-  align-items: center;
-  font-size: 18px;
-}
 
-.navItem a:link,
-.navItem a:visited {
-  color: rgb(117, 106, 187);
-}
 
-.navItem a:hover {
-  border-radius: 10px;
-  background-color: aliceblue;
-  transition: all;
-}
-.linkIcon {
-  padding: 5px;
-  padding-right: 5px;
-  font-size: 40px;
-}
-.link {
-  visibility: hidden;
-}
-.navItem:hover .link {
-  visibility: visible;
-  transition: all 0.5s ease-in-out;
-}
+
+
