@@ -3,6 +3,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { useEffect } from "react";
 
+import "./styling/footer.css";
+
 export default function Footer() {
   useEffect(() => {
     const script = document.createElement("script");
@@ -15,41 +17,64 @@ export default function Footer() {
     };
   }, []);
   return (
-    <>
-      <h1>FOOTER</h1>
-      <ul>
+    <footer>
+      <div id="footerHeaderContainer">
+        <NavLink id="header" to="/">
+          <header id="header">WILD WIND TATTOO</header>
+        </NavLink>
+      </div>
+      <ul id="ulTop">
         <li>
-          <NavLink to="/">HOME</NavLink>
+          <NavLink className="footerItem" to="/tattoos">
+            TATTOOS
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/tattoos">TATTOOS</NavLink>
-        </li>
-        <li>
-          <NavLink to="/shop">SHOP</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact">CONTACT</NavLink>
-        </li>
-        <li>
-          <NavLink to="/faqs">FAQs</NavLink>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/wildwindtattoo/?hl=en">
-            <FaInstagram />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/wildwindtattoo/">
-            <FaFacebookSquare />
-          </a>
-        </li>
-        <li>
-          <NavLink to="/giftcards">GIFT CARDS</NavLink>
-        </li>
-        <li>
-          <NavLink to="/aftercare">AFTERCARE</NavLink>
+          <NavLink className="footerItem" to="/shop">
+            SHOP
+          </NavLink>
         </li>
       </ul>
-    </>
+      <ul>
+        <li>
+          <NavLink className="footerItem" to="/contact">
+            CONTACT
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="footerItem" to="/faqs">
+            FAQs
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink className="footerItem" to="/aftercare">
+            AFTERCARE
+          </NavLink>
+        </li>
+      </ul>
+      <ul id="ulBottom">
+        <li>
+          <NavLink className="footerItem" to="/giftcards">
+            GIFT CARDS
+          </NavLink>
+        </li>
+      </ul>
+      <div id="footerIcons">
+        <a
+          className="footerIcon"
+          href="https://www.instagram.com/wildwindtattoo/?hl=en"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          className="footerIcon"
+          href="https://www.facebook.com/wildwindtattoo/"
+        >
+          <FaFacebookSquare />
+        </a>
+      </div>
+      <p id="footerTag">copyright 2024 Marf inc.</p>
+    </footer>
   );
 }
