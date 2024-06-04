@@ -3,6 +3,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { useEffect } from "react";
 
+import "./styling/footer.css";
+
 export default function Footer() {
   useEffect(() => {
     const script = document.createElement("script");
@@ -15,41 +17,65 @@ export default function Footer() {
     };
   }, []);
   return (
-    <>
-      <h1>FOOTER</h1>
+    <footer>
+      <div id="footerHeader">
+        <NavLink to="/">
+          <img
+            id="footerLogo"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
+            alt="shop logo"
+          />
+        </NavLink>
+      </div>
       <ul>
         <li>
-          <NavLink to="/">HOME</NavLink>
+          <NavLink className="navItem" to="/">
+            HOME
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/tattoos">TATTOOS</NavLink>
+          <NavLink className="navItem" to="/tattoos">
+            TATTOOS
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/shop">SHOP</NavLink>
+          <NavLink className="navItem" to="/shop">
+            SHOP
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/contact">CONTACT</NavLink>
+          <NavLink className="navItem" to="/contact">
+            CONTACT
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/faqs">FAQs</NavLink>
+          <NavLink className="navItem" to="/faqs">
+            FAQs
+          </NavLink>
         </li>
         <li>
+          <NavLink className="navItem" to="/giftcards">
+            GIFT CARDS
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="navItem" to="/aftercare">
+            AFTERCARE
+          </NavLink>
+        </li>
+      </ul>
+      <div id="footerIcons">
+        <li className="listIcons">
           <a href="https://www.instagram.com/wildwindtattoo/?hl=en">
             <FaInstagram />
           </a>
         </li>
-        <li>
+        <li className="listIcons">
           <a href="https://www.facebook.com/wildwindtattoo/">
             <FaFacebookSquare />
           </a>
         </li>
-        <li>
-          <NavLink to="/giftcards">GIFT CARDS</NavLink>
-        </li>
-        <li>
-          <NavLink to="/aftercare">AFTERCARE</NavLink>
-        </li>
-      </ul>
-    </>
+      </div>
+    </footer>
   );
 }
