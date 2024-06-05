@@ -1,9 +1,34 @@
+* {
+  --wildBlue: rgb(101, 193, 220);
+  --wildBackground: rgb(226, 209, 189);
+  --wildGreen: rgb(124, 155, 63);
+}
+
 footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: rgb(241, 234, 234);
+  background-color: rgb(226, 209, 189);
   margin-top: auto;
+}
+
+#footerHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+a#footerLogoContainer {
+  margin: 0;
+  padding: 0;
+}
+
+#footerLogo {
+  max-width: 300px;
+  margin-top: 1rem;
 }
 
 #footerIcons {
@@ -24,23 +49,12 @@ li {
 .footerItem a:visited,
 #footerHeaderConatiner a:link,
 #footerHeaderContainer a:visited {
-  color: #7aa03f;
+  color: var(--wildGreen);
   font-size: 16px;
   list-style-type: none;
   text-decoration: none;
   margin: 1rem;
-  margin-bottom: 0rem;
-  margin-top: 0;
   list-style-type: none;
-}
-#header,
-#header a:link,
-#header a:visited {
-  font-size: 35px;
-  margin-top: 1rem;
-  font-weight: 600;
-  list-style-type: none;
-  text-decoration: none;
 }
 
 .listIcons a:link,
@@ -58,14 +72,20 @@ li {
 .footerIcon,
 .footerIcon a:link,
 .footerIcon a:visited {
-  color: #7aa03f;
+  color: var(--wildGreen);
   font-size: 30px;
   padding: 1rem;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-#footerTag {
-    color: #7aa03f; 
-    margin-bottom: 1rem;
+#footerTag,
+#logoTag {
+  color: var(--wildGreen);
+  font-weight: 375;
+  margin-bottom: 1rem;
+}
+
+#logoTag {
+  margin: 0;
 }
