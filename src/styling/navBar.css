@@ -3,12 +3,11 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  z-index: 1000;
+  z-index: 999;
   background-color: rgb(241, 234, 234);
 }
 
 #navLogo {
-  margin-top: 10px;
   max-width: 300px;
   margin-top: 1rem;
   margin-bottom: 1rem;

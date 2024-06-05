@@ -1,9 +1,28 @@
 footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: rgb(241, 234, 234);
   margin-top: auto;
+}
+
+#footerHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+a#footerLogoContainer {
+  margin: 0;
+  padding: 0;
+}
+
+#footerLogo {
+  max-width: 300px;
+  margin-top: 1rem;
 }
 
 #footerIcons {
@@ -29,18 +48,7 @@ li {
   list-style-type: none;
   text-decoration: none;
   margin: 1rem;
-  margin-bottom: 0rem;
-  margin-top: 0;
   list-style-type: none;
-}
-#header,
-#header a:link,
-#header a:visited {
-  font-size: 35px;
-  margin-top: 1rem;
-  font-weight: 600;
-  list-style-type: none;
-  text-decoration: none;
 }
 
 .listIcons a:link,
@@ -65,7 +73,12 @@ li {
   padding-bottom: 0;
 }
 
-#footerTag {
+#footerTag, #logoTag {
     color: #7aa03f; 
+    font-weight:375;
     margin-bottom: 1rem;
+}
+
+#logoTag {
+  margin: 0;
 }

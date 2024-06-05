@@ -1,27 +1,21 @@
 import { NavLink } from "react-router-dom";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { useEffect } from "react";
 
 import "./styling/footer.css";
 
 export default function Footer() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
   return (
     <footer>
       <div id="footerHeaderContainer">
-        <NavLink id="header" to="/">
-          <header id="header">WILD WIND TATTOO</header>
+        <NavLink id="footerItem" to="/">
+          <img
+            id="footerLogo"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717547711/wildWindSite/wwt_line_ozy2ca.png"
+            alt="shop logo"
+          />
         </NavLink>
+        <p id="logoTag">1452 n. western ave chicago il 60622</p>
       </div>
       <ul id="ulTop">
         <li>

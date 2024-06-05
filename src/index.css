@@ -1,5 +1,5 @@
 * {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Lato", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   line-height: 1.5;
@@ -62,7 +62,7 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
