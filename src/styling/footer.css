@@ -1,3 +1,9 @@
+* {
+  --wildBlue: rgb(101, 193, 220);
+  --wildBackground: rgb(226, 209, 189);
+  --wildGreen: rgb(124, 155, 63);
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -43,7 +49,7 @@ li {
 .footerItem a:visited,
 #footerHeaderConatiner a:link,
 #footerHeaderContainer a:visited {
-  color: #7aa03f;
+  color: var(--wildGreen);
   font-size: 16px;
   list-style-type: none;
   text-decoration: none;
@@ -66,7 +72,7 @@ li {
 .footerIcon,
 .footerIcon a:link,
 .footerIcon a:visited {
-  color: #7aa03f;
+  color: var(--wildGreen);
   font-size: 30px;
   padding: 1rem;
   padding-top: 0;
@@ -75,7 +81,7 @@ li {
 
 #footerTag,
 #logoTag {
-  color: #7aa03f;
+  color: var(--wildGreen);
   font-weight: 375;
   margin-bottom: 1rem;
 }

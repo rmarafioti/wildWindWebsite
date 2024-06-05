@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { SlClose } from "react-icons/sl";
 
+import "./styling/aftercare.css";
+
 export default function Aftercare() {
   const [popUp, setPopUp] = useState(false);
   const [popUpContent, setPopUpContent] = useState(null);
