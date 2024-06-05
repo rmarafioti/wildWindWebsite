@@ -3,7 +3,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(226,209,189);
+  background-color: rgb(226, 209, 189);
   margin-top: auto;
 }
 
@@ -73,10 +73,11 @@ li {
   padding-bottom: 0;
 }
 
-#footerTag, #logoTag {
-    color: #7aa03f; 
-    font-weight:375;
-    margin-bottom: 1rem;
+#footerTag,
+#logoTag {
+  color: #7aa03f;
+  font-weight: 375;
+  margin-bottom: 1rem;
 }
 
 #logoTag {

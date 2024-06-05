@@ -101,23 +101,28 @@ export default function Aftercare() {
   );
 
   return (
-    <>
-      <h1>AFTER CARE</h1>
-      <h2>
-        DRYLOCK BANDAGE INSTRUCTIONS{" "}
+    <article id="afterCare">
+      <h1 id="afterHeader">Aftercare</h1>
+
+      <h3 id="afterTagline">
+        everything you need to know about care of your tattoo.
+      </h3>
+      <div className="careContainer">
+        <h2 className="instructions">DRYLOCK BANDAGE INSTRUCTIONS </h2>
         <button onClick={() => openPopUp(dryLockInstructions)}>
           <IoAddCircleOutline />
         </button>
-      </h2>
-      <h2>
-        TEGADERM BANDAGE INSTRUCTIONS{" "}
+      </div>
+      <div className="careContainer">
+        <h2 className="instructions">TEGADERM BANDAGE INSTRUCTIONS </h2>
         <button onClick={() => openPopUp(tegadermInstructions)}>
           <IoAddCircleOutline />
         </button>
-      </h2>
+      </div>
+
       <Popup isOpen={popUp} close={closePopUp}>
         {popUpContent}
       </Popup>
-    </>
+    </article>
   );
 }

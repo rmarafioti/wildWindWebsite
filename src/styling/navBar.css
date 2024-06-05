@@ -4,7 +4,7 @@ nav {
   justify-content: space-between;
   align-items: start;
   z-index: 999;
-  background-color: rgb(226,209,189);
+  background-color: rgb(226, 209, 189);
 }
 
 #navLogo {
@@ -126,7 +126,7 @@ nav {
   padding-bottom: 8px;
   align-items: center;
   font-size: 16px;
-  transition: background-color 0.8s, border-radius 0.3s, border 0.3s;/* Add transitions for the properties you want to animate */
+  transition: background-color 0.8s, border-radius 0.3s, border 0.3s; /* Add transitions for the properties you want to animate */
 }
 
 .navItem a:link,
@@ -134,9 +134,10 @@ nav {
   color: #7aa03f;
 }
 
-.navItem a:hover, #navItem a:focus {
+.navItem a:hover,
+#navItem a:focus {
   border-radius: 10px;
-  background-color: rgba(101,193,220, 0.2);
+  background-color: rgba(101, 193, 220, 0.2);
   border: solid 1px #7aa03f;
 }
 .linkIcon {

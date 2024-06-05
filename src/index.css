@@ -8,7 +8,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 0px solid green;
+  border: px solid green;
+
+  --wildBlue: rgb(101,193,220);
+  --wildBackground: rgb(226,209,189);
+  --wildGreen: rgb(124,155,63);
+
 }
 
 #root {
@@ -37,19 +42,22 @@ ul {
 }
 
 button {
+  color: var(--wildGreen);
+  display: flex;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 10px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: light grey;
+  border-color: var(--wildGreen);
+  background-color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.5s;
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: rgba(101, 193, 220, 0.2)
 }
 
 button:focus,
@@ -82,6 +90,40 @@ button:focus-visible {
 
 #checkout {
   width: 100vw;
+}
+
+/* aftercare */
+
+#afterCare {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+#afterHeader {
+  color: var(--wildGreen);
+}
+
+#afterTagline {
+  color: var(--wildGreen);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.careContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  display: flex;
+  align-items: center;
+  color: var(--wildGreen);
+  margin: .5rem;
 }
 
 
