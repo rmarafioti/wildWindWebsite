@@ -10,10 +10,9 @@
   box-sizing: border-box;
   border: px solid green;
 
-  --wildBlue: rgb(101,193,220);
-  --wildBackground: rgb(226,209,189);
-  --wildGreen: rgb(124,155,63);
-
+  --wildBlue: rgb(101, 193, 220);
+  --wildBackground: rgb(226, 209, 189);
+  --wildGreen: rgb(124, 155, 63);
 }
 
 #root {
@@ -47,9 +46,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 10px;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+  font-size: 20px;
   border-color: var(--wildGreen);
   background-color: white;
   cursor: pointer;
@@ -57,35 +54,12 @@ button {
 }
 
 button:hover {
-  background-color: rgba(101, 193, 220, 0.2)
+  background-color: rgba(101, 193, 220, 0.2);
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-.popUpOverlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.popUpContent {
-  max-width: 90%;
-  max-height: 80vh;
-  object-fit: contain;
-  display: block;
-  background-color: white;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #checkout {
@@ -113,30 +87,73 @@ button:focus-visible {
   margin-bottom: 1rem;
 }
 
-.careContainer {
+.careContainer, .careContainerBottom {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: solid 1px var(--wildGreen);
+}
+
+.careContainerBottom {
+  border-bottom: none;
 }
 
 .instructions {
   display: flex;
   align-items: center;
+  font-weight: 700;
   color: var(--wildGreen);
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
+.popUpOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
+.popUpContent {
+  color: var(--wildGreen);
+  padding: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  max-width: 480px;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  background-color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
+.buttonSection {
+  display: flex;
+  justify-content: end;
+}
 
+.popHeader {
+  color: black;
+  text-decoration: underline;
+}
 
+.popInstructions {
+  color: var(--wildGreen);
+  font-size: 16px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--wildGreen);
+}
 
-
-
-
-
-
-
-
-
-
+.popInstructionsTag {
+  color: black;
+}
