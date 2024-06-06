@@ -23,15 +23,19 @@ function usePopUp() {
   };
 }
 
-const PopUp = ({ isOpen, close, children, closePopUp }) => {
+const PopUp = ({ isOpen, children, closePopUp }) => {
   if (!isOpen) return null;
 
+  const handleClose = () => {
+    closePopUp(); // Close the pop-up using the closePopUp function
+  };
+
   return (
-    <div className="popUpOverlay" onClick={close}>
+    <div className="popUpOverlay">
       <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
         <div className="buttonSection">
           <button>
-            <SlClose onClick={closePopUp} />
+            <SlClose onClick={handleClose} />
           </button>
         </div>
         {children}

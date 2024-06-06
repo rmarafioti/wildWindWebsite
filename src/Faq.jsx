@@ -15,7 +15,7 @@ import {
 } from "./faqs";
 
 export default function Faq() {
-  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp(); // Using the usePopUp hook
+  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
 
   return (
     <article id="faqs">
@@ -85,9 +85,7 @@ export default function Faq() {
           </button>
         </div>
       </section>
-      <PopUp isOpen={popUp} close={closePopUp}>
-        {" "}
-        {/* Using the PopUp component */}
+      <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
     </article>

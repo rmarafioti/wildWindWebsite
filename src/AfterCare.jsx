@@ -1,6 +1,5 @@
 import React from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
-import { SlClose } from "react-icons/sl";
 import { PopUp, usePopUp } from "./popUp";
 
 import "./styling/aftercare.css";
@@ -10,11 +9,7 @@ export default function Aftercare() {
 
   const dryLockInstructions = (
     <>
-      <div className="buttonSection">
-        <button>
-          <SlClose onClick={closePopUp} />
-        </button>
-      </div>
+      <div className="buttonSection"></div>
       <h3 className="popHeader">Bandage removal</h3>
       <p className="popInstructions">
         Leave the bandage on for as little as two hours or overnight to 24
@@ -50,11 +45,7 @@ export default function Aftercare() {
 
   const tegadermInstructions = (
     <section>
-      <div className="buttonSection">
-        <button>
-          <SlClose onClick={closePopUp} />
-        </button>
-      </div>
+      <div className="buttonSection"></div>
       <h3 className="popHeader">Bandage application</h3>
       <p className="popInstructions">
         TEGADERM should be applied within one hour of completing the new tattoo.
@@ -111,7 +102,7 @@ export default function Aftercare() {
         </button>
       </div>
 
-      <PopUp isOpen={popUp} close={closePopUp}>
+      <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
     </article>
