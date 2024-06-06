@@ -1,34 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { SlClose } from "react-icons/sl";
+import { PopUp, usePopUp } from "./popUp";
 
 import "./styling/aftercare.css";
 
 export default function Aftercare() {
-  const [popUp, setPopUp] = useState(false);
-  const [popUpContent, setPopUpContent] = useState(null);
-
-  const Popup = ({ isOpen, close, children }) => {
-    if (!isOpen) return null;
-
-    return (
-      <div className="popUpOverlay" onClick={close}>
-        <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
-          {children}
-        </div>
-      </div>
-    );
-  };
-
-  const openPopUp = (content) => {
-    setPopUpContent(content);
-    setPopUp(true);
-  };
-
-  const closePopUp = () => {
-    setPopUp(false);
-    setPopUpContent(null);
-  };
+  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
 
   const dryLockInstructions = (
     <>
@@ -133,9 +111,9 @@ export default function Aftercare() {
         </button>
       </div>
 
-      <Popup isOpen={popUp} close={closePopUp}>
+      <PopUp isOpen={popUp} close={closePopUp}>
         {popUpContent}
-      </Popup>
+      </PopUp>
     </article>
   );
 }

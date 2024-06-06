@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
+import { PopUp, usePopUp } from "./popUp";
 
 import {
   questionOne,
@@ -14,30 +15,7 @@ import {
 } from "./faqs";
 
 export default function Faq() {
-  const [popUp, setPopUp] = useState(false);
-  const [popUpContent, setPopUpContent] = useState(null);
-
-  const Popup = ({ isOpen, close, children }) => {
-    if (!isOpen) return null;
-
-    return (
-      <div className="popUpOverlay" onClick={close}>
-        <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
-          {children}
-        </div>
-      </div>
-    );
-  };
-
-  const openPopUp = (content) => {
-    setPopUpContent(content);
-    setPopUp(true);
-  };
-
-  const closePopUp = () => {
-    setPopUp(false);
-    setPopUpContent(null);
-  };
+  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp(); // Using the usePopUp hook
 
   return (
     <article id="faqs">
@@ -107,9 +85,11 @@ export default function Faq() {
           </button>
         </div>
       </section>
-      <Popup isOpen={popUp} close={closePopUp}>
+      <PopUp isOpen={popUp} close={closePopUp}>
+        {" "}
+        {/* Using the PopUp component */}
         {popUpContent}
-      </Popup>
+      </PopUp>
     </article>
   );
 }
