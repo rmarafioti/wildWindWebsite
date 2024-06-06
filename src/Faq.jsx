@@ -25,61 +25,61 @@ export default function Faq() {
       </h3>
       <section id="faqSection">
         <div className="faqContainer">
-          <h1 className="faq">Does Wild Wind Tattoo accept walk-ins?</h1>
+          <h2 className="faq">Does Wild Wind Tattoo accept walk-ins?</h2>
           <button onClick={() => openPopUp(questionOne)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">What is the shop minimum?</h1>
+          <h2 className="faq">What is the shop minimum?</h2>
           <button onClick={() => openPopUp(questionTwo)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">Is the shop cash only?</h1>
+          <h2 className="faq">Is the shop cash only?</h2>
           <button onClick={() => openPopUp(questionThree)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">Do you give price quotes via email or phone?</h1>
+          <h2 className="faq">Do you give price quotes via email or phone?</h2>
           <button onClick={() => openPopUp(questionFour)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">
+          <h2 className="faq">
             What is the wait time for getting an appointment?
-          </h1>
+          </h2>
           <button onClick={() => openPopUp(questionFive)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">How can I make an appointment?</h1>
+          <h2 className="faq">How can I make an appointment?</h2>
           <button onClick={() => openPopUp(questionSix)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">
+          <h2 className="faq">
             Do I have to leave a deposit to make an appointment?"
-          </h1>
+          </h2>
           <button onClick={() => openPopUp(questionSeven)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">
+          <h2 className="faq">
             Can I see my tattoo design before my appointment?
-          </h1>
+          </h2>
           <button onClick={() => openPopUp(questionEight)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">What is your cancellation policy?</h1>
+          <h2 className="faq">What is your cancellation policy?</h2>
           <button onClick={() => openPopUp(questionNine)}>
             <IoAddCircleOutline />
           </button>

@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 
 const questionOne = (
   <>
-    <div className="buttonSection"></div>
-    <h1>Does Wild Wind Tattoo accept walk-ins?</h1>
-    <p>
+    <p className="popQuestion">"Does Wild Wind Tattoo accept walk-ins?"</p>
+    <p className="popAnswer">
       WWT strives to accommodate all clients and may accept walk-ins if openings
       are available. We recommend calling ahead on the day you plan to visit to
       check availability. Walk-ins are ideal for smaller tattoos that require
@@ -17,8 +16,8 @@ const questionOne = (
 const questionTwo = (
   <>
     <div className="buttonSection"></div>
-    <h1>What is the shop minimum?</h1>
-    <p>
+    <p className="popQuestion">"What is the shop minimum?"</p>
+    <p className="popAnswer">
       Our shop minimum is $100. The final price of any tattoo will be determined
       in person based on the design.
     </p>
@@ -28,8 +27,8 @@ const questionTwo = (
 const questionThree = (
   <>
     <div className="buttonSection"></div>
-    <h1>Is the shop cash only?</h1>
-    <p>
+    <p className="popQuestion">"Is the shop cash only?"</p>
+    <p className="popAnswer">
       No, we accept all major credit cards and cash. Please note that we do not
       accept checks, Venmo, Square Cash, Chase Quick Pay, or similar payment
       methods.
@@ -40,8 +39,10 @@ const questionThree = (
 const questionFour = (
   <>
     <div className="buttonSection"></div>
-    <h1>Do you give price quotes via email or phone?</h1>
-    <p>
+    <p className="popQuestion">
+      "Do you give price quotes via email or phone?"
+    </p>
+    <p className="popAnswer">
       We do not provide valid price quotes via email or phone. We can offer a
       general price range, but this is only an estimate. The final price depends
       on the tattoo's size, detail, and placement, which we'll discuss during
@@ -53,8 +54,10 @@ const questionFour = (
 const questionFive = (
   <>
     <div className="buttonSection"></div>
-    <h1>"What is the wait time for getting an appointment?"</h1>
-    <p>
+    <p className="popQuestion">
+      "What is the wait time for getting an appointment?"
+    </p>
+    <p className="popAnswer">
       Wait times vary as each artist manages their own schedule, but typically,
       we schedule appointments within a two to three-week timeframe.
     </p>
@@ -64,8 +67,8 @@ const questionFive = (
 const questionSix = (
   <>
     <div className="buttonSection"></div>
-    <h1>How can I make an appointment?</h1>
-    <p>
+    <p className="popQuestion">"How can I make an appointment?"</p>
+    <p className="popAnswer">
       Begin booking by filling out our
       <Link to="/contact"> contact form</Link> with basic information about your
       desired tattoo. We will respond within 1-3 business days. After an artist
@@ -80,8 +83,10 @@ const questionSix = (
 const questionSeven = (
   <>
     <div className="buttonSection"></div>
-    <h1>Do I have to leave a deposit to make an appointment?</h1>
-    <p>
+    <p className="popQuestion">
+      "Do I have to leave a deposit to make an appointment?"
+    </p>
+    <p className="popAnswer">
       Yes, a $60 deposit is required for each appointment. Once the date and
       time are arranged, you will be directed to our deposit form. Your
       appointment is not confirmed until we receive your deposit. This deposit
@@ -95,8 +100,10 @@ const questionSeven = (
 const questionEight = (
   <>
     <div className="buttonSection"></div>
-    <h1>Can I see my tattoo design before my appointment?</h1>
-    <p>
+    <p className="popQuestion">
+      "Can I see my tattoo design before my appointment?"
+    </p>
+    <p className="popAnswer">
       We do not send out or show tattoo designs via email before appointments,
       as we believe the best collaboration between client and artist occurs in
       person. Your design will be ready for review on the day of your
@@ -109,11 +116,11 @@ const questionEight = (
 const questionNine = (
   <>
     <div className="buttonSection"></div>
-    <h1>What is your cancellation policy?</h1>
-    <p>
-      If you cancel your appointment with at least 24 hours notice, we will
+    <p className="popQuestion">"What is your cancellation policy?"</p>
+    <p className="popAnswer">
+      If you cancel your appointment with at least 48 hours notice, we will
       honor your $60 deposit for a future appointment. Cancellations made with
-      less than 24 hours notice will result in the forfeiture of your deposit.
+      less than 48 hours notice will result in the forfeiture of your deposit.
       To reschedule, you may be required to place another deposit.
     </p>
   </>

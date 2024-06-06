@@ -90,13 +90,13 @@ export default function Aftercare() {
         everything you need to know about taking care of your tattoo.
       </h3>
       <div className="careContainer">
-        <h2 className="instructions">DRYLOCK BANDAGE INSTRUCTIONS </h2>
+        <h2 className="instructions">Drylock Bandage Instructions </h2>
         <button onClick={() => openPopUp(dryLockInstructions)}>
           <IoAddCircleOutline />
         </button>
       </div>
       <div className="careContainerBottom">
-        <h2 className="instructions">TEGADERM BANDAGE INSTRUCTIONS </h2>
+        <h2 className="instructions">Tegaderm Bandage Instructions </h2>
         <button onClick={() => openPopUp(tegadermInstructions)}>
           <IoAddCircleOutline />
         </button>
