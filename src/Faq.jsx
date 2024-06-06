@@ -4,8 +4,11 @@ import DropDown from "./DropDown";
 
 export default function Faq() {
   return (
-    <>
-      <h1>FAQS</h1>
+    <article id="faqs">
+      <h1>FAQs</h1>
+      <h3 id="faqTagline">
+        general questions before you fill out our contact form.
+      </h3>
       <DropDown title="Does Wild Wind Tattoo accept walk-ins?">
         <p>
           WWT strives to accommodate all clients and may accept walk-ins if
@@ -66,7 +69,7 @@ export default function Faq() {
         </p>
       </DropDown>
       <DropDown title="Can I see my tattoo design before my appointment?">
-        <p>
+        <p className="faq">
           We do not send out or show tattoo designs via email before
           appointments, as we believe the best collaboration between client and
           artist occurs in person. Your design will be ready for review on the
@@ -82,6 +85,6 @@ export default function Faq() {
           deposit. To reschedule, you may be required to place another deposit.
         </p>
       </DropDown>
-    </>
+    </article>
   );
 }

@@ -65,3 +65,33 @@ button:focus-visible {
 #checkout {
   width: 100vw;
 }
+
+/* FAQs */
+
+#faqs {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+#faqTagline {
+  font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.faqTitle {
+  margin-bottom: 1rem;
+  border-bottom: solid 1px var(--wildGreen);
+}
+
+.faq {
+  color: black;
+  text-align: center;
+  max-width: 480px;
+  margin-bottom: .5rem;
+}
+
+

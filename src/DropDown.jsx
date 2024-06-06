@@ -9,10 +9,14 @@ const DropDown = ({ title, children }) => {
 
   return (
     <>
-      <h2 onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }}>
+      <h2
+        className="faqTitle"
+        onClick={() => setIsOpen(!isOpen)}
+        style={{ cursor: "pointer" }}
+      >
         {title} {isOpen ? <IoCloseCircleOutline /> : <IoIosArrowDropdown />}
       </h2>
-      {isOpen && <div>{children}</div>}
+      {isOpen && <div className="faq">{children}</div>}
     </>
   );
 };
