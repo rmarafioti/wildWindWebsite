@@ -1,42 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
-import { SlClose } from "react-icons/sl";
+import { PopUp, usePopUp } from "./popUp";
 
 import "./styling/aftercare.css";
 
 export default function Aftercare() {
-  const [popUp, setPopUp] = useState(false);
-  const [popUpContent, setPopUpContent] = useState(null);
-
-  const Popup = ({ isOpen, close, children }) => {
-    if (!isOpen) return null;
-
-    return (
-      <div className="popUpOverlay" onClick={close}>
-        <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
-          {children}
-        </div>
-      </div>
-    );
-  };
-
-  const openPopUp = (content) => {
-    setPopUpContent(content);
-    setPopUp(true);
-  };
-
-  const closePopUp = () => {
-    setPopUp(false);
-    setPopUpContent(null);
-  };
+  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
 
   const dryLockInstructions = (
     <>
-      <div className="buttonSection">
-        <button>
-          <SlClose onClick={closePopUp} />
-        </button>
-      </div>
+      <div className="buttonSection"></div>
       <h3 className="popHeader">Bandage removal</h3>
       <p className="popInstructions">
         Leave the bandage on for as little as two hours or overnight to 24
@@ -72,11 +45,7 @@ export default function Aftercare() {
 
   const tegadermInstructions = (
     <section>
-      <div className="buttonSection">
-        <button>
-          <SlClose onClick={closePopUp} />
-        </button>
-      </div>
+      <div className="buttonSection"></div>
       <h3 className="popHeader">Bandage application</h3>
       <p className="popInstructions">
         TEGADERM should be applied within one hour of completing the new tattoo.
@@ -121,21 +90,21 @@ export default function Aftercare() {
         everything you need to know about taking care of your tattoo.
       </h3>
       <div className="careContainer">
-        <h2 className="instructions">DRYLOCK BANDAGE INSTRUCTIONS </h2>
+        <h2 className="instructions">Drylock Bandage Instructions </h2>
         <button onClick={() => openPopUp(dryLockInstructions)}>
           <IoAddCircleOutline />
         </button>
       </div>
       <div className="careContainerBottom">
-        <h2 className="instructions">TEGADERM BANDAGE INSTRUCTIONS </h2>
+        <h2 className="instructions">Tegaderm Bandage Instructions </h2>
         <button onClick={() => openPopUp(tegadermInstructions)}>
           <IoAddCircleOutline />
         </button>
       </div>
 
-      <Popup isOpen={popUp} close={closePopUp}>
+      <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
-      </Popup>
+      </PopUp>
     </article>
   );
 }

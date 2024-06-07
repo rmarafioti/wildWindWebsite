@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
+import { PopUp, usePopUp } from "./popUp";
 
 import {
   questionOne,
@@ -14,30 +15,7 @@ import {
 } from "./faqs";
 
 export default function Faq() {
-  const [popUp, setPopUp] = useState(false);
-  const [popUpContent, setPopUpContent] = useState(null);
-
-  const Popup = ({ isOpen, close, children }) => {
-    if (!isOpen) return null;
-
-    return (
-      <div className="popUpOverlay" onClick={close}>
-        <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
-          {children}
-        </div>
-      </div>
-    );
-  };
-
-  const openPopUp = (content) => {
-    setPopUpContent(content);
-    setPopUp(true);
-  };
-
-  const closePopUp = () => {
-    setPopUp(false);
-    setPopUpContent(null);
-  };
+  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
 
   return (
     <article id="faqs">
@@ -47,69 +25,69 @@ export default function Faq() {
       </h3>
       <section id="faqSection">
         <div className="faqContainer">
-          <h1 className="faq">Does Wild Wind Tattoo accept walk-ins?</h1>
+          <h2 className="faq">Does Wild Wind Tattoo accept walk-ins?</h2>
           <button onClick={() => openPopUp(questionOne)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">What is the shop minimum?</h1>
+          <h2 className="faq">What is the shop minimum?</h2>
           <button onClick={() => openPopUp(questionTwo)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">Is the shop cash only?</h1>
+          <h2 className="faq">Is the shop cash only?</h2>
           <button onClick={() => openPopUp(questionThree)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">Do you give price quotes via email or phone?</h1>
+          <h2 className="faq">Do you give price quotes via email or phone?</h2>
           <button onClick={() => openPopUp(questionFour)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">
+          <h2 className="faq">
             What is the wait time for getting an appointment?
-          </h1>
+          </h2>
           <button onClick={() => openPopUp(questionFive)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">How can I make an appointment?</h1>
+          <h2 className="faq">How can I make an appointment?</h2>
           <button onClick={() => openPopUp(questionSix)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">
+          <h2 className="faq">
             Do I have to leave a deposit to make an appointment?"
-          </h1>
+          </h2>
           <button onClick={() => openPopUp(questionSeven)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">
+          <h2 className="faq">
             Can I see my tattoo design before my appointment?
-          </h1>
+          </h2>
           <button onClick={() => openPopUp(questionEight)}>
             <IoAddCircleOutline />
           </button>
         </div>
         <div className="faqContainer">
-          <h1 className="faq">What is your cancellation policy?</h1>
+          <h2 className="faq">What is your cancellation policy?</h2>
           <button onClick={() => openPopUp(questionNine)}>
             <IoAddCircleOutline />
           </button>
         </div>
       </section>
-      <Popup isOpen={popUp} close={closePopUp}>
+      <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
-      </Popup>
+      </PopUp>
     </article>
   );
 }
