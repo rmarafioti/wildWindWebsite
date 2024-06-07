@@ -25,17 +25,20 @@ export default function Contact() {
       );
   };
   return (
-    <>
-      <h1>CONTACT</h1>
-      <h2>Contact Form</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
+    <main id="contact">
+      <h2 id="contactHeader">
+        Reach out to us with your questions and inquiries
+      </h2>
+      <h3 id="headerTagline">review our faqs first</h3>
+      <form id="contactForm" ref={form} onSubmit={sendEmail}>
+        <h2 id="formHeader">Contact Form</h2>
+        <label className="label">Name</label>
+        <input className="form" type="text" name="user_name" />
+        <label className="label">Email</label>
+        <input className="form" type="email" name="user_email" />
+        <label className="label">Message</label>
+        <textarea id="messageForm" name="message" />
+        <input id="formSubmit" type="submit" value="Send" />
       </form>
       <p>
         ADDRESS:
@@ -64,6 +67,6 @@ export default function Contact() {
           </a>
         </h1>
       </div>
-    </>
+    </main>
   );
 }

@@ -66,3 +66,53 @@ button:focus-visible {
   width: 100vw;
 }
 
+#contact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactHeader {
+  margin-top: 1rem;
+}
+
+#headerTagline {
+  margin-bottom: 1rem;
+}
+
+#formHeader {
+  margin-bottom: 1rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  border-top: solid 1px var(--wildGreen);
+  padding-top: 1rem;
+}
+.label {
+  color: var(--wildGreen);
+}
+.form, #messageForm, #formSubmit {
+  
+
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: .25rem;
+  margin-bottom: 1rem;
+}
+
+#messageForm {
+  height: 100px;
+  padding: .5rem;
+}
+
+#formSubmit {
+  border: none;
+  background-color: var(--wildBlue);
+  color: white;
+  height: 28px;
+}
