@@ -14,6 +14,8 @@ import {
   questionNine,
 } from "./faqs";
 
+import "./styling/faqs.css";
+
 export default function Faq() {
   const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
 

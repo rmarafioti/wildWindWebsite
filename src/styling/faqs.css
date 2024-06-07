@@ -4,7 +4,7 @@
   --wildGreen: rgb(124, 155, 63);
 }
 
-#afterCare {
+#faqs {
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
@@ -14,32 +14,23 @@
   margin-bottom: 2rem;
 }
 
-#afterTagline {
+#faqTagline {
   color: black;
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
-.careContainer,
-.careContainerBottom {
+.faqContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: solid 1px var(--wildGreen);
+  margin-top: 1rem;
 }
 
-.careContainerBottom {
-  border-bottom: none;
-}
-
-.instructions {
-  display: flex;
-  align-items: center;
+.faq {
   font-weight: 700;
-  color: var(--wildGreen);
-  margin: 0.5rem;
+  margin-right: 1rem;
+  border-bottom: solid 1px var(--wildGreen);
 }
 
 .popUpOverlay {
@@ -69,26 +60,17 @@
   overflow-x: hidden;
 }
 
-.buttonSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
-
-.popHeader {
+.popQuestion {
   color: var(--wildGreen);
-  text-decoration: underline;
-}
-
-.popInstructions {
-  color: black;
-  font-size: 16px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
   border-bottom: solid 1px var(--wildGreen);
 }
 
-.popInstructionsTag {
+.popAnswer {
   color: black;
+  line-height: 2;
+  margin-bottom: 2rem;
 }
