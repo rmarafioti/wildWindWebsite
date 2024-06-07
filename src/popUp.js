@@ -34,8 +34,8 @@ const PopUp = ({ isOpen, children, closePopUp }) => {
     <div className="popUpOverlay">
       <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
         <div className="buttonSection">
-          <button>
-            <SlClose onClick={handleClose} />
+          <button onClick={handleClose}>
+            <SlClose />
           </button>
         </div>
         {children}
