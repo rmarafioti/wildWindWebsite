@@ -4,6 +4,8 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
+import "./styling/contact.css";
+
 export default function Contact() {
   const form = useRef();
 
@@ -40,7 +42,11 @@ export default function Contact() {
         <label className="label">Email</label>
         <input className="form" type="email" name="user_email" />
         <label className="label">Message</label>
-        <textarea id="messageForm" name="message" />
+        <textarea
+          id="messageForm"
+          name="message"
+          placeholder="*please specify size & location of your tattoo as well as days of the week you are available to get tattooed"
+        />
         <input id="formSubmit" type="submit" value="Send" />
       </form>
       <section>

@@ -1,0 +1,99 @@
+* {
+  --wildBlue: rgb(101, 193, 220);
+  --wildBackground: rgb(226, 209, 189);
+  --wildGreen: rgb(124, 155, 63);
+}
+
+#contact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#headerTagline {
+  color: black;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+#reviewFaq {
+  font-size: 18px;
+  padding: 0.1rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#formHeader {
+  margin-bottom: 1rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  border-top: solid 1px var(--wildGreen);
+  padding-top: 1rem;
+}
+.label {
+  color: var(--wildGreen);
+}
+.form,
+#messageForm,
+#formSubmit {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+#messageForm {
+  height: 100px;
+  padding: 0.5rem;
+}
+
+#formSubmit {
+  border: none;
+  background-color: var(--wildBlue);
+  color: white;
+  height: 28px;
+  cursor: pointer;
+}
+
+.contactInfo {
+  margin: 1rem;
+}
+
+.contactInfo a:link,
+.contactInfo a:visited {
+  color: black;
+  margin: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+#contactIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.icon a:link,
+.icon a:visited {
+  color: var(--wildGreen);
+  font-size: 40px;
+}
