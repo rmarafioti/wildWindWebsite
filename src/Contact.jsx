@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -30,23 +31,25 @@ export default function Contact() {
     <main id="contact">
       <section id="contactHeader">
         <h2>Contact Us</h2>
-        <h3 id="headerTagline">
+        <h3 className="headerTagline">
           Reach out to us with your questions and inquiries
         </h3>
-        <button id="reviewFaq">review our faqs first</button>
+        <Link id="reviewLink" to="/faqs">
+          <button id="reviewFaq">review our faqs first</button>
+        </Link>
       </section>
       <form id="contactForm" ref={form} onSubmit={sendEmail}>
-        <h2 id="formHeader">Contact Form</h2>
+        <h2>Contact Form</h2>
+        <p className="headerTagline">
+          *please specify size & location of your desired tattoo as well as days
+          of the week you are available to get tattooed in your message.
+        </p>
         <label className="label">Name</label>
         <input className="form" type="text" name="user_name" />
         <label className="label">Email</label>
         <input className="form" type="email" name="user_email" />
         <label className="label">Message</label>
-        <textarea
-          id="messageForm"
-          name="message"
-          placeholder="*please specify size & location of your tattoo as well as days of the week you are available to get tattooed"
-        />
+        <textarea id="messageForm" name="message" placeholder="" />
         <input id="formSubmit" type="submit" value="Send" />
       </form>
       <section>
