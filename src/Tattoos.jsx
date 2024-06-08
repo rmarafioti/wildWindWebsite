@@ -23,30 +23,39 @@ export default function Tattoos() {
   }
 
   return (
-    <>
-      <h1>TATTOOS</h1>
-      <h2>Tattooing by Rich Marafioti</h2>
-      <p>
+    <article id="tattoos">
+      <div id="artistContainer">
+        <h2 id="artistHeader">Tattooing by Rich Marafioti</h2>
+        <h1 id="artistIgIcon">
+          <a href="https://www.instagram.com/wild_coma/">
+            <FaInstagram />
+          </a>
+        </h1>
+      </div>
+      <p id="artistAbout">
         Rich began tattooing in 2005, opening Wild Wind with ten years of
         experience in the industry. He is well versed in a variety of tattoo
         styles. He earned his degree from the Rhode Island School of Design's
         illustration department. His fine arts background is evident in his
         tattoos, personal work, and the gallery-style design of the shop.
       </p>
-      <h2>
-        <a href="https://www.instagram.com/wild_coma/">
-          <FaInstagram />
-        </a>
-      </h2>
-      <div>
-        <img src={imageurl} alt="tattoo portfolio images" />
-        <button onClick={handleClick}>browse tattoos</button>
-      </div>
-      <ul>
-        {tattooPhotos.map((tattoo) => (
-          <TattooCard key={tattoo.id} tattoo={tattoo} />
-        ))}
-      </ul>
-    </>
+      <section id="tattooSection">
+        <div id="tattooSlide">
+          <img
+            className="tattoo"
+            src={imageurl}
+            alt="tattoo portfolio images"
+          />
+          <button id="tattooButton" onClick={handleClick}>
+            browse tattoos
+          </button>
+        </div>
+        <ul id="tattooGallery">
+          {tattooPhotos.map((tattoo) => (
+            <TattooCard key={tattoo.id} tattoo={tattoo} />
+          ))}
+        </ul>
+      </section>
+    </article>
   );
 }

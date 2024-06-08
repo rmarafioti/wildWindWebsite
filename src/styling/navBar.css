@@ -17,6 +17,7 @@ nav {
   max-width: 300px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 4rem;
 }
 
 #navRight {
@@ -45,7 +46,6 @@ nav {
 }
 
 #contactButton {
-  border-radius: 5px;
   font-size: 16px;
   color: white;
   background-color: var(--wildBlue);
