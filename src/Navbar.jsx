@@ -30,9 +30,14 @@ export default function Navbar() {
             alt="shop logo"
           />
         </NavLink>
-        <NavLink id="faqContainer" to="/faqs">
-          <TbMessageCircleQuestion id="faqIcon" />
-        </NavLink>
+        <div id="navRight">
+          <NavLink id="faqContainer" to="/faqs">
+            <TbMessageCircleQuestion id="faqIcon" />
+          </NavLink>
+          <NavLink id="contactContainer" to="/contact">
+            <button id="contactButton">Contact Us</button>
+          </NavLink>
+        </div>
       </nav>
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>

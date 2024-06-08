@@ -43,7 +43,7 @@ ul {
 button {
   color: var(--wildGreen);
   display: flex;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid transparent;
   padding: 10px;
   font-size: 20px;
@@ -55,11 +55,6 @@ button {
 
 button:hover {
   background-color: rgba(101, 193, 220, 0.2);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 #checkout {
