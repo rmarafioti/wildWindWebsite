@@ -17,21 +17,43 @@ nav {
   max-width: 300px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 4rem;
+}
+
+#navRight {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 #faqContainer {
   display: flex;
   margin-top: 1rem;
-  margin-right: 0.5rem;
   width: 50px;
   height: 50px;
   justify-content: center;
   align-items: center;
+  margin-right: .5rem;
 }
 
 #faqIcon {
   color: var(--wildGreen);
   font-size: 35px;
+}
+
+#contactContainer {
+  text-decoration: none;
+}
+
+#contactButton {
+  font-size: 16px;
+  color: white;
+  background-color: var(--wildBlue);
+  border: none;
+  padding: 1rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  margin-right: 1rem;
 }
 
 /* hamburger */
@@ -142,7 +164,7 @@ nav {
 
 .navItem a:hover,
 #navItem a:focus {
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgba(101, 193, 220, 0.2);
   border: solid 1px var(--wildGreen);
 }

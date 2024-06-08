@@ -58,6 +58,7 @@
   background-color: white;
   overflow-y: auto;
   overflow-x: hidden;
+  border-radius: 5px;
 }
 
 .popQuestion {

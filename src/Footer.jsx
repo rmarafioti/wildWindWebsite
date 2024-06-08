@@ -17,43 +17,6 @@ export default function Footer() {
         </NavLink>
         <p id="logoTag">1452 n. western ave chicago il 60622</p>
       </div>
-      <ul id="ulTop">
-        <li>
-          <NavLink className="footerItem" to="/tattoos">
-            TATTOOS
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="footerItem" to="/shop">
-            SHOP
-          </NavLink>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <NavLink className="footerItem" to="/contact">
-            CONTACT
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="footerItem" to="/faqs">
-            FAQs
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink className="footerItem" to="/aftercare">
-            AFTERCARE
-          </NavLink>
-        </li>
-      </ul>
-      <ul id="ulBottom">
-        <li>
-          <NavLink className="footerItem" to="/giftcards">
-            GIFT CARDS
-          </NavLink>
-        </li>
-      </ul>
       <div id="footerIcons">
         <a
           className="footerIcon"

@@ -21,10 +21,14 @@
   margin-bottom: 1rem;
 }
 
-#headerTagline {
+.headerTagline {
   color: black;
   font-weight: 300;
   margin-bottom: 1rem;
+}
+
+#reviewLink {
+  text-decoration: none;
 }
 
 #reviewFaq {
@@ -33,10 +37,11 @@
   padding-bottom: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  text-decoration: none;
 }
 
 #formHeader {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 #contactForm {
@@ -45,6 +50,8 @@
   width: 480px;
   border-top: solid 1px var(--wildGreen);
   padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--wildGreen);
 }
 .label {
   color: var(--wildGreen);
