@@ -28,63 +28,63 @@ export default function Faq() {
       <section id="faqSection">
         <div className="faqContainer">
           <h2 className="faq">Does Wild Wind Tattoo accept walk-ins?</h2>
-          <button onClick={() => openPopUp(questionOne)}>
+          <div id="iconButton" onClick={() => openPopUp(questionOne)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">What is the shop minimum?</h2>
-          <button onClick={() => openPopUp(questionTwo)}>
+          <div id="iconButton" onClick={() => openPopUp(questionTwo)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">Is the shop cash only?</h2>
-          <button onClick={() => openPopUp(questionThree)}>
+          <div id="iconButton" onClick={() => openPopUp(questionThree)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">Do you give price quotes via email or phone?</h2>
-          <button onClick={() => openPopUp(questionFour)}>
+          <div id="iconButton" onClick={() => openPopUp(questionFour)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">
             What is the wait time for getting an appointment?
           </h2>
-          <button onClick={() => openPopUp(questionFive)}>
+          <div id="iconButton" onClick={() => openPopUp(questionFive)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">How can I make an appointment?</h2>
-          <button onClick={() => openPopUp(questionSix)}>
+          <div id="iconButton" onClick={() => openPopUp(questionSix)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">
             Do I have to leave a deposit to make an appointment?"
           </h2>
-          <button onClick={() => openPopUp(questionSeven)}>
+          <div id="iconButton" onClick={() => openPopUp(questionSeven)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">
             Can I see my tattoo design before my appointment?
           </h2>
-          <button onClick={() => openPopUp(questionEight)}>
+          <div id="iconButton" onClick={() => openPopUp(questionEight)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
         <div className="faqContainer">
           <h2 className="faq">What is your cancellation policy?</h2>
-          <button onClick={() => openPopUp(questionNine)}>
+          <div id="iconButton" onClick={() => openPopUp(questionNine)}>
             <FaPlus />
-          </button>
+          </div>
         </div>
       </section>
       <PopUp isOpen={popUp} closePopUp={closePopUp}>

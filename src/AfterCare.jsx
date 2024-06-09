@@ -91,15 +91,15 @@ export default function Aftercare() {
       </h3>
       <div className="careContainer">
         <h2 className="instructions">Drylock Bandage Instructions </h2>
-        <button onClick={() => openPopUp(dryLockInstructions)}>
+        <div id="iconButton" onClick={() => openPopUp(dryLockInstructions)}>
           <FaPlus />
-        </button>
+        </div>
       </div>
       <div className="careContainerBottom">
         <h2 className="instructions">Tegaderm Bandage Instructions </h2>
-        <button onClick={() => openPopUp(tegadermInstructions)}>
+        <div id="iconButton" onClick={() => openPopUp(tegadermInstructions)}>
           <FaPlus />
-        </button>
+        </div>
       </div>
 
       <PopUp isOpen={popUp} closePopUp={closePopUp}>

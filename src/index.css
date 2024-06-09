@@ -53,6 +53,17 @@ button {
   transition: background-color 0.5s;
 }
 
+#iconButton, #popUpButton {
+  color: var(--wildGreen);
+  display: flex;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 15px;
+  background-color: rgb(229, 223, 223);
+  cursor: pointer;
+  transition: border 0.1s;
+}
+
 #popUpButton {
   font-size: 20px;
   padding: 5px;
@@ -61,6 +72,7 @@ button {
 button:hover {
   background-color: rgba(101, 193, 220, 0.2);
 }
+
 
 #checkout {
   width: 100vw;
