@@ -167,6 +167,22 @@ align-items: end;
   height: 120px;
 }
 
+/* home */
+
+#home {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#headerHome {
+  font-weight: bold;
+}
+
 
 
 
