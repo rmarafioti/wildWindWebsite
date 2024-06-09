@@ -20,10 +20,10 @@ export default function Faq() {
   const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
 
   return (
-    <article id="faqs">
-      <h1>FAQs</h1>
+    <main id="faqs">
+      <h1 id="headerFaqs">FAQs</h1>
       <h3 id="faqTagline">
-        general questions before you fill out our contact form.
+        General questions before you fill out our contact form
       </h3>
       <section id="faqSection">
         <div className="faqContainer">
@@ -90,6 +90,6 @@ export default function Faq() {
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
-    </article>
+    </main>
   );
 }

@@ -36,12 +36,15 @@
 }
 
 #reviewFaq {
-  font-size: 18px;
   padding: 0.1rem;
   padding-bottom: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   text-decoration: none;
+  color: var(--wildGreen);
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--wildGreen);
 }
 
 #formHeader {
@@ -102,13 +105,6 @@
   margin: 1rem;
   text-decoration: none;
   border-bottom: 1px solid var(--wildGreen);
-}
-
-#reviewFaq {
-  color: var(--wildGreen);
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid var(--wildGreen);
 }
 
 #contactIcons {

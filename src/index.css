@@ -78,6 +78,8 @@ button:hover {
   width: 100vw;
 }
 
+/* tattoos */
+
 #tattoos {
   color: var(--wildGreen);
   display: flex;
@@ -94,6 +96,7 @@ button:hover {
 }
 
 #artistHeader {
+ font-weight: bold;
   margin-right: 1rem;
   margin-bottom: .5rem;
 }
@@ -107,6 +110,7 @@ button:hover {
 }
 
 #artistAbout {
+  line-height: 1.8;
   color: black;
   max-width: 480px;
   padding-bottom: 1rem;
@@ -137,10 +141,15 @@ align-items: end;
 
 #tattooButton {
   margin-top: .5rem;
+  padding: 0.1rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--wildGreen);
   font-size: 16px;
-  padding: 1rem;
-  padding-top: .3rem;
-  padding-bottom: .3rem;
+  border-radius: 5px;
+  border: 1px solid var(--wildGreen);
+  cursor: pointer;
 }
 
 #tattooGallery {

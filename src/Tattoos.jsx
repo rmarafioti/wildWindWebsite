@@ -23,9 +23,9 @@ export default function Tattoos() {
   }
 
   return (
-    <article id="tattoos">
+    <main id="tattoos">
       <div id="artistContainer">
-        <h2 id="artistHeader">Tattooing by Rich Marafioti</h2>
+        <h1 id="artistHeader">Tattooing by Rich Marafioti</h1>
         <h1 id="artistIgIcon">
           <a href="https://www.instagram.com/wild_coma/">
             <FaInstagram />
@@ -46,9 +46,9 @@ export default function Tattoos() {
             src={imageurl}
             alt="tattoo portfolio images"
           />
-          <button id="tattooButton" onClick={handleClick}>
+          <div id="tattooButton" onClick={handleClick}>
             browse tattoos
-          </button>
+          </div>
         </div>
         <ul id="tattooGallery">
           {tattooPhotos.map((tattoo) => (
@@ -56,6 +56,6 @@ export default function Tattoos() {
           ))}
         </ul>
       </section>
-    </article>
+    </main>
   );
 }

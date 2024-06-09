@@ -83,7 +83,7 @@ export default function Aftercare() {
   );
 
   return (
-    <article id="afterCare">
+    <main id="afterCare">
       <h1 id="afterHeader">Aftercare</h1>
 
       <h3 id="afterTagline">
@@ -105,6 +105,6 @@ export default function Aftercare() {
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
-    </article>
+    </main>
   );
 }
