@@ -14,10 +14,16 @@
   margin-bottom: 2rem;
 }
 
+#afterHeader {
+  font-weight: bold;
+}
+
 #afterTagline {
   color: black;
-  font-weight: 300;
+  font-weight: normal;
   margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: solid 1px var(--wildGreen);
 }
 
 .careContainer,
@@ -37,7 +43,7 @@
 .instructions {
   display: flex;
   align-items: center;
-  font-weight: 700;
+  font-weight: normal;
   color: var(--wildGreen);
   margin: 0.5rem;
 }

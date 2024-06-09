@@ -16,15 +16,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+  align-items: end;
   margin-bottom: 1rem;
+}
+
+#header {
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 .headerTagline {
   color: black;
-  font-weight: 300;
-  margin-bottom: 1rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
 }
 
 #reviewLink {
@@ -32,12 +36,15 @@
 }
 
 #reviewFaq {
-  font-size: 18px;
   padding: 0.1rem;
   padding-bottom: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   text-decoration: none;
+  color: var(--wildGreen);
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--wildGreen);
 }
 
 #formHeader {
@@ -68,6 +75,12 @@
 #messageForm {
   height: 100px;
   padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+#required {
+  font-size: 12px;
+  margin-bottom: 1rem;
 }
 
 #formSubmit {
@@ -76,6 +89,10 @@
   color: white;
   height: 28px;
   cursor: pointer;
+}
+
+#contactInfoContainer {
+  margin-bottom: 2rem;
 }
 
 .contactInfo {

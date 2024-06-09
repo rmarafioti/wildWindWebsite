@@ -1,5 +1,5 @@
 import React from "react";
-import { IoAddCircleOutline } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "./popUp";
 
 import "./styling/aftercare.css";
@@ -83,7 +83,7 @@ export default function Aftercare() {
   );
 
   return (
-    <article id="afterCare">
+    <main id="afterCare">
       <h1 id="afterHeader">Aftercare</h1>
 
       <h3 id="afterTagline">
@@ -91,20 +91,20 @@ export default function Aftercare() {
       </h3>
       <div className="careContainer">
         <h2 className="instructions">Drylock Bandage Instructions </h2>
-        <button onClick={() => openPopUp(dryLockInstructions)}>
-          <IoAddCircleOutline />
-        </button>
+        <div id="iconButton" onClick={() => openPopUp(dryLockInstructions)}>
+          <FaPlus />
+        </div>
       </div>
       <div className="careContainerBottom">
         <h2 className="instructions">Tegaderm Bandage Instructions </h2>
-        <button onClick={() => openPopUp(tegadermInstructions)}>
-          <IoAddCircleOutline />
-        </button>
+        <div id="iconButton" onClick={() => openPopUp(tegadermInstructions)}>
+          <FaPlus />
+        </div>
       </div>
 
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
-    </article>
+    </main>
   );
 }

@@ -14,21 +14,27 @@
   margin-bottom: 2rem;
 }
 
+#headerFaqs {
+  font-weight: bold;
+}
 #faqTagline {
   color: black;
-  font-weight: 300;
+  font-weight: normal;
   margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: solid 1px var(--wildGreen);
 }
 
 .faqContainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-bottom: 1rem;
   margin-top: 1rem;
 }
 
 .faq {
-  font-weight: 700;
+  font-weight: normal;
   margin-right: 1rem;
   border-bottom: solid 1px var(--wildGreen);
 }

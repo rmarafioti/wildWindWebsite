@@ -31,7 +31,7 @@ export default function Footer() {
           <FaFacebookSquare />
         </a>
       </div>
-      <p id="footerTag">copyright 2024 Marf inc.</p>
+      <h4 id="footerTag">copyright 2024 Marf inc.</h4>
     </footer>
   );
 }

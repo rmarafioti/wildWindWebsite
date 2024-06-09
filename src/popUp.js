@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SlClose } from "react-icons/sl";
+import { IoClose } from "react-icons/io5";
 
 function usePopUp() {
   const [popUp, setPopUp] = useState(false);
@@ -34,9 +34,9 @@ const PopUp = ({ isOpen, children, closePopUp }) => {
     <div className="popUpOverlay">
       <div className="popUpContent" onClick={(e) => e.stopPropagation()}>
         <div className="buttonSection">
-          <button onClick={handleClose}>
-            <SlClose />
-          </button>
+          <div id="popUpButton" onClick={handleClose}>
+            <IoClose />
+          </div>
         </div>
         {children}
       </div>

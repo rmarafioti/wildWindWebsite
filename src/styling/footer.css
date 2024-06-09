@@ -82,7 +82,6 @@ li {
 #footerTag,
 #logoTag {
   color: var(--wildGreen);
-  font-weight: 375;
   margin-bottom: 1rem;
 }
 

@@ -154,7 +154,7 @@ nav {
   padding-bottom: 8px;
   align-items: center;
   font-size: 16px;
-  transition: background-color 0.8s, border-radius 0.3s, border 0.3s; /* Add transitions for the properties you want to animate */
+  transition: background-color 0.8s, border 0.3s; /* Add transitions for the properties you want to animate */
 }
 
 .navItem a:link,
