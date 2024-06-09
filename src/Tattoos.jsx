@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import { tattooPhotos } from "./tattooPhotos";
 
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClick = () => {
+  /*const handleClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % tattooPhotos.length);
+  };*/
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % tattooPhotos.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prev) => (prev - 1 + tattooPhotos.length) % tattooPhotos.length
+    );
   };
 
   const currentImageObj =
@@ -46,9 +57,17 @@ export default function Tattoos() {
             src={imageurl}
             alt="tattoo portfolio images"
           />
-          <div id="tattooButton" onClick={handleClick}>
+          <BsArrowLeftCircleFill
+            className="arrow arrow-left"
+            onClick={handlePrev}
+          />
+          {/*<div id="tattooButton" onClick={handleClick}>
             browse tattoos
-          </div>
+          </div>*/}
+          <BsArrowRightCircleFill
+            className="arrow arrow-right"
+            onClick={handleNext}
+          />
         </div>
         <ul id="tattooGallery">
           {tattooPhotos.map((tattoo) => (
