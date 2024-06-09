@@ -1,5 +1,5 @@
 import React from "react";
-import { IoAddCircleOutline } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "./popUp";
 
 import {
@@ -29,25 +29,25 @@ export default function Faq() {
         <div className="faqContainer">
           <h2 className="faq">Does Wild Wind Tattoo accept walk-ins?</h2>
           <button onClick={() => openPopUp(questionOne)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
           <h2 className="faq">What is the shop minimum?</h2>
           <button onClick={() => openPopUp(questionTwo)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
           <h2 className="faq">Is the shop cash only?</h2>
           <button onClick={() => openPopUp(questionThree)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
           <h2 className="faq">Do you give price quotes via email or phone?</h2>
           <button onClick={() => openPopUp(questionFour)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
@@ -55,13 +55,13 @@ export default function Faq() {
             What is the wait time for getting an appointment?
           </h2>
           <button onClick={() => openPopUp(questionFive)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
           <h2 className="faq">How can I make an appointment?</h2>
           <button onClick={() => openPopUp(questionSix)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
@@ -69,7 +69,7 @@ export default function Faq() {
             Do I have to leave a deposit to make an appointment?"
           </h2>
           <button onClick={() => openPopUp(questionSeven)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
@@ -77,13 +77,13 @@ export default function Faq() {
             Can I see my tattoo design before my appointment?
           </h2>
           <button onClick={() => openPopUp(questionEight)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
         <div className="faqContainer">
           <h2 className="faq">What is your cancellation policy?</h2>
           <button onClick={() => openPopUp(questionNine)}>
-            <IoAddCircleOutline />
+            <FaPlus />
           </button>
         </div>
       </section>
