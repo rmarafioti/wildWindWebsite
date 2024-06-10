@@ -1,4 +1,4 @@
-export const aftercareInstructions = [
+export const aftercare = [
   {
     id: 1,
     title: "Drylock Bandage Instructions",
