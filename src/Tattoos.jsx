@@ -3,6 +3,8 @@ import { FaInstagram } from "react-icons/fa";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import { tattooPhotos } from "./tattooPhotos";
 
+import "./styling/tattoo.css";
+
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
