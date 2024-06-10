@@ -5,7 +5,18 @@ function usePopUp() {
   const [popUp, setPopUp] = useState(false);
   const [popUpContent, setPopUpContent] = useState(null);
 
-  const openPopUp = (content) => {
+  const openAftercarePopUp = (content) => {
+    setPopUpContent(content);
+    setPopUp(true);
+  };
+
+  const openFaqPopUp = (id, question, answer) => {
+    const content = (
+      <div>
+        <p className="popQuestion">{question}</p>
+        <p className="popAnswer">{answer}</p>
+      </div>
+    );
     setPopUpContent(content);
     setPopUp(true);
   };
@@ -18,7 +29,8 @@ function usePopUp() {
   return {
     popUp,
     popUpContent,
-    openPopUp,
+    openAftercarePopUp,
+    openFaqPopUp,
     closePopUp,
   };
 }

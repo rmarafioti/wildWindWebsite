@@ -5,7 +5,7 @@ import { PopUp, usePopUp } from "./popUp";
 import "./styling/aftercare.css";
 
 export default function Aftercare() {
-  const { popUp, popUpContent, openPopUp, closePopUp } = usePopUp();
+  const { popUp, popUpContent, openAftercarePopUp, closePopUp } = usePopUp();
 
   const dryLockInstructions = (
     <>
@@ -91,13 +91,19 @@ export default function Aftercare() {
       </h3>
       <div className="careContainer">
         <h2 className="instructions">Drylock Bandage Instructions </h2>
-        <div id="iconButton" onClick={() => openPopUp(dryLockInstructions)}>
+        <div
+          id="iconButton"
+          onClick={() => openAftercarePopUp(dryLockInstructions)}
+        >
           <FaPlus />
         </div>
       </div>
       <div className="careContainerBottom">
         <h2 className="instructions">Tegaderm Bandage Instructions </h2>
-        <div id="iconButton" onClick={() => openPopUp(tegadermInstructions)}>
+        <div
+          id="iconButton"
+          onClick={() => openAftercarePopUp(tegadermInstructions)}
+        >
           <FaPlus />
         </div>
       </div>
