@@ -5,7 +5,34 @@ function usePopUp() {
   const [popUp, setPopUp] = useState(false);
   const [popUpContent, setPopUpContent] = useState(null);
 
-  const openPopUp = (content) => {
+  const openAftercarePopUp = (
+    id,
+    headerOne,
+    instructionsOne,
+    headerTwo,
+    instructionsTwo,
+    instructionsTag
+  ) => {
+    const content = (
+      <div>
+        <h3 className="popHeader">{headerOne}</h3>
+        <p className="popInstructions">{instructionsOne}</p>
+        <h3 className="popHeader">{headerTwo}</h3>
+        <p className="popInstructions">{instructionsTwo}</p>
+        <p className="instructionsTag">{instructionsTag}</p>
+      </div>
+    );
+    setPopUpContent(content);
+    setPopUp(true);
+  };
+
+  const openFaqPopUp = (id, question, answer) => {
+    const content = (
+      <div>
+        <p className="popQuestion">{question}</p>
+        <p className="popAnswer">{answer}</p>
+      </div>
+    );
     setPopUpContent(content);
     setPopUp(true);
   };
@@ -18,7 +45,8 @@ function usePopUp() {
   return {
     popUp,
     popUpContent,
-    openPopUp,
+    openAftercarePopUp,
+    openFaqPopUp,
     closePopUp,
   };
 }
