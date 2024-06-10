@@ -53,7 +53,8 @@ button {
   transition: background-color 0.5s;
 }
 
-#iconButton, #popUpButton {
+#iconButton,
+#popUpButton {
   color: var(--wildGreen);
   display: flex;
   border-radius: 5px;
@@ -72,7 +73,6 @@ button {
 button:hover {
   background-color: rgba(101, 193, 220, 0.2);
 }
-
 
 #checkout {
   width: 100vw;
@@ -96,16 +96,17 @@ button:hover {
 }
 
 #artistHeader {
- font-weight: bold;
+  font-weight: bold;
   margin-right: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #artistIgIcon {
   font-size: 30px;
 }
 
-#artistIgIcon a:visited, #artistIgIcon a:link {
+#artistIgIcon a:visited,
+#artistIgIcon a:link {
   color: var(--wildGreen);
 }
 
@@ -129,26 +130,26 @@ button:hover {
 
 #tattooSlide {
 display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: end;
-
+  flex-direction: row;
+  justify-content: start;
+ 
 }
 
 .tattoo {
   height: 500px;
 }
 
-#tattooButton {
-  margin-top: .5rem;
-  padding: 0.1rem;
-  padding-bottom: 0.2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  color: var(--wildGreen);
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid var(--wildGreen);
+#arrowSection {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -161,10 +162,19 @@ align-items: end;
 }
 
 #tattooGallery img {
-  margin: 1rem;
+  margin: .5rem;
   margin-top: 0;
   max-width: 100%;
   height: 120px;
+}
+
+.indicator {
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.indicator:hover {
+  border: 2px solid var(--wildGreen);
 }
 
 /* home */
@@ -182,7 +192,3 @@ align-items: end;
 #headerHome {
   font-weight: bold;
 }
-
-
-
-

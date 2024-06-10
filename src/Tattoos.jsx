@@ -6,10 +6,6 @@ import { tattooPhotos } from "./tattooPhotos";
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  /*const handleClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % tattooPhotos.length);
-  };*/
-
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % tattooPhotos.length);
   };
@@ -27,10 +23,17 @@ export default function Tattoos() {
     ? new URL(currentImageObj.image, import.meta.url).href
     : "";
 
-  function TattooCard({ tattoo }) {
+  function TattooCard({ tattoo, onClick }) {
     // Construct the full URL for the image using the URL constructor
     const imageUrl = new URL(tattoo.image, import.meta.url).href;
-    return <img src={imageUrl} alt="Tattoo" />;
+    return (
+      <img
+        className="indicator"
+        src={imageUrl}
+        alt="Tattoo"
+        onClick={() => onClick(tattooPhotos.indexOf(tattoo))}
+      />
+    );
   }
 
   return (
@@ -52,26 +55,25 @@ export default function Tattoos() {
       </p>
       <section id="tattooSection">
         <div id="tattooSlide">
+          <div id="arrowSection">
+            <BsArrowLeftCircleFill className="arrow" onClick={handlePrev} />
+          </div>
           <img
             className="tattoo"
             src={imageurl}
             alt="tattoo portfolio images"
           />
-          <BsArrowLeftCircleFill
-            className="arrow arrow-left"
-            onClick={handlePrev}
-          />
-          {/*<div id="tattooButton" onClick={handleClick}>
-            browse tattoos
-          </div>*/}
-          <BsArrowRightCircleFill
-            className="arrow arrow-right"
-            onClick={handleNext}
-          />
+          <div id="arrowSection">
+            <BsArrowRightCircleFill className="arrow" onClick={handleNext} />
+          </div>
         </div>
         <ul id="tattooGallery">
-          {tattooPhotos.map((tattoo) => (
-            <TattooCard key={tattoo.id} tattoo={tattoo} />
+          {tattooPhotos.map((tattoo, index) => (
+            <TattooCard
+              key={index}
+              tattoo={tattoo}
+              onClick={() => setCurrentIndex(index)}
+            />
           ))}
         </ul>
       </section>
