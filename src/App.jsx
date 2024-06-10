@@ -9,7 +9,7 @@ import Contact from "./Contact";
 import Shop from "./Shop";
 import Tattoos from "./Tattoos";
 import GiftCards from "./GiftCards";
-import Aftercare from "./AfterCare";
+import Care from "./Care";
 import Faq from "./Faq";
 import Return from "./Return";
 import CheckoutForm from "./CheckoutForm";
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/shop" element={<Shop />} />
           <Route path="/tattoos" element={<Tattoos />} />
           <Route path="/giftcards" element={<GiftCards />} />
-          <Route path="/aftercare" element={<Aftercare />} />
+          <Route path="/aftercare" element={<Care />} />
           <Route path="/faqs" element={<Faq />} />
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/return" element={<Return />} />
