@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
@@ -6,6 +6,7 @@ import "./styling/contact.css";
 
 export default function Contact() {
   const form = useRef();
+  const [messageStatus, setMessageStatus] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,10 +18,15 @@ export default function Contact() {
       .then(
         () => {
           console.log("MESSAGE SENT!");
-          e.target.reset();
+          setMessageStatus("success"); // Set state to indicate success
+
+          /*e.target.reset();*/
+
+          form.current.reset(); // Directly reset the form
         },
         (error) => {
           console.log("MESSAGE FAILED", error.text);
+          setMessageStatus("error"); // Set state to indicate error
         }
       );
   };
@@ -50,6 +56,10 @@ export default function Contact() {
         <textarea id="messageForm" name="message" placeholder="" />
         <p id="required">*Required</p>
         <input id="formSubmit" type="submit" value="Send" />
+        {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
+        {messageStatus === "error" && (
+          <p id="errorMessage">Message failed to send. Please try again.</p>
+        )}
       </form>
       <section id="contactInfoContainer">
         <p className="contactInfo">
