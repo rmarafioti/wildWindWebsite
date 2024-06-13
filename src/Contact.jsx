@@ -42,7 +42,13 @@ export default function Contact() {
           <div id="reviewFaq">review our faqs first</div>
         </Link>
       </section>
-      <form id="contactForm" ref={form} onSubmit={sendEmail}>
+      <form
+        id="contactForm"
+        ref={form}
+        onSubmit={sendEmail}
+        encType="multipart/form-data"
+        method="post"
+      >
         <h3>Contact Form</h3>
         <p className="headerTagline">
           Please specify size & location of your desired tattoo as well as days
@@ -52,8 +58,11 @@ export default function Contact() {
         <input className="form" type="text" name="user_name" />
         <label className="label">Email*</label>
         <input className="form" type="email" name="user_email" />
+        <label>Attach file:</label>
+        <input type="file" name="my_file" />
         <label className="label">Message*</label>
         <textarea id="messageForm" name="message" placeholder="" />
+
         <p id="required">*Required</p>
         <input id="formSubmit" type="submit" value="Send" />
         {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
