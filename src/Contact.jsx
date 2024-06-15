@@ -58,6 +58,24 @@ export default function Contact() {
         <input className="form" type="text" name="user_name" />
         <label className="label">Email*</label>
         <input className="form" type="email" name="user_email" />
+        <label className="label">Phone</label>
+        <input className="form" type="text" name="user_phone" />
+        <label className="label">Size and location of your tattoo</label>
+        <input
+          className="form"
+          type="text"
+          name="user_specifics"
+          placeholder="Ex. palm size on my right bicep"
+        />
+        <label className="label">
+          Days and times you are availble to get tattooed
+        </label>
+        <input
+          className="form"
+          type="text"
+          name="user_times"
+          placeholder="Ex. weekends after 2pm work best for me"
+        />
         <label>Attach file:</label>
         <input type="file" name="my_file" />
         <label className="label">Message*</label>
