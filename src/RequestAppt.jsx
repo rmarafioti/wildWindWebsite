@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Form from "./Form";
 
+import "./styling/contact.css";
+
 export default function RequestAppt() {
   return (
     <main id="contact">

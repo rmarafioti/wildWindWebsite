@@ -14,10 +14,12 @@ export default function Contact() {
       </section>
       <section>
         <Link className="contactLink" to="/requestappt">
-          <h2 className="contactButtons">Request an appointment</h2>
+          <h3 className="contactButtons">Request an appointment</h3>
         </Link>
         <Link className="contactLink">
-          <h2 className="contactButtons">Check today's availability</h2>
+          <h3 className="contactButtons" id="contactButtonBottom">
+            Check today's availability
+          </h3>
         </Link>
       </section>
       <section id="contactInfoContainer">

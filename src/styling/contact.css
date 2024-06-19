@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #header {
@@ -27,29 +27,8 @@
 .headerTagline {
   color: black;
   font-weight: normal;
-  margin-bottom: 0.5rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--wildGreen);
-}
-
-#reviewLink {
-font-size: 20px;
-  color: black;
-  text-decoration: none;
-  font-weight: bolder;
-  padding: .2rem;
-}
-
-#reviewFaq {
-  padding: 0.1rem;
-  padding-bottom: 0.2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  text-decoration: none;
-  color: var(--wildGreen);
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid var(--wildGreen);
 }
 
 .contactLink {
@@ -58,6 +37,7 @@ font-size: 20px;
 
 .contactButtons {
   padding: 0.1rem;
+  text-align: center;
   padding-bottom: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -65,8 +45,11 @@ font-size: 20px;
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
-  margin: 1rem;
-  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#contactButtonBottom {
+  margin-bottom: 2rem;
 }
 
 #formHeader {
@@ -75,6 +58,7 @@ font-size: 20px;
 
 #contactInfoContainer {
   margin-bottom: 2rem;
+  border-top: 1px solid var(--wildGreen);
 }
 
 .contactInfo {
@@ -103,11 +87,13 @@ font-size: 20px;
 #hours {
   display: flex;
   flex-direction: column;
+
+
 }
 
 .times {
   color: black;
-  margin: 1rem;
+ 
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -119,4 +105,14 @@ font-size: 20px;
 #bold {
   font-weight: bold;
   border-bottom: 1px solid var(--wildGreen);
+}
+
+/* RequestAppt */
+
+#reviewLink {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 0.2rem;
 }
