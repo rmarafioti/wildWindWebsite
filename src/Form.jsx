@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import "./styling/form.css";
+
 export default function Form() {
   const form = useRef();
   const [messageStatus, setMessageStatus] = useState(null);
@@ -34,14 +36,9 @@ export default function Form() {
       encType="multipart/form-data"
       method="post"
     >
-      <h3>Contact Form</h3>
-      <p className="headerTagline">
-        Please specify size & location of your desired tattoo as well as days of
-        the week you are available to get tattooed in your message.
-      </p>
-      <label className="label">Name*</label>
+      <label className="label">Name</label>
       <input className="form" type="text" name="user_name" />
-      <label className="label">Email*</label>
+      <label className="label">Email</label>
       <input className="form" type="email" name="user_email" />
       <label className="label">Phone</label>
       <input className="form" type="text" name="user_phone" />
@@ -62,11 +59,12 @@ export default function Form() {
         placeholder="Ex. weekends after 2pm work best for me"
       />
       <label>Attach file:</label>
-      <input type="file" name="my_file" />
-      <label className="label">Message*</label>
+      <input className="form" id="file" type="file" name="my_file" />
+      <label className="label">Message</label>
       <textarea id="messageForm" name="message" placeholder="" />
-
-      <p id="required">*Required</p>
+      <p>
+        Make sure all fields have been filled out before you send your request
+      </p>
       <input id="formSubmit" type="submit" value="Send" />
       {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
       {messageStatus === "error" && (

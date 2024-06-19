@@ -1,0 +1,51 @@
+* {
+  --wildBlue: rgb(101, 193, 220);
+  --wildBackground: rgb(226, 209, 189);
+  --wildGreen: rgb(124, 155, 63);
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.label {
+  color: var(--wildGreen);
+}
+.form,
+#messageForm,
+#formSubmit {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+#file {
+  border: none;
+  padding: 0;
+  padding-top: 0.25rem;
+}
+
+#messageForm {
+  height: 100px;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+#required {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+#formSubmit {
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--wildBlue);
+  color: white;
+  height: 28px;
+  cursor: pointer;
+}
