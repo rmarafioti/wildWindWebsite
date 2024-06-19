@@ -42,15 +42,15 @@ export default function Navbar() {
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
           <li className="navItem">
-            <NavLink className="navContainer" to="/tattoos">
-              <IoSkullOutline className="linkIcon" />
-              <h4 className="link">TATTOOS</h4>
-            </NavLink>
-          </li>
-          <li className="navItem">
             <NavLink className="navContainer" to="/shop">
               <GoBook className="linkIcon" />
               <h4 className="link">ABOUT US</h4>
+            </NavLink>
+          </li>
+          <li className="navItem">
+            <NavLink className="navContainer" to="/tattoos">
+              <IoSkullOutline className="linkIcon" />
+              <h4 className="link">TATTOOS</h4>
             </NavLink>
           </li>
           <li className="navItem">

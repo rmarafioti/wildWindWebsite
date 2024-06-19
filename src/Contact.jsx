@@ -1,35 +1,9 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 
 import "./styling/contact.css";
 
 export default function Contact() {
-  const form = useRef();
-  const [messageStatus, setMessageStatus] = useState(null);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm("service_5she545", "template_rblhmku", form.current, {
-        publicKey: "N8iJs0OwqbPvxYuRo",
-      })
-      .then(
-        () => {
-          console.log("MESSAGE SENT!");
-          setMessageStatus("success"); // Set state to indicate success
-
-          /*e.target.reset();*/
-
-          form.current.reset(); // Directly reset the form
-        },
-        (error) => {
-          console.log("MESSAGE FAILED", error.text);
-          setMessageStatus("error"); // Set state to indicate error
-        }
-      );
-  };
   return (
     <main id="contact">
       <h1 id="header">Contact Us</h1>
@@ -37,57 +11,17 @@ export default function Contact() {
         <h3 className="headerTagline">
           Reach out to us with your questions and inquiries
         </h3>
-
-        <Link id="reviewLink" to="/faqs">
-          <div id="reviewFaq">review our faqs first</div>
+      </section>
+      <section>
+        <Link className="contactLink" to="/requestappt">
+          <h3 className="contactButtons">Request an appointment</h3>
+        </Link>
+        <Link className="contactLink">
+          <h3 className="contactButtons" id="contactButtonBottom">
+            Check today's availability
+          </h3>
         </Link>
       </section>
-      <form
-        id="contactForm"
-        ref={form}
-        onSubmit={sendEmail}
-        encType="multipart/form-data"
-        method="post"
-      >
-        <h3>Contact Form</h3>
-        <p className="headerTagline">
-          Please specify size & location of your desired tattoo as well as days
-          of the week you are available to get tattooed in your message.
-        </p>
-        <label className="label">Name*</label>
-        <input className="form" type="text" name="user_name" />
-        <label className="label">Email*</label>
-        <input className="form" type="email" name="user_email" />
-        <label className="label">Phone</label>
-        <input className="form" type="text" name="user_phone" />
-        <label className="label">Size and location of your tattoo</label>
-        <input
-          className="form"
-          type="text"
-          name="user_specifics"
-          placeholder="Ex. palm size on my right bicep"
-        />
-        <label className="label">
-          Days and times you are availble to get tattooed
-        </label>
-        <input
-          className="form"
-          type="text"
-          name="user_times"
-          placeholder="Ex. weekends after 2pm work best for me"
-        />
-        <label>Attach file:</label>
-        <input type="file" name="my_file" />
-        <label className="label">Message*</label>
-        <textarea id="messageForm" name="message" placeholder="" />
-
-        <p id="required">*Required</p>
-        <input id="formSubmit" type="submit" value="Send" />
-        {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
-        {messageStatus === "error" && (
-          <p id="errorMessage">Message failed to send. Please try again.</p>
-        )}
-      </form>
       <section id="contactInfoContainer">
         <p className="contactInfo">
           ADDRESS:
@@ -96,6 +30,19 @@ export default function Contact() {
             1452 N. Western Ave. Chicago, IL 60622
           </a>
         </p>
+        <section id="hoursContainer">
+          <p className="contactInfo" id="hour">
+            HOURS:{" "}
+          </p>
+          <div id="hours">
+            <p className="times" id="timesTop">
+              <b id="bold">Friday - Monday:</b> 12 pm - 8 pm
+            </p>
+            <p className="times">
+              <b id="bold">Tuesday:</b> 12 pm - 4 pm
+            </p>
+          </div>
+        </section>
         <p className="contactInfo">
           PHONE:<a href="tel:+7732272027"> 773.227.2027</a>
         </p>

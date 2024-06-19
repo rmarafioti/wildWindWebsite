@@ -6,6 +6,7 @@ import Footer from "./Footer";
 /*import Root from "./Root";*/
 import Home from "./Home";
 import Contact from "./Contact";
+import RequestAppt from "./RequestAppt";
 import Shop from "./Shop";
 import Tattoos from "./Tattoos";
 import GiftCards from "./GiftCards";
@@ -23,6 +24,7 @@ const App = () => {
           {/*<Route path="/" element={<Root />} />*/}
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/requestappt" element={<RequestAppt />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/tattoos" element={<Tattoos />} />
           <Route path="/giftcards" element={<GiftCards />} />
