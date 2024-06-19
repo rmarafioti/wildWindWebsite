@@ -32,6 +32,14 @@
   padding-bottom: 0.5rem;
 }
 
+#reviewLink {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 0.2rem;
+}
+
 .contactLink {
   text-decoration: none;
 }
@@ -108,10 +116,16 @@
 
 /* RequestAppt */
 
-#reviewLink {
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-  font-weight: bolder;
-  padding: 0.2rem;
+#requestContact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#requestHeader {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--wildGreen);
 }
