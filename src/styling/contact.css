@@ -46,6 +46,23 @@
   border: 1px solid var(--wildGreen);
 }
 
+.contactLink {
+  text-decoration: none;
+}
+
+.contactButtons {
+  padding: 0.1rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
+  margin: 1rem;
+  margin-top: 0;
+}
+
 #formHeader {
   margin-bottom: 0rem;
 }
@@ -135,6 +152,6 @@
 
 #bold {
   font-weight: bold;
-  text-decoration: underline;
+  border-bottom: 1px solid var(--wildGreen);
 }
 

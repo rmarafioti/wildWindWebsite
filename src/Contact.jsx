@@ -37,9 +37,16 @@ export default function Contact() {
         <h3 className="headerTagline">
           Reach out to us with your questions and inquiries
         </h3>
-
-        <Link id="reviewLink" to="/faqs">
+        {/*<Link id="reviewLink" to="/faqs">
           <div id="reviewFaq">review our faqs first</div>
+        </Link>*/}
+      </section>
+      <section>
+        <Link className="contactLink">
+          <h2 className="contactButtons">Request an appointment</h2>
+        </Link>
+        <Link className="contactLink">
+          <h2 className="contactButtons">Check today's availability</h2>
         </Link>
       </section>
       {/*<form
