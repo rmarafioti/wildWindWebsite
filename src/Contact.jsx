@@ -9,8 +9,16 @@ export default function Contact() {
       <h1 id="header">Contact Us</h1>
       <section id="contactHeader">
         <h3 className="headerTagline">
-          Reach out to us with your questions and inquiries
+          Reach out to request an appointment or inquire about day of
+          availability
         </h3>
+        <h4 className="headerTaglineTwo">
+          For general questions please review our{" "}
+          <Link id="reviewLink" to="/faqs">
+            FAQs
+          </Link>{" "}
+          first
+        </h4>
       </section>
       <section>
         <Link className="contactLink" to="/requestappt">
