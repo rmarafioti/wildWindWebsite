@@ -8,7 +8,6 @@
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -107,17 +106,35 @@
   border-bottom: 1px solid var(--wildGreen);
 }
 
-#contactIcons {
+#hoursContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
-.icon a:link,
-.icon a:visited {
-  color: var(--wildGreen);
-  font-size: 40px;
+#hour {
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
+
+#hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.times {
+  color: black;
+  margin: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#timesTop {
+  margin-bottom: .5rem;
+}
+
+#bold {
+  font-weight: bold;
+  text-decoration: underline;
+}
+

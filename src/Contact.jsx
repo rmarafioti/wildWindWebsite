@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import "./styling/contact.css";
 
 export default function Contact() {
-  const form = useRef();
+  /*const form = useRef();
   const [messageStatus, setMessageStatus] = useState(null);
 
   const sendEmail = (e) => {
@@ -20,7 +20,7 @@ export default function Contact() {
           console.log("MESSAGE SENT!");
           setMessageStatus("success"); // Set state to indicate success
 
-          /*e.target.reset();*/
+       
 
           form.current.reset(); // Directly reset the form
         },
@@ -29,7 +29,7 @@ export default function Contact() {
           setMessageStatus("error"); // Set state to indicate error
         }
       );
-  };
+  };*/
   return (
     <main id="contact">
       <h1 id="header">Contact Us</h1>
@@ -42,7 +42,7 @@ export default function Contact() {
           <div id="reviewFaq">review our faqs first</div>
         </Link>
       </section>
-      <form
+      {/*<form
         id="contactForm"
         ref={form}
         onSubmit={sendEmail}
@@ -87,7 +87,7 @@ export default function Contact() {
         {messageStatus === "error" && (
           <p id="errorMessage">Message failed to send. Please try again.</p>
         )}
-      </form>
+      </form>*/}
       <section id="contactInfoContainer">
         <p className="contactInfo">
           ADDRESS:
@@ -96,6 +96,19 @@ export default function Contact() {
             1452 N. Western Ave. Chicago, IL 60622
           </a>
         </p>
+        <section id="hoursContainer">
+          <p className="contactInfo" id="hour">
+            HOURS:{" "}
+          </p>
+          <div id="hours">
+            <p className="times" id="timesTop">
+              <b id="bold">Friday - Monday:</b> 12 pm - 8 pm
+            </p>
+            <p className="times">
+              <b id="bold">Tuesday:</b> 12 pm - 4 pm
+            </p>
+          </div>
+        </section>
         <p className="contactInfo">
           PHONE:<a href="tel:+7732272027"> 773.227.2027</a>
         </p>
