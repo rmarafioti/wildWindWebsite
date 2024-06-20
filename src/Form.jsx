@@ -6,6 +6,7 @@ import "./styling/form.css";
 export default function Form() {
   const form = useRef();
   const [messageStatus, setMessageStatus] = useState(null);
+  const [validationError, setValidationError] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
@@ -22,6 +23,7 @@ export default function Form() {
       ...formValues,
       [name]: files ? files[0] : value,
     });
+    setValidationError(false); // Reset validation error on input change
   };
 
   const isFormValid = () => {
@@ -40,7 +42,7 @@ export default function Form() {
     e.preventDefault();
 
     if (!isFormValid()) {
-      setMessageStatus("error");
+      setValidationError(true);
       return;
     }
 
@@ -52,7 +54,7 @@ export default function Form() {
         () => {
           console.log("MESSAGE SENT!");
           setMessageStatus("success"); // Set state to indicate success
-
+          setValidationError(false);
           form.current.reset(); // Directly reset the form
           setFormValues({
             user_name: "",
@@ -149,6 +151,9 @@ export default function Form() {
         disabled-={!isFormValid()}
       />
       {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
+      {validationError && (
+        <p id="validationError">Please fill out all required fields.</p>
+      )}
       {messageStatus === "error" && (
         <p id="errorMessage">Message failed to send. Please try again.</p>
       )}
