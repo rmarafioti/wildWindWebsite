@@ -12,6 +12,8 @@ export default function Form() {
   const [fileSizeError, setFileSizeError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSent, setIsSent] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
@@ -21,6 +23,8 @@ export default function Form() {
     my_file: null,
     message: "",
   });
+
+  let resetSentStateTimeout;
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -32,6 +36,8 @@ export default function Form() {
     setFileSizeError(false); // Reset file size error on input change
     setEmailError(false); // Reset email error on input change
     setPhoneError(false); // Reset phone error on input change
+    setIsLoading(false);
+    setIsSent(false);
   };
 
   const isFormValid = () => {
@@ -54,6 +60,11 @@ export default function Form() {
   const isValidPhone = (phone) => {
     const phoneDigits = phone.replace(/\D/g, ""); // Remove all non-digit characters
     return phoneDigits.length === 10;
+  };
+
+  const resetSentState = () => {
+    setIsSent(false);
+    setMessageStatus(null);
   };
 
   const sendEmail = (e) => {
@@ -80,6 +91,8 @@ export default function Form() {
       return;
     }
 
+    setIsLoading(true);
+
     emailjs
       .sendForm("service_5she545", "template_rblhmku", form.current, {
         publicKey: "N8iJs0OwqbPvxYuRo",
@@ -88,6 +101,8 @@ export default function Form() {
         () => {
           console.log("MESSAGE SENT!");
           setMessageStatus("success");
+          setIsLoading(false);
+          setIsSent(true);
           setValidationError(false);
           setEmailError(false);
           setPhoneError(false);
@@ -102,6 +117,8 @@ export default function Form() {
             my_file: null,
             message: "",
           });
+
+          resetSentStateTimeout = setTimeout(resetSentState, 2000);
         },
         (error) => {
           console.log("MESSAGE FAILED", error.text);
@@ -114,6 +131,11 @@ export default function Form() {
       );
   };
 
+  // Clear timeout if the user interacts with the form before it expires
+  const handleFocus = () => {
+    clearTimeout(resetSentStateTimeout);
+  };
+
   return (
     <form
       id="contactForm"
@@ -121,6 +143,7 @@ export default function Form() {
       onSubmit={sendEmail}
       encType="multipart/form-data"
       method="post"
+      onFocus={handleFocus}
     >
       <label className="label">Name*</label>
       <input
@@ -191,10 +214,15 @@ export default function Form() {
       <p>
         *Required fields must be filled out in order for your request to be sent
       </p>
-      <input id="formSubmit" type="submit" value="Send" disabled-={"true"} />
+      <input
+        id="formSubmit"
+        type="submit"
+        value={isLoading ? "Sending..." : isSent ? "Sent" : "Send"}
+        disabled-={"true" || isLoading || isSent}
+      />
       {messageStatus === "success" && (
         <p id="messageSent">
-          Message Sent! <Link to="/">Return Home</Link>
+          <Link to="/">Return Home</Link>
         </p>
       )}
       {validationError && (
