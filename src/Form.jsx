@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 import "./styling/form.css";
 
@@ -203,7 +204,11 @@ export default function Form() {
         *Required fields must be filled out in order for your request to be sent
       </p>
       <input id="formSubmit" type="submit" value="Send" disabled-={"true"} />
-      {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
+      {messageStatus === "success" && (
+        <p id="messageSent">
+          Message Sent! <Link to="/">Return Home</Link>
+        </p>
+      )}
       {validationError && (
         <p id="validationError">Please fill out all required fields.</p>
       )}
