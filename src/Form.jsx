@@ -7,6 +7,7 @@ export default function Form() {
   const form = useRef();
   const [messageStatus, setMessageStatus] = useState(null);
   const [validationError, setValidationError] = useState(false);
+  const [fileSizeError, setFileSizeError] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
@@ -24,6 +25,7 @@ export default function Form() {
       [name]: files ? files[0] : value,
     });
     setValidationError(false); // Reset validation error on input change
+    setFileSizeError(false);
   };
 
   const isFormValid = () => {
@@ -68,7 +70,11 @@ export default function Form() {
         },
         (error) => {
           console.log("MESSAGE FAILED", error.text);
-          setMessageStatus("error"); // Set state to indicate error
+          if (error.text.includes("Attachments size limit")) {
+            setFileSizeError(true);
+          } else {
+            setMessageStatus("error");
+          }
         }
       );
   };
@@ -153,6 +159,11 @@ export default function Form() {
       {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
       {validationError && (
         <p id="validationError">Please fill out all required fields.</p>
+      )}
+      {fileSizeError && (
+        <p id="fileSizeError">
+          Attachments size limit. The maximum allowed attachments size is 500Kb.
+        </p>
       )}
       {messageStatus === "error" && (
         <p id="errorMessage">Message failed to send. Please try again.</p>
