@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import InputMask from "react-input-mask";
 import { Link } from "react-router-dom";
 
 import "./styling/form.css";
@@ -27,24 +28,10 @@ export default function Form() {
       ...formValues,
       [name]: files ? files[0] : value,
     });
-
-    // Reset specific error state related to the input being changed
-    if (
-      name === "user_name" ||
-      name === "user_specifics" ||
-      name === "user_times"
-    ) {
-      setValidationError(false);
-    }
-    if (name === "user_email") {
-      setEmailError(false);
-    }
-    if (name === "user_phone") {
-      setPhoneError(false);
-    }
-    if (name === "my_file") {
-      setFileSizeError(false);
-    }
+    setValidationError(false); // Reset validation error on input change
+    setFileSizeError(false); // Reset file size error on input change
+    setEmailError(false); // Reset email error on input change
+    setPhoneError(false); // Reset phone error on input change
   };
 
   const isFormValid = () => {
@@ -154,10 +141,11 @@ export default function Form() {
         required
       />
       <label className="label">Phone*</label>
-      <input
+      <InputMask
         className="form"
         type="text"
         name="user_phone"
+        mask="(999) 999-9999"
         value={formValues.user_phone}
         onChange={handleInputChange}
         required
