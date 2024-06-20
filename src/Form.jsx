@@ -8,6 +8,8 @@ export default function Form() {
   const [messageStatus, setMessageStatus] = useState(null);
   const [validationError, setValidationError] = useState(false);
   const [fileSizeError, setFileSizeError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
@@ -24,8 +26,24 @@ export default function Form() {
       ...formValues,
       [name]: files ? files[0] : value,
     });
-    setValidationError(false); // Reset validation error on input change
-    setFileSizeError(false);
+
+    // Reset specific error state related to the input being changed
+    if (
+      name === "user_name" ||
+      name === "user_specifics" ||
+      name === "user_times"
+    ) {
+      setValidationError(false);
+    }
+    if (name === "user_email") {
+      setEmailError(false);
+    }
+    if (name === "user_phone") {
+      setPhoneError(false);
+    }
+    if (name === "my_file") {
+      setFileSizeError(false);
+    }
   };
 
   const isFormValid = () => {
@@ -40,11 +58,37 @@ export default function Form() {
     );
   };
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPhone = (phone) => {
+    const phoneDigits = phone.replace(/\D/g, ""); // Remove all non-digit characters
+    return phoneDigits.length === 10;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
+    let formValid = true;
+
     if (!isFormValid()) {
       setValidationError(true);
+      formValid = false;
+    }
+
+    if (!isValidEmail(formValues.user_email)) {
+      setEmailError(true);
+      formValid = false;
+    }
+
+    if (!isValidPhone(formValues.user_phone)) {
+      setPhoneError(true);
+      formValid = false;
+    }
+
+    if (!formValid) {
       return;
     }
 
@@ -55,9 +99,12 @@ export default function Form() {
       .then(
         () => {
           console.log("MESSAGE SENT!");
-          setMessageStatus("success"); // Set state to indicate success
+          setMessageStatus("success");
           setValidationError(false);
-          form.current.reset(); // Directly reset the form
+          setEmailError(false);
+          setPhoneError(false);
+          setFileSizeError(false);
+          form.current.reset();
           setFormValues({
             user_name: "",
             user_email: "",
@@ -94,6 +141,7 @@ export default function Form() {
         name="user_name"
         value={formValues.user_name}
         onChange={handleInputChange}
+        required
       />
       <label className="label">Email*</label>
       <input
@@ -102,6 +150,7 @@ export default function Form() {
         name="user_email"
         value={formValues.user_email}
         onChange={handleInputChange}
+        required
       />
       <label className="label">Phone*</label>
       <input
@@ -110,6 +159,7 @@ export default function Form() {
         name="user_phone"
         value={formValues.user_phone}
         onChange={handleInputChange}
+        required
       />
       <label className="label">Size and location of your tattoo*</label>
       <input
@@ -119,6 +169,7 @@ export default function Form() {
         value={formValues.user_specifics}
         onChange={handleInputChange}
         placeholder="Ex. palm size on my right bicep"
+        required
       />
       <label className="label">
         Days and times you are available to get tattooed*
@@ -130,6 +181,7 @@ export default function Form() {
         value={formValues.user_times}
         onChange={handleInputChange}
         placeholder="Ex. weekends after 2pm work best for me"
+        required
       />
       <label>Attach file:</label>
       <input
@@ -150,19 +202,16 @@ export default function Form() {
       <p>
         *Required fields must be filled out in order for your request to be sent
       </p>
-      <input
-        id="formSubmit"
-        type="submit"
-        value="Send"
-        disabled-={!isFormValid()}
-      />
+      <input id="formSubmit" type="submit" value="Send" disabled-={"true"} />
       {messageStatus === "success" && <p id="messageSent">Message Sent!</p>}
       {validationError && (
         <p id="validationError">Please fill out all required fields.</p>
       )}
+      {emailError && <p id="emailError">Please enter a valid email address.</p>}
+      {phoneError && <p id="phoneError">Please enter a valid phone number.</p>}
       {fileSizeError && (
         <p id="fileSizeError">
-          Attachments size limit. The maximum allowed attachments size is 500Kb.
+          Attachment file error. The maximum allowed attachments size is 500Kb.
         </p>
       )}
       {messageStatus === "error" && (
