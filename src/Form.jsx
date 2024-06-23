@@ -1,19 +1,19 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import InputMask from "react-input-mask";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./styling/form.css";
 
 export default function Form() {
   const form = useRef();
+  const navigate = useNavigate();
   const [messageStatus, setMessageStatus] = useState(null);
   const [validationError, setValidationError] = useState(false);
   const [fileSizeError, setFileSizeError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  /*const [isSent, setIsSent] = useState(false);*/
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
@@ -23,8 +23,6 @@ export default function Form() {
     my_file: null,
     message: "",
   });
-
-  /*let resetSentStateTimeout;*/
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -37,7 +35,6 @@ export default function Form() {
     setEmailError(false); // Reset email error on input change
     setPhoneError(false); // Reset phone error on input change
     setIsLoading(false);
-    /*setIsSent(false);*/
   };
 
   const isFormValid = () => {
@@ -61,11 +58,6 @@ export default function Form() {
     const phoneDigits = phone.replace(/\D/g, ""); // Remove all non-digit characters
     return phoneDigits.length === 10;
   };
-
-  /*const resetSentState = () => {
-    setIsSent(false);
-    setMessageStatus(null);
-  };*/
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -102,7 +94,6 @@ export default function Form() {
           console.log("MESSAGE SENT!");
           setMessageStatus("success");
           setIsLoading(false);
-          /*setIsSent(true);*/
           setValidationError(false);
           setEmailError(false);
           setPhoneError(false);
@@ -118,7 +109,7 @@ export default function Form() {
             message: "",
           });
 
-          /*resetSentStateTimeout = setTimeout(resetSentState, 2000);*/
+          navigate("/requestsent");
         },
         (error) => {
           console.log("MESSAGE FAILED", error.text);
@@ -130,11 +121,6 @@ export default function Form() {
         }
       );
   };
-
-  // Clear timeout if the user interacts with the form before it expires
-  /*const handleFocus = () => {
-    clearTimeout(resetSentStateTimeout);
-  };*/
 
   return (
     <form
@@ -217,16 +203,10 @@ export default function Form() {
       <input
         id="formSubmit"
         type="submit"
-        value={isLoading ? "Sending..." : /*: isSent ? "Sent" :*/ "Send"}
-        disabled-={"true" || isLoading /*|| isSent*/}
+        value={isLoading ? "Sending..." : "Send"}
+        disabled-={"true" || isLoading}
       />
-      {
-        messageStatus === "success" /*&& (
-        <p id="messageSent">
-          <Link to="/">Return Home</Link>
-        </p>
-      )*/
-      }
+      {messageStatus === "success"}
       {validationError && (
         <p id="validationError">Please fill out all required fields.</p>
       )}

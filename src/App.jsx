@@ -14,6 +14,7 @@ import Care from "./Care";
 import Faq from "./Faq";
 import Return from "./Return";
 import CheckoutForm from "./CheckoutForm";
+import RequestSent from "./RequestSent";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/faqs" element={<Faq />} />
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/return" element={<Return />} />
+          <Route path="/requestsent" element={<RequestSent />} />
         </Routes>
         <Footer />
       </Router>
