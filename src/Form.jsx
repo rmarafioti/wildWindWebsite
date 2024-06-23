@@ -206,7 +206,7 @@ export default function Form() {
       <label className="label">Tattoo size*</label>
       <select
         className="form"
-        name="user_specifics"
+        name="user_size"
         value={formValues.user_specifics}
         onChange={handleInputChange}
         required
@@ -218,20 +218,20 @@ export default function Form() {
           </option>
         ))}
       </select>
-      {validationError.user_specifics && (
+      {validationError.user_size && (
         <p className="error">Please select a tattoo size.</p>
       )}
-      <label className="label">Tattoo Location*</label>
+      <label className="label">Specify your desired tattoo location*</label>
       <input
         className="form"
         type="text"
         name="user_location"
         value={formValues.user_location}
-        placeholder="Specify the desired location of your tattoo"
+        placeholder="Ex. Right arm bicep"
         onChange={handleInputChange}
         required
       />
-      {validationError.user_name && (
+      {validationError.user_location && (
         <p className="error">
           Please enter the desired location of your tattoo.
         </p>
