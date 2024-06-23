@@ -13,7 +13,8 @@ export default function Form() {
     user_name: false,
     user_email: false,
     user_phone: false,
-    user_specifics: false,
+    user_size: false,
+    user_location: false,
     user_times: false,
     my_file: false,
   });
@@ -23,11 +24,20 @@ export default function Form() {
     user_name: "",
     user_email: "",
     user_phone: "",
-    user_specifics: "",
+    user_size: "",
+    user_location: "",
     user_times: "",
     my_file: null,
     message: "",
   });
+
+  const suggestedSizes = [
+    "TINY: I want my tattoo as small as it can be",
+    "SMALL: I want my tattoo around palm size",
+    "MEDIUM: I want my tattoo hand size",
+    "LARGE: I want my tattoo to fill a good portion of the area it is on",
+    "GOING BIG!: I want large scale work, a backpiece, full sleeve, etc",
+  ];
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -52,7 +62,10 @@ export default function Form() {
       case "user_phone":
         isValid = isValidPhone(value);
         break;
-      case "user_specifics":
+      case "user_size":
+        isValid = value.trim() !== "";
+        break;
+      case "user_location":
         isValid = value.trim() !== "";
         break;
       case "user_times":
@@ -76,7 +89,8 @@ export default function Form() {
       !validationError.user_name &&
       !validationError.user_email &&
       !validationError.user_phone &&
-      !validationError.user_specifics &&
+      !validationError.user_size &&
+      !validationError.user_location &&
       !validationError.user_times &&
       !fileSizeError
     );
@@ -114,7 +128,8 @@ export default function Form() {
             user_name: false,
             user_email: false,
             user_phone: false,
-            user_specifics: false,
+            user_size: false,
+            user_location: false,
             user_times: false,
             my_file: false,
           });
@@ -123,7 +138,8 @@ export default function Form() {
             user_name: "",
             user_email: "",
             user_phone: "",
-            user_specifics: "",
+            user_size: "",
+            user_location: "",
             user_times: "",
             my_file: null,
             message: "",
@@ -187,18 +203,38 @@ export default function Form() {
       {validationError.user_phone && (
         <p className="error">Please enter a valid phone number.</p>
       )}
-      <label className="label">Size and location of your tattoo*</label>
-      <input
+      <label className="label">Tattoo size*</label>
+      <select
         className="form"
-        type="text"
         name="user_specifics"
         value={formValues.user_specifics}
         onChange={handleInputChange}
-        placeholder="Ex. palm size on my right bicep"
+        required
+      >
+        <option value="">Select a size</option>
+        {suggestedSizes.map((size, index) => (
+          <option key={index} value={size}>
+            {size}
+          </option>
+        ))}
+      </select>
+      {validationError.user_specifics && (
+        <p className="error">Please select a tattoo size.</p>
+      )}
+      <label className="label">Tattoo Location*</label>
+      <input
+        className="form"
+        type="text"
+        name="user_location"
+        value={formValues.user_location}
+        placeholder="Specify the desired location of your tattoo"
+        onChange={handleInputChange}
         required
       />
-      {validationError.user_specifics && (
-        <p className="error">Please provide specifics of your tattoo.</p>
+      {validationError.user_name && (
+        <p className="error">
+          Please enter the desired location of your tattoo.
+        </p>
       )}
       <label className="label">
         Days and times you are available to get tattooed*
