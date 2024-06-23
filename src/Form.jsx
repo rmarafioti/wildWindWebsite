@@ -1,30 +1,43 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import InputMask from "react-input-mask";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./styling/form.css";
 
 export default function Form() {
   const form = useRef();
+  const navigate = useNavigate();
   const [messageStatus, setMessageStatus] = useState(null);
-  const [validationError, setValidationError] = useState(false);
+  const [validationError, setValidationError] = useState({
+    user_name: false,
+    user_email: false,
+    user_phone: false,
+    user_size: false,
+    user_location: false,
+    user_times: false,
+    my_file: false,
+  });
   const [fileSizeError, setFileSizeError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [phoneError, setPhoneError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isSent, setIsSent] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
     user_phone: "",
-    user_specifics: "",
+    user_size: "",
+    user_location: "",
     user_times: "",
     my_file: null,
     message: "",
   });
 
-  let resetSentStateTimeout;
+  const suggestedSizes = [
+    "TINY: I want my tattoo as small as it can be",
+    "SMALL: I want my tattoo around palm size",
+    "MEDIUM: I want my tattoo hand size",
+    "LARGE: I want my tattoo to fill a good portion of the area it is on",
+    "GOING BIG!: I want large scale work, a backpiece, full sleeve, etc",
+  ];
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -32,23 +45,54 @@ export default function Form() {
       ...formValues,
       [name]: files ? files[0] : value,
     });
-    setValidationError(false); // Reset validation error on input change
+    validateField(name, files ? files[0] : value);
     setFileSizeError(false); // Reset file size error on input change
-    setEmailError(false); // Reset email error on input change
-    setPhoneError(false); // Reset phone error on input change
     setIsLoading(false);
-    setIsSent(false);
+  };
+
+  const validateField = (name, value) => {
+    let isValid = true;
+    switch (name) {
+      case "user_name":
+        isValid = value.trim() !== "";
+        break;
+      case "user_email":
+        isValid = isValidEmail(value);
+        break;
+      case "user_phone":
+        isValid = isValidPhone(value);
+        break;
+      case "user_size":
+        isValid = value.trim() !== "";
+        break;
+      case "user_location":
+        isValid = value.trim() !== "";
+        break;
+      case "user_times":
+        isValid = value.trim() !== "";
+        break;
+      case "my_file":
+        isValid = value && value.size <= 500000; // 500KB limit
+        setFileSizeError(!isValid);
+        break;
+      default:
+        break;
+    }
+    setValidationError((prevErrors) => ({
+      ...prevErrors,
+      [name]: !isValid,
+    }));
   };
 
   const isFormValid = () => {
-    const { user_name, user_email, user_phone, user_specifics, user_times } =
-      formValues;
     return (
-      user_name.trim() !== "" &&
-      user_email.trim() !== "" &&
-      user_phone.trim() !== "" &&
-      user_specifics.trim() !== "" &&
-      user_times.trim() !== ""
+      !validationError.user_name &&
+      !validationError.user_email &&
+      !validationError.user_phone &&
+      !validationError.user_size &&
+      !validationError.user_location &&
+      !validationError.user_times &&
+      !fileSizeError
     );
   };
 
@@ -62,32 +106,10 @@ export default function Form() {
     return phoneDigits.length === 10;
   };
 
-  const resetSentState = () => {
-    setIsSent(false);
-    setMessageStatus(null);
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    let formValid = true;
-
     if (!isFormValid()) {
-      setValidationError(true);
-      formValid = false;
-    }
-
-    if (!isValidEmail(formValues.user_email)) {
-      setEmailError(true);
-      formValid = false;
-    }
-
-    if (!isValidPhone(formValues.user_phone)) {
-      setPhoneError(true);
-      formValid = false;
-    }
-
-    if (!formValid) {
       return;
     }
 
@@ -102,23 +124,28 @@ export default function Form() {
           console.log("MESSAGE SENT!");
           setMessageStatus("success");
           setIsLoading(false);
-          setIsSent(true);
-          setValidationError(false);
-          setEmailError(false);
-          setPhoneError(false);
-          setFileSizeError(false);
+          setValidationError({
+            user_name: false,
+            user_email: false,
+            user_phone: false,
+            user_size: false,
+            user_location: false,
+            user_times: false,
+            my_file: false,
+          });
           form.current.reset();
           setFormValues({
             user_name: "",
             user_email: "",
             user_phone: "",
-            user_specifics: "",
+            user_size: "",
+            user_location: "",
             user_times: "",
             my_file: null,
             message: "",
           });
 
-          resetSentStateTimeout = setTimeout(resetSentState, 2000);
+          navigate("/requestsent");
         },
         (error) => {
           console.log("MESSAGE FAILED", error.text);
@@ -131,11 +158,6 @@ export default function Form() {
       );
   };
 
-  // Clear timeout if the user interacts with the form before it expires
-  const handleFocus = () => {
-    clearTimeout(resetSentStateTimeout);
-  };
-
   return (
     <form
       id="contactForm"
@@ -143,7 +165,6 @@ export default function Form() {
       onSubmit={sendEmail}
       encType="multipart/form-data"
       method="post"
-      onFocus={handleFocus}
     >
       <label className="label">Name*</label>
       <input
@@ -154,6 +175,9 @@ export default function Form() {
         onChange={handleInputChange}
         required
       />
+      {validationError.user_name && (
+        <p className="error">Please enter your name.</p>
+      )}
       <label className="label">Email*</label>
       <input
         className="form"
@@ -163,6 +187,9 @@ export default function Form() {
         onChange={handleInputChange}
         required
       />
+      {validationError.user_email && (
+        <p className="error">Please enter a valid email address.</p>
+      )}
       <label className="label">Phone*</label>
       <InputMask
         className="form"
@@ -173,16 +200,42 @@ export default function Form() {
         onChange={handleInputChange}
         required
       />
-      <label className="label">Size and location of your tattoo*</label>
+      {validationError.user_phone && (
+        <p className="error">Please enter a valid phone number.</p>
+      )}
+      <label className="label">Tattoo size*</label>
+      <select
+        className="form"
+        name="user_size"
+        value={formValues.user_specifics}
+        onChange={handleInputChange}
+        required
+      >
+        <option value="">Select a size</option>
+        {suggestedSizes.map((size, index) => (
+          <option key={index} value={size}>
+            {size}
+          </option>
+        ))}
+      </select>
+      {validationError.user_size && (
+        <p className="error">Please select a tattoo size.</p>
+      )}
+      <label className="label">Specify your desired tattoo location*</label>
       <input
         className="form"
         type="text"
-        name="user_specifics"
-        value={formValues.user_specifics}
+        name="user_location"
+        value={formValues.user_location}
+        placeholder="Ex. Right arm bicep"
         onChange={handleInputChange}
-        placeholder="Ex. palm size on my right bicep"
         required
       />
+      {validationError.user_location && (
+        <p className="error">
+          Please enter the desired location of your tattoo.
+        </p>
+      )}
       <label className="label">
         Days and times you are available to get tattooed*
       </label>
@@ -195,6 +248,9 @@ export default function Form() {
         placeholder="Ex. weekends after 2pm work best for me"
         required
       />
+      {validationError.user_times && (
+        <p className="error">Please provide your availability.</p>
+      )}
       <label>Attach file:</label>
       <input
         className="form"
@@ -203,6 +259,11 @@ export default function Form() {
         name="my_file"
         onChange={handleInputChange}
       />
+      {fileSizeError && (
+        <p className="error">
+          Attachment file error. The maximum allowed attachments size is 500Kb.
+        </p>
+      )}
       <label className="label">Additional information</label>
       <textarea
         id="messageForm"
@@ -211,30 +272,13 @@ export default function Form() {
         onChange={handleInputChange}
         placeholder=""
       />
-      <p>
-        *Required fields must be filled out in order for your request to be sent
-      </p>
+      <p>*Required</p>
       <input
         id="formSubmit"
         type="submit"
-        value={isLoading ? "Sending..." : isSent ? "Sent" : "Send"}
-        disabled-={"true" || isLoading || isSent}
+        value={isLoading ? "Sending..." : "Send"}
+        disabled-={"true" || isLoading || !isFormValid()}
       />
-      {messageStatus === "success" && (
-        <p id="messageSent">
-          <Link to="/">Return Home</Link>
-        </p>
-      )}
-      {validationError && (
-        <p id="validationError">Please fill out all required fields.</p>
-      )}
-      {emailError && <p id="emailError">Please enter a valid email address.</p>}
-      {phoneError && <p id="phoneError">Please enter a valid phone number.</p>}
-      {fileSizeError && (
-        <p id="fileSizeError">
-          Attachment file error. The maximum allowed attachments size is 500Kb.
-        </p>
-      )}
       {messageStatus === "error" && (
         <p id="errorMessage">Message failed to send. Please try again.</p>
       )}
