@@ -6,10 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./styling/form.css";
 
 export default function Form() {
-  const form = useRef();
-  const navigate = useNavigate();
-  const [messageStatus, setMessageStatus] = useState(null);
-  const [validationError, setValidationError] = useState({
+  const inputValidationError = {
     user_name: false,
     user_email: false,
     user_phone: false,
@@ -17,10 +14,9 @@ export default function Form() {
     user_location: false,
     user_times: false,
     my_file: false,
-  });
-  const [fileSizeError, setFileSizeError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [formValues, setFormValues] = useState({
+  };
+
+  const inputForm = {
     user_name: "",
     user_email: "",
     user_phone: "",
@@ -29,7 +25,15 @@ export default function Form() {
     user_times: "",
     my_file: null,
     message: "",
-  });
+  };
+
+  const form = useRef();
+  const navigate = useNavigate();
+  const [messageStatus, setMessageStatus] = useState(null);
+  const [validationError, setValidationError] = useState(inputValidationError);
+  const [fileSizeError, setFileSizeError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formValues, setFormValues] = useState(inputForm);
 
   const suggestedSizes = [
     "TINY: I want my tattoo as small as it can be",
@@ -85,15 +89,7 @@ export default function Form() {
   };
 
   const isFormValid = () => {
-    return (
-      !validationError.user_name &&
-      !validationError.user_email &&
-      !validationError.user_phone &&
-      !validationError.user_size &&
-      !validationError.user_location &&
-      !validationError.user_times &&
-      !fileSizeError
-    );
+    return !Object.values(validationError).includes(true) && !fileSizeError;
   };
 
   const isValidEmail = (email) => {
@@ -124,26 +120,9 @@ export default function Form() {
           console.log("MESSAGE SENT!");
           setMessageStatus("success");
           setIsLoading(false);
-          setValidationError({
-            user_name: false,
-            user_email: false,
-            user_phone: false,
-            user_size: false,
-            user_location: false,
-            user_times: false,
-            my_file: false,
-          });
+          setValidationError(inputValidationError);
           form.current.reset();
-          setFormValues({
-            user_name: "",
-            user_email: "",
-            user_phone: "",
-            user_size: "",
-            user_location: "",
-            user_times: "",
-            my_file: null,
-            message: "",
-          });
+          setFormValues(inputForm);
 
           navigate("/requestsent");
         },
