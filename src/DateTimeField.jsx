@@ -103,7 +103,7 @@ export default function DateTimeField({
           ))}
         </select>
         <p id="addMore" onClick={handleAddTime}>
-          {selectedTimes.length > 0 ? "Add More" : "Add"}
+          {selectedTimes.length > 0 ? "Add More" : "Add time +"}
         </p>
       </div>
 

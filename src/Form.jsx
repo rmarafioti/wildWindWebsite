@@ -233,7 +233,7 @@ export default function Form() {
         onChange={handleInputChange}
         validationError={validationError.user_times}
       />
-      <label>Attach file:</label>
+      <label>Attach tattoo reference:</label>
       <input
         className="form"
         id="file"
