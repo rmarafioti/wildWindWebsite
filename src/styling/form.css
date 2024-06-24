@@ -54,3 +54,59 @@
   font-weight: bold;
   color: black;
 }
+
+.selectTimeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.timeForm {
+  background-color: rgb(236, 232, 232);
+  margin: 0.5rem;
+  margin-left: 0;
+  border: 1px solid black;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+#addMore {
+  color: black;
+  background-color: rgb(236, 232, 232);
+  font-size: 12px;
+  border: 1px solid var(--wildGreen);
+  padding: 0.2rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.selectedTimesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timeEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0.3rem;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#removeButton {
+  color: var(--wildGreen);
+  display: flex;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 15px;
+  background-color: rgb(229, 223, 223);
+  cursor: pointer;
+  transition: border 0.1s;
+  font-size: 20px;
+  padding: 5px;
+  margin-left: .5rem;
+}
