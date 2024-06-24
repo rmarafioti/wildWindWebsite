@@ -17,7 +17,12 @@ export default function TattooSizeField({
 
   return (
     <div className="form-group">
-      <label className="label">Tattoo size*</label>
+      <label className="label">
+        Tattoo size{" "}
+        {validationError && (
+          <p className="error">*Please select a tattoo size.</p>
+        )}
+      </label>
       <select
         className="form"
         name={name}
@@ -33,7 +38,6 @@ export default function TattooSizeField({
           </option>
         ))}
       </select>
-      {validationError && <p className="error">Please select a tattoo size.</p>}
     </div>
   );
 }

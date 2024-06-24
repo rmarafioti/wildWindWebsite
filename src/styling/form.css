@@ -49,3 +49,8 @@
   color: black;
   cursor: pointer;
 }
+
+.error {
+  font-weight: bold;
+  color: black;
+}

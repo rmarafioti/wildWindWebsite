@@ -3,12 +3,13 @@ import emailjs from "@emailjs/browser";
 import InputMask from "react-input-mask";
 import { useNavigate } from "react-router-dom";
 import TattooSizeField from "./TattooSizeField";
+import DateTimeField from "./DateTimeField";
 
 import "./styling/form.css";
 
 export default function Form() {
   const inputValidationError = {
-    user_name: false,
+    user_name: true,
     user_email: false,
     user_phone: false,
     user_size: false,
@@ -155,7 +156,12 @@ export default function Form() {
       encType="multipart/form-data"
       method="post"
     >
-      <label className="label">Name*</label>
+      <label className="label">
+        Name{" "}
+        {validationError.user_name && (
+          <p className="error">**Please enter your name.</p>
+        )}
+      </label>
       <input
         className="form"
         type="text"
@@ -165,10 +171,12 @@ export default function Form() {
         onFocus={() => handleInputFocus("user_name")}
         required
       />
-      {validationError.user_name && (
-        <p className="error">Please enter your name.</p>
-      )}
-      <label className="label">Email*</label>
+      <label className="label">
+        Email{" "}
+        {validationError.user_email && (
+          <p className="error">*Please enter a valid email address.</p>
+        )}
+      </label>
       <input
         className="form"
         type="email"
@@ -178,10 +186,12 @@ export default function Form() {
         onFocus={() => handleInputFocus("user_email")}
         required
       />
-      {validationError.user_email && (
-        <p className="error">Please enter a valid email address.</p>
-      )}
-      <label className="label">Phone*</label>
+      <label className="label">
+        Phone{" "}
+        {validationError.user_phone && (
+          <p className="error">*Please enter a valid phone number.</p>
+        )}
+      </label>
       <InputMask
         className="form"
         type="text"
@@ -192,9 +202,6 @@ export default function Form() {
         onFocus={() => handleInputFocus("user_phone")}
         required
       />
-      {validationError.user_phone && (
-        <p className="error">Please enter a valid phone number.</p>
-      )}
       <TattooSizeField
         name="user_size"
         value={formValues.user_size}
@@ -202,7 +209,14 @@ export default function Form() {
         onFocus={() => handleInputFocus("user_size")}
         validationError={validationError.user_size}
       />
-      <label className="label">Specify your desired tattoo location*</label>
+      <label className="label">
+        Specify your desired tattoo location{" "}
+        {validationError.user_location && (
+          <p className="error">
+            Please enter the desired location of your tattoo.
+          </p>
+        )}
+      </label>
       <input
         className="form"
         type="text"
@@ -218,22 +232,12 @@ export default function Form() {
           Please enter the desired location of your tattoo.
         </p>
       )}
-      <label className="label">
-        Days and times you are available to get tattooed*
-      </label>
-      <input
-        className="form"
-        type="text"
+      <DateTimeField
         name="user_times"
         value={formValues.user_times}
         onChange={handleInputChange}
-        onFocus={() => handleInputFocus("user_times")}
-        placeholder="Ex. weekends after 2pm work best for me"
-        required
+        validationError={validationError.user_times}
       />
-      {validationError.user_times && (
-        <p className="error">Please provide your availability.</p>
-      )}
       <label>Attach file:</label>
       <input
         className="form"
