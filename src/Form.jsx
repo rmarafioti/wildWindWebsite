@@ -45,18 +45,21 @@ export default function Form() {
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
-    setFormValues({
-      ...formValues,
-      [name]: files ? files[0] : value,
-    });
-    validateField(name, files ? files[0] : value);
+    const newValue = files ? files[0] : value;
+
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: newValue,
+    }));
+
+    validateField(name, newValue);
     setFileSizeError(false); // Reset file size error on input change
     setIsLoading(false);
   };
 
-  const validateField = (name, value) => {
+  const validateField = (field, value) => {
     let isValid = true;
-    switch (name) {
+    switch (field) {
       case "user_name":
         isValid = value.trim() !== "";
         break;
@@ -82,14 +85,22 @@ export default function Form() {
       default:
         break;
     }
+
     setValidationError((prevErrors) => ({
       ...prevErrors,
-      [name]: !isValid,
+      [field]: !isValid,
     }));
+
+    return isValid;
   };
 
-  const isFormValid = () => {
-    return !Object.values(validationError).includes(true) && !fileSizeError;
+  const handleInputFocus = (currentField) => {
+    const fields = Object.keys(inputForm);
+    const currentIndex = fields.indexOf(currentField);
+    if (currentIndex < fields.length - 1) {
+      const nextField = fields[currentIndex + 1];
+      validateField(nextField, formValues[nextField]);
+    }
   };
 
   const isValidEmail = (email) => {
@@ -100,6 +111,12 @@ export default function Form() {
   const isValidPhone = (phone) => {
     const phoneDigits = phone.replace(/\D/g, ""); // Remove all non-digit characters
     return phoneDigits.length === 10;
+  };
+
+  const isFormValid = () => {
+    return (
+      Object.values(validationError).every((error) => !error) && !fileSizeError
+    );
   };
 
   const sendEmail = (e) => {
@@ -152,6 +169,7 @@ export default function Form() {
         name="user_name"
         value={formValues.user_name}
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("user_name")}
         required
       />
       {validationError.user_name && (
@@ -164,6 +182,7 @@ export default function Form() {
         name="user_email"
         value={formValues.user_email}
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("user_email")}
         required
       />
       {validationError.user_email && (
@@ -177,6 +196,7 @@ export default function Form() {
         mask="(999) 999-9999"
         value={formValues.user_phone}
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("user_phone")}
         required
       />
       {validationError.user_phone && (
@@ -186,8 +206,9 @@ export default function Form() {
       <select
         className="form"
         name="user_size"
-        value={formValues.user_specifics}
+        value={formValues.user_size}
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("user_size")}
         required
       >
         <option value="">Select a size</option>
@@ -208,6 +229,7 @@ export default function Form() {
         value={formValues.user_location}
         placeholder="Ex. Right arm bicep"
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("user_location")}
         required
       />
       {validationError.user_location && (
@@ -224,6 +246,7 @@ export default function Form() {
         name="user_times"
         value={formValues.user_times}
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("user_times")}
         placeholder="Ex. weekends after 2pm work best for me"
         required
       />
@@ -237,6 +260,7 @@ export default function Form() {
         type="file"
         name="my_file"
         onChange={handleInputChange}
+        onFocus={() => handleInputFocus("my_file")}
       />
       {fileSizeError && (
         <p className="error">
@@ -256,7 +280,7 @@ export default function Form() {
         id="formSubmit"
         type="submit"
         value={isLoading ? "Sending..." : "Send"}
-        disabled-={"true" || isLoading || !isFormValid()}
+        disabled={isLoading || !isFormValid()}
       />
       {messageStatus === "error" && (
         <p id="errorMessage">Message failed to send. Please try again.</p>
