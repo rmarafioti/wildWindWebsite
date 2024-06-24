@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import InputMask from "react-input-mask";
 import { useNavigate } from "react-router-dom";
+import TattooSizeField from "./TattooSizeField";
 
 import "./styling/form.css";
 
@@ -34,14 +35,6 @@ export default function Form() {
   const [fileSizeError, setFileSizeError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState(inputForm);
-
-  const suggestedSizes = [
-    "TINY: I want my tattoo as small as it can be",
-    "SMALL: I want my tattoo around palm size",
-    "MEDIUM: I want my tattoo hand size",
-    "LARGE: I want my tattoo to fill a good portion of the area it is on",
-    "GOING BIG!: I want large scale work, a backpiece, full sleeve, etc",
-  ];
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -202,25 +195,13 @@ export default function Form() {
       {validationError.user_phone && (
         <p className="error">Please enter a valid phone number.</p>
       )}
-      <label className="label">Tattoo size*</label>
-      <select
-        className="form"
+      <TattooSizeField
         name="user_size"
         value={formValues.user_size}
         onChange={handleInputChange}
         onFocus={() => handleInputFocus("user_size")}
-        required
-      >
-        <option value="">Select a size</option>
-        {suggestedSizes.map((size, index) => (
-          <option key={index} value={size}>
-            {size}
-          </option>
-        ))}
-      </select>
-      {validationError.user_size && (
-        <p className="error">Please select a tattoo size.</p>
-      )}
+        validationError={validationError.user_size}
+      />
       <label className="label">Specify your desired tattoo location*</label>
       <input
         className="form"
