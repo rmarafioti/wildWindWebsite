@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoClose } from "react-icons/io5";
 
 export default function DateTimeField({
   name,
@@ -11,24 +12,32 @@ export default function DateTimeField({
   const [selectedTimes, setSelectedTimes] = useState([]);
 
   const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
     "Weekdays",
     "Weekends",
+    "Mondays",
+    "Tuesdays",
+    "Wednesdays",
+    "Thursdays",
+    "Fridays",
+    "Saturdays",
+    "Sundays",
   ];
+
   const times = [
     "12 pm",
+    "12:30 pm",
     "1 pm",
+    "1:30 pm",
     "2 pm",
+    "2:30 pm",
     "3 pm",
+    "3:30 pm",
     "4 pm",
+    "4:30 pm",
     "5 pm",
+    "5:30 pm",
     "6 pm",
+    "6:30 pm",
     "7 pm",
   ];
 
@@ -66,9 +75,9 @@ export default function DateTimeField({
           <p className="error">*Please provide your availability.</p>
         )}
       </label>
-      <div className="selector-container">
+      <div className="selectTimeContainer">
         <select
-          className="form"
+          className="timeForm"
           value={selectedDay}
           onChange={(e) => setSelectedDay(e.target.value)}
         >
@@ -80,28 +89,31 @@ export default function DateTimeField({
           ))}
         </select>
         <select
-          className="form"
+          className="timeForm"
           value={selectedTime}
           onChange={(e) => setSelectedTime(e.target.value)}
         >
-          <option value="">Select a time</option>
+          <option className="selectValue" value="">
+            Select a time
+          </option>
           {times.map((time, index) => (
             <option key={index} value={time}>
               {time}
             </option>
           ))}
         </select>
-        <button type="button" onClick={handleAddTime}>
-          {selectedTimes.length > 0 ? "Add More" : "Add"}
-        </button>
+        <p id="addMore" onClick={handleAddTime}>
+          {selectedTimes.length > 0 ? "Add More" : "Add time +"}
+        </p>
       </div>
-      <div className="selected-times">
+
+      <div className="selectedTimesContainer">
         {selectedTimes.map((time, index) => (
-          <div key={index} className="time-entry">
+          <div key={index} className="timeEntry">
             {time}{" "}
-            <button type="button" onClick={() => handleRemoveTime(index)}>
-              Remove
-            </button>
+            <div id="removeButton" onClick={() => handleRemoveTime(index)}>
+              <IoClose />
+            </div>
           </div>
         ))}
       </div>

@@ -227,18 +227,13 @@ export default function Form() {
         onFocus={() => handleInputFocus("user_location")}
         required
       />
-      {validationError.user_location && (
-        <p className="error">
-          Please enter the desired location of your tattoo.
-        </p>
-      )}
       <DateTimeField
         name="user_times"
         value={formValues.user_times}
         onChange={handleInputChange}
         validationError={validationError.user_times}
       />
-      <label>Attach file:</label>
+      <label>Attach tattoo reference:</label>
       <input
         className="form"
         id="file"
@@ -260,7 +255,6 @@ export default function Form() {
         onChange={handleInputChange}
         placeholder=""
       />
-      <p>*Required</p>
       <input
         id="formSubmit"
         type="submit"
