@@ -41,9 +41,9 @@ export default function Tattoos() {
   return (
     <main id="tattoos">
       <div id="artistContainer">
-        <h1 id="artistHeader">Tattooing by Rich Marafioti</h1>
-        <h1 id="artistIgIcon">
-          <a href="https://www.instagram.com/wild_coma/">
+        <h1 id="artistHeader">
+          Rich Marafioti
+          <a id="artistIgIcon" href="https://www.instagram.com/wild_coma/">
             <FaInstagram />
           </a>
         </h1>

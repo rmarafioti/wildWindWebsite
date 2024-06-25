@@ -26,7 +26,7 @@ export default function Faq() {
       <h3 id="faqTagline">
         General questions before you fill out our contact form
       </h3>
-      <ul id="faqs">
+      <ul id="questions">
         {faqs.map((faq) => (
           <FaqCard
             key={faq.id}

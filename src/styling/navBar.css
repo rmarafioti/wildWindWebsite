@@ -28,13 +28,13 @@ nav {
 
 #faqContainer {
   display: flex;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 50px;
   height: 50px;
   justify-content: center;
   align-items: center;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 #faqIcon {
@@ -48,13 +48,15 @@ nav {
 
 #contactButton {
   font-size: 16px;
-  color: white;
-  background-color: var(--wildBlue);
+  font-weight: bold;
+  color: black;
+  background-color: white;
   border: none;
   padding: 1rem;
-  padding-top: .3rem;
-  padding-bottom: .3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   margin-right: 1rem;
+  border: 2.5px solid var(--wildGreen);
 }
 
 /* hamburger */
@@ -64,7 +66,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-left: 0.5rem;
   width: 50px;
   height: 50px;
@@ -129,7 +131,7 @@ nav {
 .menu {
   margin: 0.5rem;
   margin-top: 0;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   background-color: white;
   display: none;
   z-index: 1000;
@@ -172,8 +174,33 @@ nav {
 
 .link {
   opacity: 0;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
 }
 .navItem:hover .link {
-  opacity: 1; 
+  opacity: 1;
+}
+
+@media (max-width: 586px) {
+  nav {
+    padding-bottom: 0.5rem;
+  }
+  #navLogo {
+    max-width: 200px;
+    margin-left: 0;
+  }
+  #contactButton {
+    display: none;
+  }
+  .menu.active {
+    display: block;
+    flex-direction: column;
+    align-items: start;
+    border-bottom: none;
+  }
+  .navItem a {
+    border-bottom: 1px solid var(--wildGreen);
+  }
+  .link {
+    opacity: 1;
+  }
 }
