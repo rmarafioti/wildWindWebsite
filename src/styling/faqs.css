@@ -4,7 +4,8 @@
   --wildGreen: rgb(124, 155, 63);
 }
 
-#faqs {
+#faqs,
+#questions {
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@
   color: black;
   font-weight: normal;
   margin-bottom: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: solid 1px var(--wildGreen);
 }
 
@@ -81,4 +82,29 @@
   color: black;
   line-height: 2;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 586px) {
+  #faqs {
+    text-align: center;
+    justify-content: left;
+  }
+  #questions {
+    margin-top: 0;
+    align-items: center;
+  }
+  .faqContainer {
+    text-align: left;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--wildGreen);
+  }
+
+  .faq {
+    font-size: 20px;
+    border-bottom: 0;
+  }
+  .popUpContent {
+    border-radius: 0px;
+  }
 }
