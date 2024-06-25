@@ -26,6 +26,11 @@
   border-bottom: solid 1px var(--wildGreen);
 }
 
+#aftercaresContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .careContainer,
 .careContainerBottom {
   display: flex;
@@ -34,6 +39,10 @@
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: solid 1px var(--wildGreen);
+}
+
+.careContainer {
+  margin-top: 2rem;
 }
 
 .careContainerBottom {
@@ -45,7 +54,7 @@
   align-items: center;
   font-weight: normal;
   color: var(--wildGreen);
-  margin: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .popUpOverlay {
@@ -99,4 +108,19 @@
 
 .popInstructionsTag {
   color: black;
+}
+
+@media (max-width: 586px) {
+  #afterTagline {
+    text-align: center;
+  }
+  .careContainer {
+    margin-top: 1rem;
+  }
+  .instructions {
+    font-size: 20px;
+  }
+  .popUpContent {
+    border-radius: 0px;
+  }
 }

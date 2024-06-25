@@ -46,7 +46,7 @@ export default function Care() {
       <h3 id="afterTagline">
         everything you need to know about taking care of your tattoo.
       </h3>
-      <ul>
+      <ul id="aftercaresContainer">
         {aftercare.map((aftercareInstructions) => (
           <AftercareCard
             key={aftercareInstructions.id}
