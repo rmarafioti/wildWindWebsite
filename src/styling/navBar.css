@@ -177,3 +177,31 @@ nav {
 .navItem:hover .link {
   opacity: 1; 
 }
+
+@media (max-width: 586px) {
+nav {
+  padding-bottom: .5rem;
+}
+  #navLogo {
+    max-width: 200px;
+    margin-left: 2rem;
+  }
+  #contactButton{
+    font-size: 12px;
+    padding: .2rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+  }
+  .menu.active {
+    display: block;
+    flex-direction: column;
+    align-items: start;
+    border-bottom: none;
+  }
+  .navItem a {
+    border-bottom: 1px solid var(--wildGreen);
+  }
+  .link {
+    opacity: 1;
+  }
+}
