@@ -87,20 +87,29 @@
   border-radius: 5px;
 }
 
-#addMore {
+#addTime {
+  margin-left: .5rem;
+}
+
+#addMoreButton {
+  display: flex;
+  align-items: center;
   color: black;
   background-color: rgb(236, 232, 232);
   font-size: 12px;
   border: 1px solid var(--wildGreen);
   padding: 0.2rem;
   border-radius: 5px;
-  margin-left: 1rem;
+  margin-left: .5rem;
   cursor: pointer;
+}
+
+#addSymbol {
+  font-size: 20px;
 }
 
 .selectedTimesContainer {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .timeEntry {

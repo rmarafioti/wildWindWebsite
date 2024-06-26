@@ -93,38 +93,3 @@ button:hover {
 #headerHome {
   font-weight: bold;
 }
-
-/* request sent */
-
-#requestSent {
-  color: var(--wildGreen);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-#requestSentMessage {
-  font-weight: bold;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--wildGreen);
-  margin-bottom: 1rem;
-}
-
-#requestMessage {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--wildGreen);
-}
-
-.messageTag {
-  font-weight: bold;
-}
-
-@media (max-width: 586px) {
-  #requestSent {
-    margin: 1rem;
-    text-align: center;
-  }
-}

@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import "./styling/form.css";
+
 export default function RequestSent() {
   return (
     <main id="requestSent">
@@ -9,6 +12,9 @@ export default function RequestSent() {
       </h3>
       <h3 className="messageTag">Best,</h3>
       <h3 className="messageTag">Wild Wind Tattoo</h3>
+      <Link id="returnLink" to="/">
+        <h4 id="returnHome">Return Home</h4>
+      </Link>
     </main>
   );
 }
