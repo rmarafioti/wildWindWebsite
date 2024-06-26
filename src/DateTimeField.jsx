@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { IoAdd } from "react-icons/io5";
 
 export default function DateTimeField({
   name,
@@ -102,9 +103,10 @@ export default function DateTimeField({
             </option>
           ))}
         </select>
-        <p id="addMore" onClick={handleAddTime}>
-          {selectedTimes.length > 0 ? "Add More" : "Add time +"}
-        </p>
+        <p id="addTime">{selectedTimes.length > 0 ? "Add More" : "Add Time"}</p>
+        <div id="addMoreButton" onClick={handleAddTime}>
+          <IoAdd id="addSymbol" />
+        </div>
       </div>
 
       <div className="selectedTimesContainer">

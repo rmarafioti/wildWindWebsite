@@ -3,9 +3,9 @@ import CheckoutForm from "./CheckoutForm";
 
 export default function GiftCards() {
   return (
-    <>
-      <h1>GIFT CARDS</h1>
+    <main id="giftCards">
+      <h1 id="giftCardHeader">GIFT CARDS</h1>
       <CheckoutForm />
-    </>
+    </main>
   );
 }

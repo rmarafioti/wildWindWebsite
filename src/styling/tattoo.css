@@ -72,9 +72,11 @@
 }
 
 .arrow {
+  background-color: white;
+  border-radius: 5px;
   margin-left: 1rem;
   margin-right: 1rem;
-  font-size: 30px;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -103,7 +105,7 @@
   border: 2px solid var(--wildGreen);
 }
 
-@media (max-width: 586px) {
+@media (max-width: 1360px) {
   #tattoos {
     margin: 1rem;
   }
@@ -123,7 +125,7 @@
   }
   .arrow {
     position: absolute;
-    margin-left: -0.94rem;
+    margin-left: -1.3rem;
     text-align: center;
   }
   #tattooGallery {

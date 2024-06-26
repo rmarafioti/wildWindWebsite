@@ -40,50 +40,6 @@
   border-bottom: solid 1px var(--wildGreen);
 }
 
-.popUpOverlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-/*.popUpContent {
-  color: var(--wildGreen);
-  padding: 1rem;
-  padding-top: 1rem;
-  text-align: center;
-  max-width: 480px;
-  max-height: 80vh;
-  object-fit: contain;
-  display: block;
-  background-color: white;
-  overflow-y: auto;
-  overflow-x: hidden;
-  border-radius: 0px;
-}*/
-
-.popQuestion {
-  color: var(--wildGreen);
-  padding: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: solid 1px var(--wildGreen);
-}
-
-.popAnswer {
-  color: black;
-  line-height: 2;
-  margin-bottom: 2rem;
-}
-
 @media (max-width: 586px) {
   #faqs {
     text-align: center;

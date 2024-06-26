@@ -71,7 +71,12 @@
 }
 
 .contactInfo {
+  display: flex;
   margin: 1rem;
+}
+
+.contactInfoValue {
+  text-align: center;
 }
 
 .contactInfo a:link,
@@ -128,4 +133,66 @@
   margin-bottom: 2rem;
   font-weight: bold;
   border-bottom: 1px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
+  #contactHeader {
+    margin: 1rem;
+    text-align: center;
+  }
+  .contactButtons {
+    margin-top: 1rem;
+  }
+  #contactInfoContainer {
+    margin: 1rem;
+  }
+}
+
+/* request sent */
+
+#requestSent {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#requestSentMessage {
+  font-weight: bold;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+#requestMessage {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+.messageTag {
+  font-weight: bold;
+}
+
+#returnLink {
+  text-decoration: none;
+}
+
+#returnHome {
+  color:black;
+  margin-top: 2rem;
+  background-color: lightgrey;
+  border: 1px solid var(--wildGreen);
+  border-radius: 5px;
+  padding: .3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 586px) {
+  #requestSent {
+    margin: 1rem;
+    text-align: center;
+  }
 }

@@ -5,6 +5,7 @@ import { PopUp, usePopUp } from "./popUp";
 import { aftercare } from "./aftercareInstructions";
 
 import "./styling/aftercare.css";
+import "./styling/popup.css";
 
 export default function Care() {
   const { popUp, popUpContent, openAftercarePopUp, closePopUp } = usePopUp();

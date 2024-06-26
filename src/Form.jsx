@@ -217,36 +217,44 @@ export default function Form() {
           </p>
         )}
       </label>
-      <input
-        className="form"
-        type="text"
-        name="user_location"
-        value={formValues.user_location}
-        placeholder="Ex. Right arm bicep"
-        onChange={handleInputChange}
-        onFocus={() => handleInputFocus("user_location")}
-        required
-      />
-      <DateTimeField
-        name="user_times"
-        value={formValues.user_times}
-        onChange={handleInputChange}
-        validationError={validationError.user_times}
-      />
-      <label>Attach tattoo reference:</label>
-      <input
-        className="form"
-        id="file"
-        type="file"
-        name="my_file"
-        onChange={handleInputChange}
-        onFocus={() => handleInputFocus("my_file")}
-      />
-      {fileSizeError && (
-        <p className="error">
-          Attachment file error. The maximum allowed attachments size is 500Kb.
-        </p>
-      )}
+      <div className="formSectionContainer">
+        <input
+          className="form"
+          id="tattooLocation"
+          type="text"
+          name="user_location"
+          value={formValues.user_location}
+          placeholder="Ex. Right arm bicep"
+          onChange={handleInputChange}
+          onFocus={() => handleInputFocus("user_location")}
+          required
+        />
+      </div>
+      <div className="formSectionContainer">
+        <DateTimeField
+          name="user_times"
+          value={formValues.user_times}
+          onChange={handleInputChange}
+          validationError={validationError.user_times}
+        />
+      </div>
+      <div className="formSectionContainer" id="attachFile">
+        <label>Attach tattoo reference:</label>
+        <input
+          className="form"
+          id="file"
+          type="file"
+          name="my_file"
+          onChange={handleInputChange}
+          onFocus={() => handleInputFocus("my_file")}
+        />
+        {fileSizeError && (
+          <p className="error">
+            Attachment file error. The maximum allowed attachments size is
+            500Kb.
+          </p>
+        )}
+      </div>
       <label className="label">Additional information</label>
       <textarea
         id="messageForm"
