@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./styling/form.css";
+
 export default function TattooSizeField({
   name,
   value,
@@ -9,14 +11,14 @@ export default function TattooSizeField({
 }) {
   const suggestedSizes = [
     "TINY: I want my tattoo as small as it can be",
-    "SMALL: I want my tattoo around palm size",
-    "MEDIUM: I want my tattoo hand size",
-    "LARGE: I want my tattoo to fill a good portion of the area it is on",
-    "GOING BIG!: I want large scale work, a backpiece, full sleeve, etc",
+    "SMALL: Approx palm size",
+    "MEDIUM: Approx hand size",
+    "LARGE: Fill the whole area my tattoo is on",
+    "GOING BIG!: I want large scale work",
   ];
 
   return (
-    <div className="form-group">
+    <div id="tattooSizeContainer">
       <label className="label">
         Tattoo size{" "}
         {validationError && (
@@ -24,6 +26,7 @@ export default function TattooSizeField({
         )}
       </label>
       <select
+        id="tattooSizeOption"
         className="form"
         name={name}
         value={value}
@@ -33,7 +36,7 @@ export default function TattooSizeField({
       >
         <option value="">Select a size</option>
         {suggestedSizes.map((option, index) => (
-          <option key={index} value={option}>
+          <option id="tattooSizeOption" key={index} value={option}>
             {option}
           </option>
         ))}
