@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 import { tattooPhotos } from "./tattooPhotos";
 
 import "./styling/tattoo.css";
@@ -58,7 +58,7 @@ export default function Tattoos() {
       <section id="tattooSection">
         <div id="tattooSlide">
           <div id="arrowSection">
-            <BsArrowLeftCircleFill className="arrow" onClick={handlePrev} />
+            <PiArrowSquareLeft className="arrow" onClick={handlePrev} />
           </div>
           <img
             className="tattoo"
@@ -66,7 +66,7 @@ export default function Tattoos() {
             alt="tattoo portfolio images"
           />
           <div id="arrowSection">
-            <BsArrowRightCircleFill className="arrow" onClick={handleNext} />
+            <PiArrowSquareRight className="arrow" onClick={handleNext} />
           </div>
         </div>
         <ul id="tattooGallery">
