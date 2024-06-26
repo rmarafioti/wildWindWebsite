@@ -71,7 +71,12 @@
 }
 
 .contactInfo {
+  display: flex;
   margin: 1rem;
+}
+
+.contactInfoValue {
+  text-align: center;
 }
 
 .contactInfo a:link,
@@ -128,4 +133,17 @@
   margin-bottom: 2rem;
   font-weight: bold;
   border-bottom: 1px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
+  #contactHeader {
+    margin: 1rem;
+    text-align: center;
+  }
+  .contactButtons {
+    margin-top: 1rem;
+  }
+  #contactInfoContainer {
+    margin: 1rem;
+  }
 }
