@@ -5,6 +5,7 @@ import { PopUp, usePopUp } from "./popUp";
 import { faqs } from "./faqs";
 
 import "./styling/faqs.css";
+import "./styling/popup.css";
 
 export default function Faq() {
   const { popUp, popUpContent, openFaqPopUp, closePopUp } = usePopUp();
