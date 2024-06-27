@@ -94,6 +94,25 @@ button:hover {
   font-weight: bold;
 }
 
+#contactHomeButton {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border: 2.5px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
+  #contactHomeButton {
+    display: block;
+  }
+}
+
 /* gift cards */
 
 #giftCards {
@@ -108,12 +127,103 @@ button:hover {
   color: var(--wildGreen);
   font-weight: bold;
   text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+/* shop about */
+
+#shopAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+#mainShopHeader {
+  color: var(--wildGreen);
+  font-weight: bold;
+}
+
+.shopHeader {
+  color: var(--wildGreen);
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#shopIconContainer {
+  display: flex;
+}
+
+.shopIcon {
+  padding: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+#firstParagraph {
+  border-top: 1px solid var(--wildGreen);
+  padding-top: 1rem;
+  max-width: 480px;
+}
+
+#firstParagraph, .shopParagraphs, .shopMiddleParagraphs {
+  max-width: 480px;
+}
+
+.shopMiddleParagraphs {
+  margin-bottom: 1rem;
+}
+
+#bottomParagraph {
+  margin-bottom: 0;
+}
+
+.missionItem {
+  color: var(--wildGreen);
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+/* return */
+
+#success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+#successHeader {
+  color: var(--wildGreen);
+  font-weight: bold;
   padding-bottom: .5rem;
   border-bottom: 1px solid var(--wildGreen);
   margin-bottom: 1rem;
 }
 
+.successTag {
+  max-width: 480px;
+  text-align: center;
+}
 
+#custEmail {
+  font-weight: bold;
+}
 
-
-
+#bottomTag {
+  margin-top: 1rem;
+}
