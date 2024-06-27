@@ -177,3 +177,34 @@ button:hover {
   padding-bottom: 0;
   margin-bottom: 1rem;
 }
+
+/* return */
+
+#success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+#successHeader {
+  color: var(--wildGreen);
+  font-weight: bold;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+.successTag {
+  max-width: 480px;
+  text-align: center;
+}
+
+#custEmail {
+  font-weight: bold;
+}
+
+#bottomTag {
+  margin-top: 1rem;
+}
