@@ -94,6 +94,25 @@ button:hover {
   font-weight: bold;
 }
 
+#contactHomeButton {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border: 2.5px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
+  #contactHomeButton {
+    display: block;
+  }
+}
+
 /* gift cards */
 
 #giftCards {
