@@ -1,20 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
 /*import Root from "./Root";*/
-import Home from "./Home";
-import Contact from "./Contact";
-import RequestAppt from "./RequestAppt";
-import Shop from "./Shop";
-import Tattoos from "./Tattoos";
-import GiftCards from "./GiftCards";
-import Care from "./Care";
-import Faq from "./Faq";
-import Return from "./Return";
-import CheckoutForm from "./CheckoutForm";
-import RequestSent from "./RequestSent";
+import Home from "./features/Home";
+import Contact from "./features/Contact";
+import RequestAppt from "./features/RequestAppt";
+import Shop from "./features/Shop";
+import Tattoos from "./features/Tattoos";
+import GiftCards from "./features/GiftCards";
+import Care from "./features/Care";
+import Faq from "./features/Faq";
+import Return from "./features/Return";
+import CheckoutForm from "./features/CheckoutForm";
+import RequestSent from "./features/RequestSent";
+import Reviews from "./features/Reviews";
+import Media from "./features/Media";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/return" element={<Return />} />
           <Route path="/requestsent" element={<RequestSent />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
         <Footer />
       </Router>

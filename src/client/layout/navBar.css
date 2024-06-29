@@ -149,12 +149,12 @@ nav {
   justify-content: left;
   text-decoration: none;
 }
-.navItem {
+.navItem, #aboutItem {
   margin-top: 2px;
   list-style-type: none;
 }
 
-.navItem a {
+.navItem a, #aboutItem a {
   padding: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -163,7 +163,9 @@ nav {
 }
 
 .navItem a:link,
-.navItem a:visited {
+.navItem a:visited,
+#aboutItem a:link,
+#aboutItem a:visited {
   color: var(--wildGreen);
 }
 
@@ -176,8 +178,52 @@ nav {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-.navItem:hover .link {
+.navItem:hover .link, #aboutItem:hover .link{
   opacity: 1;
+}
+
+#aboutUs {
+  position: relative;
+  margin-right: 0.8rem;
+}
+
+#aboutItem {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#dropIcon {
+  font-size: 20px;
+  background-color: lightgrey;
+  border: 1px solid var(--wildGreen);
+  border-radius: 4px;
+}
+
+.drop {
+  position: absolute;
+  top: 25%;
+  left: 2.8%;
+  margin: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: white;
+  display: none;
+  z-index: 1000;
+  
+}
+
+.drop.active {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+
+.dropLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
 }
 
 @media (max-width: 586px) {
@@ -197,10 +243,13 @@ nav {
     align-items: start;
     border-bottom: none;
   }
-  .navItem a {
+  .navItem a, #aboutItem {
     border-bottom: 1px solid var(--wildGreen);
   }
   .link {
     opacity: 1;
+  }
+  .drop {
+    position: static;
   }
 }

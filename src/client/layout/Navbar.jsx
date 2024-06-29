@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import { IoSkullOutline } from "react-icons/io5";
@@ -6,21 +6,35 @@ import { GoBook } from "react-icons/go";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
+import { FaPlus } from "react-icons/fa6";
 
-import "./styling/navBar.css";
+import "./navBar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [dropDown, setDropDown] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if (!menuOpen) {
+      setDropDown(false); // Close dropdown when closing the menu
+    }
+  };
+
+  const toggleDropDown = () => {
+    setDropDown(!dropDown); // Toggle dropDown state
+  };
+
   return (
     <>
       <nav>
-        <div id="hamMenuContainer" onClick={() => setMenuOpen(!menuOpen)}>
+        <div id="hamMenuContainer" onClick={toggleMenu}>
           <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
         </div>
         <NavLink to="/">
@@ -41,12 +55,32 @@ export default function Navbar() {
       </nav>
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
-          <li className="navItem">
+          <li id="aboutItem">
             <NavLink className="navContainer" to="/shop">
               <GoBook className="linkIcon" />
-              <h4 className="link">ABOUT US</h4>
+              <h4 className="link" id="aboutUs">
+                ABOUT US
+              </h4>
             </NavLink>
+            <IoIosArrowDown
+              className="link"
+              id="dropIcon"
+              onClick={toggleDropDown}
+            />
           </li>
+          <div id="dropDownContainer">
+            <menu className={`drop ${dropDown ? "active" : ""}`}>
+              <NavLink className="dropLink" to="/reviews">
+                <h4>REVIEWS</h4>
+                <FaPlus />
+              </NavLink>
+
+              <NavLink className="dropLink" to="/media">
+                <h4>MEDIA</h4>
+                <FaPlus />
+              </NavLink>
+            </menu>
+          </div>
           <li className="navItem">
             <NavLink className="navContainer" to="/tattoos">
               <IoSkullOutline className="linkIcon" />

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
-import { tattooPhotos } from "./tattooPhotos";
 
-import "./styling/tattoo.css";
+import { tattooPhotos } from "../content/tattooPhotos";
+
+import "./tattoo.css";
 
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);

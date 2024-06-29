@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import TattooSizeField from "./TattooSizeField";
 import DateTimeField from "./DateTimeField";
 
-import "./styling/form.css";
+import "./form.css";
 
 export default function Form() {
   const inputValidationError = {

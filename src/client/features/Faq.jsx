@@ -1,11 +1,11 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
-import { PopUp, usePopUp } from "./popUp";
+import { PopUp, usePopUp } from "../content/popUp";
 
-import { faqs } from "./faqs";
+import { faqs } from "../content/faqs";
 
-import "./styling/faqs.css";
-import "./styling/popup.css";
+import "./faqs.css";
+import "./popup.css";
 
 export default function Faq() {
   const { popUp, popUpContent, openFaqPopUp, closePopUp } = usePopUp();
