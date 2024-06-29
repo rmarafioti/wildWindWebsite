@@ -1,6 +1,8 @@
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 export default function Shop() {
   return (
     <main id="shopAbout">
@@ -48,6 +50,10 @@ export default function Shop() {
         want in an inclusive, safe space. While you get tattooed, enjoy a clean,
         creative, and artistic environment.
       </p>
+      <div>
+        <Link to="/reviews">Reviews</Link>
+        <Link to="/media">Media</Link>
+      </div>
       <h2 className="shopHeader">COMMUNITY</h2>
       <p className="shopParagraphs">
         Wild Wind Tattoo is proud to serve and work with our strong community.

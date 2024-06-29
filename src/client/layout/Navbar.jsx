@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import { IoSkullOutline } from "react-icons/io5";
@@ -6,15 +6,21 @@ import { GoBook } from "react-icons/go";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 
 import "./navBar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [dropDown, setDropDown] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setDropDown(false);
   }, [location.pathname]);
 
   return (
@@ -45,6 +51,10 @@ export default function Navbar() {
             <NavLink className="navContainer" to="/shop">
               <GoBook className="linkIcon" />
               <h4 className="link">ABOUT US</h4>
+              <IoIosArrowDown
+                className="link"
+                onClick={() => setDropDown(!dropDown)}
+              />
             </NavLink>
           </li>
           <li className="navItem">
@@ -71,6 +81,12 @@ export default function Navbar() {
               <h4 className="link">GIFTCARDS</h4>
             </NavLink>
           </li>
+        </menu>
+      </div>
+      <div id="dropDownContainer">
+        <menu className={`menu ${dropDown ? "active" : ""}`}>
+          <NavLink to="/reviews">Reviews</NavLink>
+          <NavLink to="/media">Media</NavLink>
         </menu>
       </div>
     </>
