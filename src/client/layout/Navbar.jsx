@@ -7,7 +7,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
 
-import "./styling/navBar.css";
+import "./navBar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);

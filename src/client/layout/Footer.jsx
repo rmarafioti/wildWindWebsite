@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
-import "./styling/footer.css";
+import "./footer.css";
 
 export default function Footer() {
   return (
