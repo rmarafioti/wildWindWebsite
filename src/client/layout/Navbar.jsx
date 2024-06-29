@@ -63,7 +63,7 @@ export default function Navbar() {
               </h4>
             </NavLink>
             <IoIosArrowDown
-              className="link"
+              className="aboutLink"
               id="dropIcon"
               onClick={toggleDropDown}
             />
