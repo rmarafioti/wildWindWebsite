@@ -15,6 +15,8 @@ import Faq from "./features/Faq";
 import Return from "./features/Return";
 import CheckoutForm from "./features/CheckoutForm";
 import RequestSent from "./features/RequestSent";
+import Reviews from "./features/Reviews";
+import Media from "./features/Media";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/return" element={<Return />} />
           <Route path="/requestsent" element={<RequestSent />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
         <Footer />
       </Router>
