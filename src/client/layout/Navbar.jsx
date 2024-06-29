@@ -20,14 +20,21 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  useEffect(() => {
-    setDropDown(false);
-  }, [location.pathname]);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if (!menuOpen) {
+      setDropDown(false); // Close dropdown when closing the menu
+    }
+  };
+
+  const toggleDropDown = () => {
+    setDropDown(!dropDown); // Toggle dropDown state
+  };
 
   return (
     <>
       <nav>
-        <div id="hamMenuContainer" onClick={() => setMenuOpen(!menuOpen)}>
+        <div id="hamMenuContainer" onClick={toggleMenu}>
           <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
         </div>
         <NavLink to="/">
@@ -58,7 +65,7 @@ export default function Navbar() {
             <IoIosArrowDown
               className="link"
               id="dropIcon"
-              onClick={() => setDropDown(!dropDown)}
+              onClick={toggleDropDown}
             />
           </li>
           <div id="dropDownContainer">
