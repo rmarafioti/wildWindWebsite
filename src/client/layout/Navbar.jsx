@@ -22,9 +22,7 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      setDropDown(false); // Close dropdown when closing the menu
-    }
+    setDropDown(false); // Close dropdown when closing the menu
   };
 
   const toggleDropDown = () => {
@@ -108,12 +106,17 @@ export default function Navbar() {
         </menu>
         <div id="dropDownContainer">
           <menu className={`drop ${dropDown ? "active" : ""}`}>
-            <NavLink className="dropLink" id="dropLinkTop" to="/reviews">
+            <NavLink
+              className="dropLink"
+              id="dropLinkTop"
+              to="/reviews"
+              onClick={toggleDropDown}
+            >
               <h4 className="dropLinkName">REVIEWS</h4>
               <FaPlus />
             </NavLink>
 
-            <NavLink className="dropLink" to="/media">
+            <NavLink className="dropLink" to="/media" onClick={toggleDropDown}>
               <h4 className="dropLinkName">MEDIA</h4>
               <FaPlus />
             </NavLink>
