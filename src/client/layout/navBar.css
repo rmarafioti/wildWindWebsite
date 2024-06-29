@@ -204,11 +204,11 @@ nav {
   top: 25%;
   left: 2.8%;
   margin: 0.5rem;
-  padding: 1rem;
   background-color: white;
   display: none;
   z-index: 1000;
   border: 1px solid var(--wildGreen);
+  border-radius: 5px;
 }
 
 .drop.active {
@@ -222,7 +222,24 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 120px;
   text-decoration: none;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0.5rem;
+  transition: background-color 0.5s ease;
+}
+
+.dropLink:hover {
+  background-color: lightgrey;
+}
+
+#dropLinkTop {
+  margin-bottom: 0;
+}
+
+.dropLinkName {
+  margin-right: .5rem;
 }
 
 @media (max-width: 586px) {
@@ -253,10 +270,12 @@ nav {
     top: 15.5%;
     left: 45%;
     margin: 0.5rem;
-    padding: 1rem;
     background-color: white;
     border: 1px solid var(--wildGreen);
     display: none;
     z-index: 1000;
+  }
+  .dropLink {
+    margin: .5rem;
   }
 }
