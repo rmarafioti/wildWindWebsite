@@ -7,6 +7,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaPlus } from "react-icons/fa6";
 
 import "./navBar.css";
 
@@ -47,16 +48,32 @@ export default function Navbar() {
       </nav>
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
-          <li className="navItem">
+          <li id="aboutItem">
             <NavLink className="navContainer" to="/shop">
               <GoBook className="linkIcon" />
-              <h4 className="link">ABOUT US</h4>
-              <IoIosArrowDown
-                className="link"
-                onClick={() => setDropDown(!dropDown)}
-              />
+              <h4 className="link" id="aboutUs">
+                ABOUT US
+              </h4>
             </NavLink>
+            <IoIosArrowDown
+              className="link"
+              id="dropIcon"
+              onClick={() => setDropDown(!dropDown)}
+            />
           </li>
+          <div id="dropDownContainer">
+            <menu className={`drop ${dropDown ? "active" : ""}`}>
+              <NavLink className="dropLink" to="/reviews">
+                <h4>REVIEWS</h4>
+                <FaPlus />
+              </NavLink>
+
+              <NavLink className="dropLink" to="/media">
+                <h4>MEDIA</h4>
+                <FaPlus />
+              </NavLink>
+            </menu>
+          </div>
           <li className="navItem">
             <NavLink className="navContainer" to="/tattoos">
               <IoSkullOutline className="linkIcon" />
@@ -81,12 +98,6 @@ export default function Navbar() {
               <h4 className="link">GIFTCARDS</h4>
             </NavLink>
           </li>
-        </menu>
-      </div>
-      <div id="dropDownContainer">
-        <menu className={`menu ${dropDown ? "active" : ""}`}>
-          <NavLink to="/reviews">Reviews</NavLink>
-          <NavLink to="/media">Media</NavLink>
         </menu>
       </div>
     </>
