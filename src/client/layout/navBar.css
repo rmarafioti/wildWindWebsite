@@ -130,7 +130,8 @@ nav {
 
 .menu {
   margin: 0.5rem;
-  margin-top: 0;
+margin-left: 1rem;
+margin-right: 1rem;
   padding-bottom: 0.5rem;
   background-color: white;
   display: none;
@@ -150,14 +151,10 @@ nav {
   text-decoration: none;
 }
 .navItem, #aboutItem {
-  margin-top: 2px;
   list-style-type: none;
 }
 
 .navItem a, #aboutItem a {
-  padding: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
   align-items: center;
   font-size: 16px;
 }
@@ -175,26 +172,31 @@ nav {
 }
 
 .link {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: .5rem;
+  transition: background-color 0.5s ease;
 }
-.navItem:hover .link, #aboutItem:hover .link{
-  opacity: 1;
-}
+
 
 #aboutUs {
   position: relative;
+  margin-right: .5rem;
 }
 
 #aboutItem {
   display: flex;
-  justify-content: left;
   align-items: center;
+  text-align: end;
 }
+
 
 #dropIcon {
   font-size: 20px;
-  background-color: lightgrey;
   border: 1px solid var(--wildGreen);
   border-radius: 4px;
 }
@@ -204,11 +206,11 @@ nav {
   top: 25%;
   left: 2.8%;
   margin: 0.5rem;
-  padding: 1rem;
   background-color: white;
   display: none;
   z-index: 1000;
   border: 1px solid var(--wildGreen);
+  border-radius: 5px;
 }
 
 .drop.active {
@@ -218,11 +220,42 @@ nav {
   justify-content: left;
 }
 
+/*#aboutItem .aboutLink {
+  opacity: 0;
+}
+
+#aboutItem:hover .aboutLink {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.drop.active #aboutItem .aboutLink{
+  opacity: 1;
+  transition: opacity 0.3s ease; 
+}*/
+
 .dropLink {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 130px;
   text-decoration: none;
+  border-radius: 5px;
+  padding: .5rem;
+  margin: 0.5rem;
+  transition: background-color 0.5s ease;
+}
+
+.dropLink:hover, .link:hover {
+  background-color: lightgrey;
+}
+
+#dropLinkTop {
+  margin-bottom: 0;
+}
+
+.dropLinkName {
+  margin-right: .5rem;
 }
 
 @media (max-width: 586px) {
@@ -250,13 +283,16 @@ nav {
   }
   .drop {
     position: absolute;
-    top: 15.5%;
-    left: 45%;
+    top: 17%;
+    left: 48%;
     margin: 0.5rem;
-    padding: 1rem;
     background-color: white;
     border: 1px solid var(--wildGreen);
     display: none;
     z-index: 1000;
+  }
+  .dropLink {
+    padding: 1rem;
+    margin: 0;
   }
 }

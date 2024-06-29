@@ -22,9 +22,7 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      setDropDown(false); // Close dropdown when closing the menu
-    }
+    setDropDown(false); // Close dropdown when closing the menu
   };
 
   const toggleDropDown = () => {
@@ -56,14 +54,18 @@ export default function Navbar() {
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
           <li id="aboutItem">
-            <NavLink className="navContainer" to="/shop">
+            <NavLink
+              className="navContainer"
+              to="/shop"
+              onClick={toggleDropDown}
+            >
               <GoBook className="linkIcon" />
               <h4 className="link" id="aboutUs">
                 ABOUT US
               </h4>
             </NavLink>
             <IoIosArrowDown
-              className="link"
+              className="aboutLink"
               id="dropIcon"
               onClick={toggleDropDown}
             />
@@ -82,25 +84,41 @@ export default function Navbar() {
             </menu>
           </div>*/}
           <li className="navItem">
-            <NavLink className="navContainer" to="/tattoos">
+            <NavLink
+              className="navContainer"
+              to="/tattoos"
+              onClick={toggleDropDown}
+            >
               <IoSkullOutline className="linkIcon" />
               <h4 className="link">TATTOOS</h4>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink className="navContainer" to="/contact">
+            <NavLink
+              className="navContainer"
+              to="/contact"
+              onClick={toggleDropDown}
+            >
               <HiOutlineEnvelope className="linkIcon" />
               <h4 className="link">CONTACT</h4>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink className="navContainer" to="/aftercare">
+            <NavLink
+              className="navContainer"
+              to="/aftercare"
+              onClick={toggleDropDown}
+            >
               <IoHeartOutline className="linkIcon" />
               <h4 className="link">AFTERCARE</h4>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink className="navContainer" to="/giftcards">
+            <NavLink
+              className="navContainer"
+              to="/giftcards"
+              onClick={toggleDropDown}
+            >
               <IoGiftOutline className="linkIcon" />
               <h4 className="link">GIFTCARDS</h4>
             </NavLink>
@@ -108,13 +126,18 @@ export default function Navbar() {
         </menu>
         <div id="dropDownContainer">
           <menu className={`drop ${dropDown ? "active" : ""}`}>
-            <NavLink className="dropLink" to="/reviews">
-              <h4>REVIEWS</h4>
+            <NavLink
+              className="dropLink"
+              id="dropLinkTop"
+              to="/reviews"
+              onClick={toggleDropDown}
+            >
+              <h4 className="dropLinkName">REVIEWS</h4>
               <FaPlus />
             </NavLink>
 
-            <NavLink className="dropLink" to="/media">
-              <h4>MEDIA</h4>
+            <NavLink className="dropLink" to="/media" onClick={toggleDropDown}>
+              <h4 className="dropLinkName">MEDIA</h4>
               <FaPlus />
             </NavLink>
           </menu>
