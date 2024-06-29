@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
-import { tattooPhotos } from "../../tattooPhotos";
+
+import { tattooPhotos } from "../content/tattooPhotos";
 
 import "./tattoo.css";
 

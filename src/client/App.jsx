@@ -9,7 +9,7 @@ import Contact from "./features/Contact";
 import RequestAppt from "./features/RequestAppt";
 import Shop from "./features/Shop";
 import Tattoos from "./features/Tattoos";
-import GiftCards from "../GiftCards";
+import GiftCards from "./features/GiftCards";
 import Care from "./features/Care";
 import Faq from "./features/Faq";
 import Return from "./features/Return";

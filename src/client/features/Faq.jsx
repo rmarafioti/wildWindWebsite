@@ -1,8 +1,8 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
-import { PopUp, usePopUp } from "../../popUp";
+import { PopUp, usePopUp } from "../content/popUp";
 
-import { faqs } from "../../faqs";
+import { faqs } from "../content/faqs";
 
 import "./faqs.css";
 import "./popup.css";
