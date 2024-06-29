@@ -68,7 +68,7 @@ export default function Navbar() {
               onClick={toggleDropDown}
             />
           </li>
-          <div id="dropDownContainer">
+          {/*<div id="dropDownContainer">
             <menu className={`drop ${dropDown ? "active" : ""}`}>
               <NavLink className="dropLink" to="/reviews">
                 <h4>REVIEWS</h4>
@@ -80,7 +80,7 @@ export default function Navbar() {
                 <FaPlus />
               </NavLink>
             </menu>
-          </div>
+          </div>*/}
           <li className="navItem">
             <NavLink className="navContainer" to="/tattoos">
               <IoSkullOutline className="linkIcon" />
@@ -106,6 +106,19 @@ export default function Navbar() {
             </NavLink>
           </li>
         </menu>
+        <div id="dropDownContainer">
+          <menu className={`drop ${dropDown ? "active" : ""}`}>
+            <NavLink className="dropLink" to="/reviews">
+              <h4>REVIEWS</h4>
+              <FaPlus />
+            </NavLink>
+
+            <NavLink className="dropLink" to="/media">
+              <h4>MEDIA</h4>
+              <FaPlus />
+            </NavLink>
+          </menu>
+        </div>
       </div>
     </>
   );

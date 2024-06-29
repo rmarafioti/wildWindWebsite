@@ -140,8 +140,8 @@ nav {
 
 .menu.active {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navContainer {
@@ -184,7 +184,6 @@ nav {
 
 #aboutUs {
   position: relative;
-  margin-right: 0.8rem;
 }
 
 #aboutItem {
@@ -205,11 +204,11 @@ nav {
   top: 25%;
   left: 2.8%;
   margin: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 1rem;
   background-color: white;
   display: none;
   z-index: 1000;
-  
+  border: 1px solid var(--wildGreen);
 }
 
 .drop.active {
@@ -250,6 +249,14 @@ nav {
     opacity: 1;
   }
   .drop {
-    position: static;
+    position: absolute;
+    top: 15.5%;
+    left: 45%;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid var(--wildGreen);
+    display: none;
+    z-index: 1000;
   }
 }
