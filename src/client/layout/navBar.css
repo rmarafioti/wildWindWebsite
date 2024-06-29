@@ -220,20 +220,6 @@ margin-right: 1rem;
   justify-content: left;
 }
 
-/*#aboutItem .aboutLink {
-  opacity: 0;
-}
-
-#aboutItem:hover .aboutLink {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.drop.active #aboutItem .aboutLink{
-  opacity: 1;
-  transition: opacity 0.3s ease; 
-}*/
-
 .dropLink {
   display: flex;
   flex-direction: row;
@@ -247,6 +233,7 @@ margin-right: 1rem;
 }
 
 .dropLink:hover, .link:hover {
+  color: black;
   background-color: lightgrey;
 }
 

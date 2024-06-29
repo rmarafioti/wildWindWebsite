@@ -35,7 +35,7 @@ export default function Navbar() {
         <div id="hamMenuContainer" onClick={toggleMenu}>
           <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
         </div>
-        <NavLink to="/">
+        <NavLink to="/" onClick={toggleMenu}>
           <img
             id="navLogo"
             src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
@@ -43,10 +43,10 @@ export default function Navbar() {
           />
         </NavLink>
         <div id="navRight">
-          <NavLink id="faqContainer" to="/faqs">
+          <NavLink id="faqContainer" to="/faqs" onClick={toggleMenu}>
             <TbMessageCircleQuestion id="faqIcon" />
           </NavLink>
-          <NavLink id="contactContainer" to="/contact">
+          <NavLink id="contactContainer" to="/contact" onClick={toggleMenu}>
             <button id="contactButton">Contact Us</button>
           </NavLink>
         </div>
@@ -54,11 +54,7 @@ export default function Navbar() {
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
           <li id="aboutItem">
-            <NavLink
-              className="navContainer"
-              to="/shop"
-              onClick={toggleDropDown}
-            >
+            <NavLink className="navContainer" to="/shop" onClick={toggleMenu}>
               <GoBook className="linkIcon" />
               <h4 className="link" id="aboutUs">
                 ABOUT US
@@ -70,24 +66,11 @@ export default function Navbar() {
               onClick={toggleDropDown}
             />
           </li>
-          {/*<div id="dropDownContainer">
-            <menu className={`drop ${dropDown ? "active" : ""}`}>
-              <NavLink className="dropLink" to="/reviews">
-                <h4>REVIEWS</h4>
-                <FaPlus />
-              </NavLink>
-
-              <NavLink className="dropLink" to="/media">
-                <h4>MEDIA</h4>
-                <FaPlus />
-              </NavLink>
-            </menu>
-          </div>*/}
           <li className="navItem">
             <NavLink
               className="navContainer"
               to="/tattoos"
-              onClick={toggleDropDown}
+              onClick={toggleMenu}
             >
               <IoSkullOutline className="linkIcon" />
               <h4 className="link">TATTOOS</h4>
@@ -97,7 +80,7 @@ export default function Navbar() {
             <NavLink
               className="navContainer"
               to="/contact"
-              onClick={toggleDropDown}
+              onClick={toggleMenu}
             >
               <HiOutlineEnvelope className="linkIcon" />
               <h4 className="link">CONTACT</h4>
@@ -107,7 +90,7 @@ export default function Navbar() {
             <NavLink
               className="navContainer"
               to="/aftercare"
-              onClick={toggleDropDown}
+              onClick={toggleMenu}
             >
               <IoHeartOutline className="linkIcon" />
               <h4 className="link">AFTERCARE</h4>
@@ -117,7 +100,7 @@ export default function Navbar() {
             <NavLink
               className="navContainer"
               to="/giftcards"
-              onClick={toggleDropDown}
+              onClick={toggleMenu}
             >
               <IoGiftOutline className="linkIcon" />
               <h4 className="link">GIFTCARDS</h4>
@@ -130,13 +113,12 @@ export default function Navbar() {
               className="dropLink"
               id="dropLinkTop"
               to="/reviews"
-              onClick={toggleDropDown}
+              onClick={toggleMenu}
             >
               <h4 className="dropLinkName">REVIEWS</h4>
               <FaPlus />
             </NavLink>
-
-            <NavLink className="dropLink" to="/media" onClick={toggleDropDown}>
+            <NavLink className="dropLink" to="/media" onClick={toggleMenu}>
               <h4 className="dropLinkName">MEDIA</h4>
               <FaPlus />
             </NavLink>
