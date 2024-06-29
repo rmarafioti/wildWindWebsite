@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styling/form.css";
+import "./form.css";
 
 export default function TattooSizeField({
   name,

@@ -1,11 +1,11 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
-import { PopUp, usePopUp } from "./popUp";
+import { PopUp, usePopUp } from "../../popUp";
 
-import { aftercare } from "./aftercareInstructions";
+import { aftercare } from "../../aftercareInstructions";
 
-import "./styling/aftercare.css";
-import "./styling/popup.css";
+import "./aftercare.css";
+import "./popup.css";
 
 export default function Care() {
   const { popUp, popUpContent, openAftercarePopUp, closePopUp } = usePopUp();

@@ -1,5 +1,5 @@
 import React from "react";
-import CheckoutForm from "./CheckoutForm";
+import CheckoutForm from "./client/features/CheckoutForm";
 
 export default function GiftCards() {
   return (
