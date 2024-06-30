@@ -1,9 +1,3 @@
-* {
-  --wildBlue: rgb(101, 193, 220);
-  --wildBackground: rgb(226, 209, 189);
-  --wildGreen: rgb(124, 155, 63);
-}
-
 #contact {
   color: var(--wildGreen);
   display: flex;
@@ -54,7 +48,7 @@
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #contactButtonBottom {
@@ -159,6 +153,15 @@
   margin-top: 1rem;
 }
 
+#requestSentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
 #requestSentMessage {
   font-weight: bold;
   padding-bottom: 1rem;
@@ -166,14 +169,23 @@
   margin-bottom: 1rem;
 }
 
-#requestMessage {
-  margin-bottom: 1rem;
+.requestMessage {
+  color: black;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--wildGreen);
+}
+
+#requestMessageTop {
+  border-bottom: none;
+  margin-bottom: 0rem;
 }
 
 .messageTag {
+  color: black;
+}
+
+#messageTagBottom {
   font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 #returnLink {
@@ -181,13 +193,16 @@
 }
 
 #returnHome {
-  color:black;
-  margin-top: 2rem;
-  background-color: lightgrey;
-  border: 1px solid var(--wildGreen);
+  margin: 1rem;
+  padding: 0.1rem;
+  text-align: center;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-decoration: none;
+  color: var(--wildGreen);
   border-radius: 5px;
-  padding: .3rem;
-  cursor: pointer;
+  border: 2px solid var(--wildGreen);
 }
 
 @media (max-width: 586px) {

@@ -4,7 +4,7 @@ import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
 import { tattooPhotos } from "../content/tattooPhotos";
 
-import "./tattoo.css";
+import "./styles/tattoo.css";
 
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -4,8 +4,8 @@ import { PopUp, usePopUp } from "../content/popUp";
 
 import { faqs } from "../content/faqs";
 
-import "./faqs.css";
-import "./popup.css";
+import "./styles/faqs.css";
+import "./styles/popup.css";
 
 export default function Faq() {
   const { popUp, popUpContent, openFaqPopUp, closePopUp } = usePopUp();

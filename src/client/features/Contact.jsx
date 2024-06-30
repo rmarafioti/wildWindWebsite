@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./contact.css";
+import "./styles/contact.css";
 
 export default function Contact() {
   return (
@@ -23,11 +23,6 @@ export default function Contact() {
       <section>
         <Link className="contactLink" to="/requestappt">
           <h3 className="contactButtons">Request an appointment</h3>
-        </Link>
-        <Link className="contactLink">
-          <h3 className="contactButtons" id="contactButtonBottom">
-            Check today's availability
-          </h3>
         </Link>
       </section>
       <section id="contactInfoContainer">

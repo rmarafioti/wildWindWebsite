@@ -1,5 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
@@ -19,10 +24,21 @@ import Reviews from "./features/Reviews";
 import Media from "./features/Media";
 
 const App = () => {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  };
+
   return (
     <div className="App">
       <Router>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           {/*<Route path="/" element={<Root />} />*/}
           <Route path="/" element={<Home />} />

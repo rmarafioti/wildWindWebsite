@@ -82,11 +82,21 @@ export const tattooPhotos = [
   {
     id: 17,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1717295419/wildWindSite/colorBlockForearms_fsrsvf.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1719753503/wildWindSite/bustBooks_kvyaw7.jpg",
   },
   {
     id: 18,
     image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1719753530/wildWindSite/devilBaby_zaxu90.jpg",
+  },
+  {
+    id: 19,
+    image:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1717295419/wildWindSite/hotSauce_ymbvyv.jpg",
+  },
+  {
+    id: 20,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1719753516/wildWindSite/colorBlockFlowers_ejfkdp.jpg",
   },
 ];
