@@ -27,15 +27,19 @@ export default function Return() {
     return (
       <section id="success">
         <h1 id="successHeader">Payment Recieved!</h1>
-        <p className="successTag">
-          We appreciate your business! A confirmation email will be sent to:{" "}
-          <b id="custEmail">{customerEmail}</b>.{" "}
-        </p>
-        <p className="successTag" id="bottomTag">
-          If you have any questions, please email{" "}
-          <a href="mailto:wildwindtattoo@gmail.com">wildwindtattoo@gmail.com</a>
-          .
-        </p>
+        <div id="successContainer">
+          <h3 className="successTag">
+            We appreciate your business! A confirmation email will be sent to:{" "}
+            <b id="custEmail">{customerEmail}</b>.{" "}
+          </h3>
+          <h3 className="successTag" id="bottomTag">
+            If you have any questions, please email{" "}
+            <a href="mailto:wildwindtattoo@gmail.com">
+              wildwindtattoo@gmail.com
+            </a>
+            .
+          </h3>
+        </div>
         <Link id="returnLink" to="/">
           <h4 id="returnHome">Return Home</h4>
         </Link>
