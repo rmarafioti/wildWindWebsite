@@ -1,4 +1,4 @@
-* {
+*, html {
   font-family: "Lato", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -129,71 +129,6 @@ button:hover {
   text-align: center;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--wildGreen);
-  margin-bottom: 1rem;
-}
-
-/* shop about */
-
-#shopAbout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  margin-bottom: 2rem;
-}
-
-#mainShopHeader {
-  color: var(--wildGreen);
-  font-weight: bold;
-}
-
-.shopHeader {
-  color: var(--wildGreen);
-  font-weight: bold;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--wildGreen);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-#shopIconContainer {
-  display: flex;
-}
-
-.shopIcon {
-  padding: 0.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 1rem;
-}
-
-#firstParagraph {
-  border-top: 1px solid var(--wildGreen);
-  padding-top: 1rem;
-  max-width: 480px;
-}
-
-#firstParagraph, .shopParagraphs, .shopMiddleParagraphs {
-  max-width: 480px;
-}
-
-.shopMiddleParagraphs {
-  margin-bottom: 1rem;
-}
-
-#bottomParagraph {
-  margin-bottom: 0;
-}
-
-.missionItem {
-  color: var(--wildGreen);
-  font-weight: bold;
-  font-size: 18px;
-  font-style: italic;
-  padding: 1rem;
-  padding-top: 0;
-  padding-bottom: 0;
   margin-bottom: 1rem;
 }
 

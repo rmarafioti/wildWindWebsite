@@ -1,13 +1,46 @@
+import React, { useState, useEffect } from "react";
+
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
+import { shopPhotos } from "../content/shopPhotos";
+
+import "./shop.css";
+
 export default function Shop() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
+        setIsFading(false);
+      }, 1000); // Match this duration with the CSS transition duration
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentImageObj =
+    shopPhotos.length > 0 ? shopPhotos[currentIndex] : null;
+
+  const imageurl = currentImageObj
+    ? new URL(currentImageObj.image, import.meta.url).href
+    : "";
+
   return (
     <main id="shopAbout">
       <h1 id="mainShopHeader">About Us</h1>
-
+      <img
+        id="shopImages"
+        className={isFading ? "fade-out" : ""}
+        src={imageurl}
+        alt="tattoo shop photos"
+      />
       <div id="shopIconContainer">
         <h1 className="shopIcon">
           <a href="https://www.instagram.com/wildwindtattoo/?hl=en">
@@ -20,7 +53,6 @@ export default function Shop() {
           </a>
         </h1>
       </div>
-
       <p id="firstParagraph">
         Rich Marafioti founded Wild Wind Tattoo, which has provided expert
         tattooing in Chicago since 2015. Located in vibrant Wicker Park, Wild
@@ -50,10 +82,6 @@ export default function Shop() {
         want in an inclusive, safe space. While you get tattooed, enjoy a clean,
         creative, and artistic environment.
       </p>
-      <div>
-        <Link to="/reviews">Reviews</Link>
-        <Link to="/media">Media</Link>
-      </div>
       <h2 className="shopHeader">COMMUNITY</h2>
       <p className="shopParagraphs">
         Wild Wind Tattoo is proud to serve and work with our strong community.
@@ -62,6 +90,14 @@ export default function Shop() {
         Fund. We are currently partnered with Chicago Therapy Collective's Hire
         Trans Now initiative.
       </p>
+      <div id="shopLinksContainer">
+        <Link to="/reviews" className="shopLinks">
+          <h3>Reviews</h3>
+        </Link>
+        <Link to="/media" className="shopLinks">
+          <h3>Media</h3>
+        </Link>
+      </div>
     </main>
   );
 }
