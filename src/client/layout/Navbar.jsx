@@ -63,6 +63,7 @@ export default function Navbar() {
           </NavLink>
         </div>
       </nav>
+      {/*hamburger menu open*/}
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
           <li id="aboutItem">
@@ -72,6 +73,7 @@ export default function Navbar() {
                 ABOUT US
               </h4>
             </NavLink>
+            {/*drop down menu togglebutton*/}
             <IoIosArrowDown
               className="aboutLink"
               id="dropIcon"
@@ -103,6 +105,7 @@ export default function Navbar() {
             </NavLink>
           </li>
         </menu>
+        {/*drop down menu open*/}
         <div id="dropDownContainer">
           <menu className={`drop ${dropDown ? "active" : ""}`}>
             <NavLink className="dropLink" id="dropLinkTop" to="/reviews">
