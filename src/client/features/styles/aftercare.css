@@ -1,17 +1,10 @@
-* {
-  --wildBlue: rgb(101, 193, 220);
-  --wildBackground: rgb(226, 209, 189);
-  --wildGreen: rgb(124, 155, 63);
-}
-
 #afterCare {
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  margin-bottom: 2rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 #afterHeader {
@@ -22,7 +15,7 @@
   color: black;
   font-weight: normal;
   margin-bottom: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: solid 1px var(--wildGreen);
 }
 

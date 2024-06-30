@@ -69,7 +69,7 @@ export default function DateTimeField({
   };
 
   return (
-    <div className="form-group">
+    <div>
       <label className="label">
         Days and times you are available to get tattooed{" "}
         {validationError && (
