@@ -1,9 +1,3 @@
-* {
-  --wildBlue: rgb(101, 193, 220);
-  --wildBackground: rgb(226, 209, 189);
-  --wildGreen: rgb(124, 155, 63);
-}
-
 #reviewPage {
   color: var(--wildGreen);
   display: flex;

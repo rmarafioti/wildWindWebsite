@@ -1,4 +1,4 @@
-* {
+*, html {
   font-family: "Lato", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -146,6 +146,7 @@ button:hover {
 #mainShopHeader {
   color: var(--wildGreen);
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .shopHeader {
@@ -159,12 +160,17 @@ button:hover {
 
 #shopIconContainer {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .shopIcon {
   padding: 0.5rem;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+#shopImages {
   margin-bottom: 1rem;
 }
 

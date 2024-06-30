@@ -1,13 +1,35 @@
+import React, { useState, useEffect } from "react";
+
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
+import { shopPhotos } from "../content/shopPhotos";
+
 export default function Shop() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
+    }, 3000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentImageObj =
+    shopPhotos.length > 0 ? shopPhotos[currentIndex] : null;
+
+  const imageurl = currentImageObj
+    ? new URL(currentImageObj.image, import.meta.url).href
+    : "";
+
   return (
     <main id="shopAbout">
       <h1 id="mainShopHeader">About Us</h1>
-
+      <img id="shopImages" src={imageurl} alt="tattoo shop photos" />
       <div id="shopIconContainer">
         <h1 className="shopIcon">
           <a href="https://www.instagram.com/wildwindtattoo/?hl=en">
@@ -20,7 +42,6 @@ export default function Shop() {
           </a>
         </h1>
       </div>
-
       <p id="firstParagraph">
         Rich Marafioti founded Wild Wind Tattoo, which has provided expert
         tattooing in Chicago since 2015. Located in vibrant Wicker Park, Wild
