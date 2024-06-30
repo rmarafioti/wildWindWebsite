@@ -8,6 +8,7 @@ import {
 
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
+//ROOT not being used w/ BrowserRouter but keep component in case we need to switch to ReactRouter
 /*import Root from "./Root";*/
 import Home from "./features/Home";
 import Contact from "./features/Contact";
@@ -24,6 +25,9 @@ import Reviews from "./features/Reviews";
 import Media from "./features/Media";
 
 const App = () => {
+  /**
+   * @ScrollToTop viewport shows top of navigated route if user scrolled down on previous route
+   */
   const ScrollToTop = () => {
     const { pathname } = useLocation();
 
