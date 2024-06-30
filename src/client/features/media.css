@@ -1,0 +1,68 @@
+* {
+    --wildBlue: rgb(101, 193, 220);
+    --wildBackground: rgb(226, 209, 189);
+    --wildGreen: rgb(124, 155, 63);
+  }
+
+
+#media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--wildGreen);
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#mediaHeader {
+    border-bottom: 1px solid var(--wildGreen);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.mediaHeader {
+    color: black;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mediaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border-bottom: 1px solid var(--wildGreen);
+}
+
+.targetText {
+    color: var(--wildGreen);
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+#mediaContainerBottom {
+    border-bottom: none;
+}
+
+.video {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#atBayPhoto {
+    border-radius: 8px;
+    width: 560px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 586px) {
+    .video {
+        width: 100%;
+    }
+    #atBayPhoto {
+        width: 100%;
+    }
+}
