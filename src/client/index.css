@@ -172,6 +172,12 @@ button:hover {
 
 #shopImages {
   margin-bottom: 1rem;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+#shopImages.fade-out {
+  opacity: 0;
 }
 
 #firstParagraph {
@@ -201,6 +207,24 @@ button:hover {
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 1rem;
+}
+
+#shopLinksContainer {
+  display: flex;
+margin-top: 2rem;
+}
+
+.shopLinks {
+  margin: 1rem;
+  padding: 0.1rem;
+  text-align: center;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
 }
 
 /* return */
