@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 import { reviews } from "../content/reviews";
 
-import "./reviews.css";
+import "./styles/reviews.css";
 
 export default function Reviews() {
   function ReviewCard({ name, review }) {

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 import { shopPhotos } from "../content/shopPhotos";
 
-import "./shop.css";
+import "./styles/shop.css";
 
 export default function Shop() {
   const [currentIndex, setCurrentIndex] = useState(0);

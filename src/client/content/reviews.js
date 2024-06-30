@@ -11,7 +11,7 @@ export const reviews = [
     name: "Hannah P.",
     rating: "5 Stars",
     review:
-      "Rich did such an amazing job on tattoos for me and my friend. It was my friend's first tattoo and he was really great about walking her through the process and aftercare and made us both feel very at home.I walked in not really know what I wanted to get (other than some vague inspiration), but even with the lack of detail, Rich managed to design a piece that was absolutely perfect for me. I couldn't be happier with how it turned out!",
+      "Rich did such an amazing job on tattoos for me and my friend. It was my friend's first tattoo and he was really great about walking her through the process and aftercare and made us both feel very at home. I walked in not really know what I wanted to get (other than some vague inspiration), but even with the lack of detail, Rich managed to design a piece that was absolutely perfect for me. I couldn't be happier with how it turned out!",
   },
   {
     id: 3,

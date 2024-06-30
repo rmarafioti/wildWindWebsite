@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./form.css";
+import "./styles/form.css";
 
 export default function RequestSent() {
   return (

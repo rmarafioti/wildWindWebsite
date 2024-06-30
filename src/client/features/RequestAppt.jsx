@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-import "./contact.css";
+import "./styles/contact.css";
 
 export default function RequestAppt() {
   return (

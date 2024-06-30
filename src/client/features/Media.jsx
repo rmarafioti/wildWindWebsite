@@ -1,5 +1,6 @@
-import "./media.css";
 import { Link } from "react-router-dom";
+
+import "./styles/media.css";
 
 export default function Media() {
   return (
