@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
 import { reviews } from "../content/reviews";
@@ -40,12 +41,17 @@ export default function Reviews() {
           />
         ))}
       </ul>
-      <a
-        href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082771,-87.6899845,16z/data=!4m8!3m7!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!9m1!1b1!16s%2Fg%2F11bw5xqdp7?entry=ttu"
-        id="readMoreLink"
-      >
-        <h3 id="readMore">Read more reviews</h3>
-      </a>
+      <div id="reviewLinksContainer">
+        <a
+          className="reviewLink"
+          href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082771,-87.6899845,16z/data=!4m8!3m7!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!9m1!1b1!16s%2Fg%2F11bw5xqdp7?entry=ttu"
+        >
+          <h3>Read more reviews</h3>
+        </a>
+        <Link to="/shop" className="reviewLink">
+          <h3>About</h3>
+        </Link>
+      </div>
     </main>
   );
 }

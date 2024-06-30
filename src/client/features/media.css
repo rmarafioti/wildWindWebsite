@@ -62,6 +62,23 @@
     margin-bottom: 1rem;
 }
 
+#mediaLinksContainer {
+    display: flex;
+  }
+  
+  .mediaLinks {
+    margin: 1rem;
+    padding: 0.1rem;
+    text-align: center;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+    color: var(--wildGreen);
+    border-radius: 5px;
+    border: 2px solid var(--wildGreen);
+  }
+
 @media (max-width: 586px) {
     .video {
         width: 100%;

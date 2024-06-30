@@ -44,11 +44,11 @@ export default function Media() {
           allowfullscreen
         ></iframe>
       </div>
-      <div id="shopLinksContainer">
-        <Link to="/reviews" className="shopLinks">
+      <div id="mediaLinksContainer">
+        <Link to="/reviews" className="mediaLinks">
           <h3>Reviews</h3>
         </Link>
-        <Link to="/shop" className="shopLinks">
+        <Link to="/shop" className="mediaLinks">
           <h3>About</h3>
         </Link>
       </div>
