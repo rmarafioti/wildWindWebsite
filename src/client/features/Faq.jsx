@@ -7,9 +7,16 @@ import { faqs } from "../content/faqs";
 import "./styles/faqs.css";
 import "./styles/popup.css";
 
+/**
+ * @component Faq features a functional pop up for frequently asked tattoo questions
+ */
 export default function Faq() {
   const { popUp, popUpContent, openFaqPopUp, closePopUp } = usePopUp();
 
+  /**
+   * @function FaqCard holds frequently asked tattoo questions and answers listed in faqs.js && pop up functionality handled by way of popUp.js
+   *
+   */
   function FaqCard({ id, question, answer }) {
     return (
       <div className="faqContainer">
