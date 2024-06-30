@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import "./styles/giftcards.css";
+
 export default function Return() {
   const [status, setStatus] = useState(null);
   const [customerEmail, setCustomerEmail] = useState("");

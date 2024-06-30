@@ -15,9 +15,7 @@
   color: black;
   text-align: center;
   padding-bottom: 0.5rem;
-  margin: 1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   border-bottom: 1px solid var(--wildGreen);
 }
 
