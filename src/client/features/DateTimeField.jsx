@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { IoAdd } from "react-icons/io5";
 
+/**
+ * @component DateTimeField features functionality for a user to select available days and times and add them or delete them. DateTimeField component is imported and set in Form.jsx
+ */
 export default function DateTimeField({
   name,
   value,
@@ -42,6 +45,9 @@ export default function DateTimeField({
     "7 pm",
   ];
 
+  /**
+   * @function handleAddTime if a selected day && selected are chosen add them to an array of strings called selected times
+   */
   const handleAddTime = () => {
     if (selectedDay && selectedTime) {
       const newTime = `${selectedDay} at ${selectedTime}`;
@@ -57,6 +63,10 @@ export default function DateTimeField({
     }
   };
 
+  /**
+   * @function handleRemoveTime functionality to remove a selected time from the selected times array
+   * @param index of the selected time in the array
+   */
   const handleRemoveTime = (index) => {
     const newSelectedTimes = selectedTimes.filter((_, i) => i !== index);
     setSelectedTimes(newSelectedTimes);
