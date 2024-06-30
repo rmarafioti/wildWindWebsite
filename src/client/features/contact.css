@@ -1,9 +1,3 @@
-* {
-  --wildBlue: rgb(101, 193, 220);
-  --wildBackground: rgb(226, 209, 189);
-  --wildGreen: rgb(124, 155, 63);
-}
-
 #contact {
   color: var(--wildGreen);
   display: flex;
@@ -54,7 +48,7 @@
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #contactButtonBottom {

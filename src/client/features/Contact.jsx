@@ -24,11 +24,6 @@ export default function Contact() {
         <Link className="contactLink" to="/requestappt">
           <h3 className="contactButtons">Request an appointment</h3>
         </Link>
-        <Link className="contactLink">
-          <h3 className="contactButtons" id="contactButtonBottom">
-            Check today's availability
-          </h3>
-        </Link>
       </section>
       <section id="contactInfoContainer">
         <div className="contactInfo">
