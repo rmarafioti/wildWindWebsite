@@ -2,7 +2,7 @@ export const reviews = [
   {
     id: 1,
     name: "Margaux S.",
-    rating: "",
+    rating: "5 Stars",
     review:
       "This place is fantastic! I loved my experience working with Rich. He had such passion and he's very helpful guiding the experience. I relied on his expertise when I was getting two tattoos covered up with a bigger tattoo. He was great to talk with, I loved the relaxing jazz music in the shop and the vibrant art was so cheerful, so inviting. Rich and I kept in touch and he checked my tattoo out a month later to see how it healed. I've told my friends to go see Rich and I can't recommend enough! Thank you!",
   },
