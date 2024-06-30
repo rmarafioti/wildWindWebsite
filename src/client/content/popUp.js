@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 
+/**
+ * @function usePopUp handles opening the pop up && setting the pop up content for Care.jsx && Faq.jsx
+ */
 function usePopUp() {
   const [popUp, setPopUp] = useState(false);
   const [popUpContent, setPopUpContent] = useState(null);
 
+  //for Care.jsx
   const openAftercarePopUp = (
     id,
     headerOne,
@@ -26,6 +30,7 @@ function usePopUp() {
     setPopUp(true);
   };
 
+  //for Faq.jsx
   const openFaqPopUp = (id, question, answer) => {
     const content = (
       <div>
@@ -51,6 +56,9 @@ function usePopUp() {
   };
 }
 
+/**
+ * @function PopUp handles the UI of the pop up @handleClose uses the closePopUp function to close the pop up
+ */
 const PopUp = ({ isOpen, children, closePopUp }) => {
   if (!isOpen) return null;
 

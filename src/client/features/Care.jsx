@@ -7,9 +7,16 @@ import { aftercare } from "../content/aftercareInstructions";
 import "./styles/aftercare.css";
 import "./styles/popup.css";
 
+/**
+ * @component Care featuring a functional pop up for tattoo care instructions
+ */
 export default function Care() {
   const { popUp, popUpContent, openAftercarePopUp, closePopUp } = usePopUp();
 
+  /**
+   * @function AftercareCard holds care instructions listed in aftercareinstructions.js && pop up functionality is handled by way of popUp.js
+   *
+   */
   function AftercareCard({
     id,
     title,
