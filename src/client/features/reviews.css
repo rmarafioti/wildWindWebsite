@@ -30,9 +30,7 @@
 
 .review {
   color: black;
-  margin: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 1rem 1rem 1rem;
   padding: 1rem;
   border: 1px solid lightgrey;
   border-radius: 8px;
@@ -62,23 +60,6 @@
   margin-bottom: 1rem;
 }
 
-#readMoreLink {
-    text-decoration: none;
-}
-
-#readMore {
-    padding: 0.1rem;
-    text-align: center;
-    padding-bottom: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    text-decoration: none;
-    color: var(--wildGreen);
-    border-radius: 5px;
-    border: 2px solid var(--wildGreen);
-    margin-bottom: 2rem;
-}
-
 #reviewLinksContainer {
   display: flex;
   margin-bottom: 2rem;
@@ -86,11 +67,8 @@
 
 .reviewLink {
   margin: 1rem;
-  padding: 0.1rem;
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
   text-align: center;
-  padding-bottom: 0.2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   text-decoration: none;
   color: var(--wildGreen);
   border-radius: 5px;
