@@ -1,4 +1,5 @@
 import "./media.css";
+import { Link } from "react-router-dom";
 
 export default function Media() {
   return (
@@ -32,6 +33,7 @@ export default function Media() {
         ></img>
         <iframe
           className="video"
+          id="videoBottom"
           width="560"
           height="315"
           src="https://res.cloudinary.com/dzpne110u/video/upload/v1719756420/wildWindSite/BFD_AT_BAY_MATCHING_TATTOOS_CARDS_15s_16x9_1080P_H264_ym3g3y.mp4"
@@ -41,6 +43,14 @@ export default function Media() {
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
+      </div>
+      <div id="shopLinksContainer">
+        <Link to="/reviews" className="shopLinks">
+          <h3>Reviews</h3>
+        </Link>
+        <Link to="/shop" className="shopLinks">
+          <h3>About</h3>
+        </Link>
       </div>
     </main>
   );

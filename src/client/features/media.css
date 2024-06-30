@@ -49,6 +49,10 @@
 
 .video {
     border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#videoBottom {
     margin-bottom: 1rem;
 }
 
