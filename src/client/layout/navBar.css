@@ -229,7 +229,7 @@ nav {
   background-color: lightgrey;
 }
 
-#dropLinkTop {
+#dropLinkTop, #dropLinkMiddle {
   margin-bottom: 0;
 }
 

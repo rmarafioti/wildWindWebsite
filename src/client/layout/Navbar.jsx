@@ -112,8 +112,12 @@ export default function Navbar() {
               <h4 className="dropLinkName">REVIEWS</h4>
               <FaPlus />
             </NavLink>
-            <NavLink className="dropLink" to="/media">
+            <NavLink className="dropLink" id="dropLinkMiddle" to="/media">
               <h4 className="dropLinkName">MEDIA</h4>
+              <FaPlus />
+            </NavLink>
+            <NavLink className="dropLink" to="/faqs">
+              <h4 className="dropLinkName">FAQs</h4>
               <FaPlus />
             </NavLink>
           </menu>
