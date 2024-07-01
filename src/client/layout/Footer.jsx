@@ -4,6 +4,9 @@ import { FaInstagram } from "react-icons/fa";
 
 import "./footer.css";
 
+/**
+ * @component footer features static business info and links to outside sites
+ */
 export default function Footer() {
   return (
     <footer>

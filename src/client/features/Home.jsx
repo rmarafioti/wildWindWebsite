@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+/**
+ *
+ * @component Home features the main landing page of the web app with video and copy for SEO
+ */
 export default function Home() {
   return (
     <main id="home">

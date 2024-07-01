@@ -1,9 +1,3 @@
-* {
-  --wildBlue: rgb(101, 193, 220);
-  --wildBackground: rgb(226, 209, 189);
-  --wildGreen: rgb(124, 155, 63);
-}
-
 footer {
   display: flex;
   flex-direction: column;
@@ -54,7 +48,6 @@ li {
   list-style-type: none;
   text-decoration: none;
   margin: 1rem;
-  list-style-type: none;
 }
 
 .listIcons a:link,
@@ -74,9 +67,7 @@ li {
 .footerIcon a:visited {
   color: var(--wildGreen);
   font-size: 30px;
-  padding: 1rem;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 #footerTag,

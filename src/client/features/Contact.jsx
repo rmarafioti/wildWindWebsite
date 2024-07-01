@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import "./styles/contact.css";
 
+/**
+ * @component Contact features general static business info and links to outside sites
+ */
 export default function Contact() {
   return (
     <main id="contact">

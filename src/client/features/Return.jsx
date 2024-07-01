@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 
 import "./styles/giftcards.css";
 
+/**
+ *
+ * @component Return features a message to the user when the form on CheckoutForm.jsx is successfully sent
+ */
 export default function Return() {
   const [status, setStatus] = useState(null);
   const [customerEmail, setCustomerEmail] = useState("");

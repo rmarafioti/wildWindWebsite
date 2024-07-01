@@ -6,7 +6,16 @@ import { reviews } from "../content/reviews";
 
 import "./styles/reviews.css";
 
+/**
+ *
+ * @component Reviews features reviews by clients about the business by way of review.js
+ */
 export default function Reviews() {
+  /**
+   *
+   * @function ReviewCard holds the information for each indiviual review
+   *
+   */
   function ReviewCard({ name, review }) {
     return (
       <li className="review">

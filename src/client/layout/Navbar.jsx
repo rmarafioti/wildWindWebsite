@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import { IoSkullOutline } from "react-icons/io5";
 import { GoBook } from "react-icons/go";
@@ -11,22 +12,33 @@ import { FaPlus } from "react-icons/fa6";
 
 import "./navBar.css";
 
+/**
+ * @component navigation bar featuring a functional hamburger menu and drop down menu to route to each component in the application
+ */
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   const location = useLocation();
 
+  //reset menu and dropdown to closed on state change
   useEffect(() => {
     setMenuOpen(false);
+    setDropDown(false);
   }, [location.pathname]);
 
+  /**
+   * @toggleMenu open and close hamburger menu && close drop down menu
+   */
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    setDropDown(false); // Close dropdown when closing the menu
+    setDropDown(false);
   };
 
+  /**
+   * @toggleDropDown open and close drop down menu
+   */
   const toggleDropDown = () => {
-    setDropDown(!dropDown); // Toggle dropDown state
+    setDropDown(!dropDown);
   };
 
   return (
@@ -35,7 +47,7 @@ export default function Navbar() {
         <div id="hamMenuContainer" onClick={toggleMenu}>
           <div className={`menuButtonBurger ${menuOpen ? "open" : ""}`}></div>
         </div>
-        <NavLink to="/" onClick={toggleMenu}>
+        <NavLink to="/">
           <img
             id="navLogo"
             src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
@@ -43,23 +55,25 @@ export default function Navbar() {
           />
         </NavLink>
         <div id="navRight">
-          <NavLink id="faqContainer" to="/faqs" onClick={toggleMenu}>
+          <NavLink id="faqContainer" to="/faqs">
             <TbMessageCircleQuestion id="faqIcon" />
           </NavLink>
-          <NavLink id="contactContainer" to="/contact" onClick={toggleMenu}>
+          <NavLink id="contactContainer" to="/contact">
             <button id="contactButton">Contact Us</button>
           </NavLink>
         </div>
       </nav>
+      {/*hamburger menu open*/}
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
           <li id="aboutItem">
-            <NavLink className="navContainer" to="/shop" onClick={toggleMenu}>
+            <NavLink className="navContainer" to="/shop">
               <GoBook className="linkIcon" />
               <h4 className="link" id="aboutUs">
                 ABOUT US
               </h4>
             </NavLink>
+            {/*drop down menu togglebutton*/}
             <IoIosArrowDown
               className="aboutLink"
               id="dropIcon"
@@ -67,58 +81,38 @@ export default function Navbar() {
             />
           </li>
           <li className="navItem">
-            <NavLink
-              className="navContainer"
-              to="/tattoos"
-              onClick={toggleMenu}
-            >
+            <NavLink className="navContainer" to="/tattoos">
               <IoSkullOutline className="linkIcon" />
               <h4 className="link">TATTOOS</h4>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink
-              className="navContainer"
-              to="/contact"
-              onClick={toggleMenu}
-            >
+            <NavLink className="navContainer" to="/contact">
               <HiOutlineEnvelope className="linkIcon" />
               <h4 className="link">CONTACT</h4>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink
-              className="navContainer"
-              to="/aftercare"
-              onClick={toggleMenu}
-            >
+            <NavLink className="navContainer" to="/aftercare">
               <IoHeartOutline className="linkIcon" />
               <h4 className="link">AFTERCARE</h4>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink
-              className="navContainer"
-              to="/giftcards"
-              onClick={toggleMenu}
-            >
+            <NavLink className="navContainer" to="/giftcards">
               <IoGiftOutline className="linkIcon" />
               <h4 className="link">GIFTCARDS</h4>
             </NavLink>
           </li>
         </menu>
+        {/*drop down menu open*/}
         <div id="dropDownContainer">
           <menu className={`drop ${dropDown ? "active" : ""}`}>
-            <NavLink
-              className="dropLink"
-              id="dropLinkTop"
-              to="/reviews"
-              onClick={toggleMenu}
-            >
+            <NavLink className="dropLink" id="dropLinkTop" to="/reviews">
               <h4 className="dropLinkName">REVIEWS</h4>
               <FaPlus />
             </NavLink>
-            <NavLink className="dropLink" to="/media" onClick={toggleMenu}>
+            <NavLink className="dropLink" to="/media">
               <h4 className="dropLinkName">MEDIA</h4>
               <FaPlus />
             </NavLink>
