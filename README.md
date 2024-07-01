@@ -9,10 +9,10 @@ Currently, two official plugins are available:
 
 # Wild Wind Tattoo Website
 
-![Site Outline](src/images/wildWindSite.jpg)
+![Site Outline](src/client/images/wildWindSite.jpg)
 
-![Site Wireframe Mobile](src/images/wireframeMobile.png)
+![Site Wireframe Mobile](src/client/images/wireframeMobile.png)
 
-![SiteWireframeDesktop](src/images/wireframeDesktop.png)
+![SiteWireframeDesktop](src/client/images/wireframeDesktop.png)
 
 Color coding to specify HTML container grouping
