@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 # Wild Wind Tattoo Website
 
-![Site Outline](src/client/images/wildWindSite.jpg)
+![Site Outline](src/client/images/wildWindSiteMap.jpg)
 
 ![Site Wireframe Mobile](src/client/images/wireframeMobile.png)
 
