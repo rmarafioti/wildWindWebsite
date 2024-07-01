@@ -9,17 +9,25 @@ import { shopPhotos } from "../content/shopPhotos";
 
 import "./styles/shop.css";
 
+/**
+ *
+ * @component Shop features static information about the business as well as a slideshow of shop photos by way of shopPhotos.js
+ */
 export default function Shop() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
+    /**
+     *@function interval creates a slideshow of shop photos looping through by the photos index at a set timeout of 3 seconds
+     */
     const interval = setInterval(() => {
       setIsFading(true);
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
         setIsFading(false);
-      }, 1000); // Match this duration with the CSS transition duration
+        // Match this duration with the CSS transition duration
+      }, 1000);
     }, 3000);
 
     return () => clearInterval(interval);

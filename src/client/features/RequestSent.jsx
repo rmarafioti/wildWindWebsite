@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 
 import "./styles/form.css";
 
+/**
+ *
+ * @component RequestSent features a message to the user when the form on RequestAppt.jsx is successfully sent
+ */
 export default function RequestSent() {
   return (
     <main id="requestSent">

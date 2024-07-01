@@ -3,6 +3,10 @@ import Form from "./Form";
 
 import "./styles/contact.css";
 
+/**
+ *
+ * @component RequestAppt features a functional form by way of Form.jsx for a client to request an appointmmet via email
+ */
 export default function RequestAppt() {
   return (
     <main id="requestContact">

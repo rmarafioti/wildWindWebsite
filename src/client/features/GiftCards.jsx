@@ -4,6 +4,10 @@ import CheckoutForm from "./CheckoutForm";
 
 import "./styles/giftcards.css";
 
+/**
+ *
+ * @component GiftCards features embedded Stripe form from CheckoutForm.jsx for user to purchase a gift certificate at any value
+ */
 export default function GiftCards() {
   return (
     <main id="giftCards">

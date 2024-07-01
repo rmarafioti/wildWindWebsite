@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 
 import "./styles/media.css";
 
+/**
+ *
+ * @component Media features published media for other companies the business has collaborated with or was featured in
+ */
 export default function Media() {
   return (
     <main id="media">
