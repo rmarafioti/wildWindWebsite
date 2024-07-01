@@ -6,9 +6,13 @@ import { tattooPhotos } from "../content/tattooPhotos";
 
 import "./styles/tattoo.css";
 
+/**
+ *
+ * @component Tattoos features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
+ */
 export default function Tattoos() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  // functionality for the user to navigate forward and backward through tattoo photos
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % tattooPhotos.length);
   };
@@ -26,8 +30,11 @@ export default function Tattoos() {
     ? new URL(currentImageObj.image, import.meta.url).href
     : "";
 
+  /**
+   *
+   * @TattooCard holds each individual tattoo to be mapped through for the thumbnail gallery
+   */
   function TattooCard({ tattoo, onClick }) {
-    // Construct the full URL for the image using the URL constructor
     const imageUrl = new URL(tattoo.image, import.meta.url).href;
     return (
       <img

@@ -2,6 +2,9 @@ import React from "react";
 
 import "./styles/form.css";
 
+/**
+ * @component TattooSizeField features functionality for a user to select the desized size of their tattoo via the suggestedSizes array.TattooSizeField component is imported and set in Form.jsx
+ */
 export default function TattooSizeField({
   name,
   value,
