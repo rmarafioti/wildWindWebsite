@@ -16,6 +16,8 @@ import Contact from "./features/Contact";
 import RequestAppt from "./features/RequestAppt";
 import AboutUs from "./features/AboutUs";
 import Tattoos from "./features/Tattoos";
+import MercedesTats from "./features/MercedesTats";
+import RichTats from "./features/RichTats";
 import GiftCards from "./features/GiftCards";
 import Care from "./features/Care";
 import Faq from "./features/Faq";
@@ -52,6 +54,8 @@ const App = () => {
             <Route path="/requestappt" element={<RequestAppt />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/tattoos" element={<Tattoos />} />
+            <Route path="/mercedestats" element={<MercedesTats />} />
+            <Route path="/richtats" element={<RichTats />} />
             <Route path="/giftcards" element={<GiftCards />} />
             <Route path="/aftercare" element={<Care />} />
             <Route path="/faqs" element={<Faq />} />

@@ -133,11 +133,11 @@ export default function Navbar() {
         {/*drop down menu open*/}
         <div id="dropDownContainer">
           <menu className={`droptats ${dropDown ? "active" : ""}`}>
-            <NavLink className="dropLink" id="dropLinkTop" to="/rich">
+            <NavLink className="dropLink" id="dropLinkTop" to="/richtats">
               <h4 className="dropLinkName">Rich Marafioti</h4>
               <FaPlus />
             </NavLink>
-            <NavLink className="dropLink" to="/mercedes">
+            <NavLink className="dropLink" to="/mercedestats">
               <h4 className="dropLinkName">Mercedes Wright</h4>
               <FaPlus />
             </NavLink>
