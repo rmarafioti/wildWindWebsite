@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import "./styles/giftcards.css";
@@ -32,6 +33,13 @@ export default function Return() {
   if (status === "complete") {
     return (
       <section id="success">
+        <Helmet>
+          <title>Return Page - wildwindtattoo.com</title>
+          <meta
+            name="description"
+            content="This is the return page of wildwindtattoo.com."
+          />
+        </Helmet>
         <h1 id="successHeader">Payment Recieved!</h1>
         <div id="successContainer">
           <h3 className="successTag">

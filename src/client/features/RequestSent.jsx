@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import "./styles/form.css";
@@ -9,6 +10,13 @@ import "./styles/form.css";
 export default function RequestSent() {
   return (
     <main id="requestSent">
+      <Helmet>
+        <title>Request Sent Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the request sent page of wildwindtattoo.com."
+        />
+      </Helmet>
       <div id="requestSentContainer">
         <h1 id="requestSentMessage">Thank you for your message!</h1>
         <h3 className="requestMessage" id="requestMessageTop">

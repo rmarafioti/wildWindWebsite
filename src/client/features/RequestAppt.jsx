@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Form from "./Form";
 
 import "./styles/contact.css";
@@ -10,6 +11,13 @@ import "./styles/contact.css";
 export default function RequestAppt() {
   return (
     <main id="requestContact">
+      <Helmet>
+        <title>Request Appointmnet Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the request appointmnet page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="requestHeader">Request An Appointment</h1>
       <Form />
     </main>

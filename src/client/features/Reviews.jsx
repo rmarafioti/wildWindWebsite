@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
@@ -37,6 +38,13 @@ export default function Reviews() {
 
   return (
     <main id="reviewPage">
+      <Helmet>
+        <title>Reviews Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the reviews page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="reviewHeader">REVIEWS</h1>
       <h3 id="reviewTag">
         Take a look at what our clients have to say about us!
@@ -57,8 +65,8 @@ export default function Reviews() {
         >
           <h3>Read more reviews</h3>
         </a>
-        <Link to="/shop" className="reviewLink">
-          <h3>About</h3>
+        <Link to="/aboutus" className="reviewLink">
+          <h3>About Us</h3>
         </Link>
       </div>
     </main>

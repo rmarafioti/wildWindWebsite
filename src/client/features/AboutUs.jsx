@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -42,6 +43,13 @@ export default function Shop() {
 
   return (
     <main id="shopAbout">
+      <Helmet>
+        <title>About Us Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the about page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="mainShopHeader">About Us</h1>
       <img
         id="shopImages"

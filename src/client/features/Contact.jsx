@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import "./styles/contact.css";
@@ -9,6 +10,13 @@ import "./styles/contact.css";
 export default function Contact() {
   return (
     <main id="contact">
+      <Helmet>
+        <title>Contact Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the contact page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="header">Contact Us</h1>
       <section id="contactHeader">
         <h3 className="headerTagline">
