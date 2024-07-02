@@ -137,12 +137,12 @@ nav {
 }
 
 .navItem,
-#aboutItem {
+#aboutItem, #tattooItem {
   list-style-type: none;
 }
 
 .navItem a,
-#aboutItem a {
+#aboutItem a, #tattooItem a {
   align-items: center;
   font-size: 16px;
 }
@@ -150,7 +150,8 @@ nav {
 .navItem a:link,
 .navItem a:visited,
 #aboutItem a:link,
-#aboutItem a:visited  {
+#aboutItem a:visited, #tattooItem a:link,
+#tattooItem a:visited  {
   color: var(--wildGreen);
 }
 
@@ -170,15 +171,14 @@ nav {
   transition: background-color 0.5s ease;
 }
 
-#aboutUs {
+#aboutUs, #tats {
   position: relative;
   margin-right: 0.5rem;
 }
 
-#aboutItem {
+#aboutItem, #tattooItem {
   display: flex;
   align-items: center;
-  text-align: end;
 }
 
 #dropIcon {
@@ -199,7 +199,19 @@ nav {
   border-radius: 5px;
 }
 
-.drop.active {
+.droptats {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  margin: 0.5rem;
+  background-color: white;
+  display: none;
+  z-index: 1000;
+  border: 1px solid var(--wildGreen);
+  border-radius: 5px;
+}
+
+.drop.active, .droptats.active {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -250,7 +262,7 @@ nav {
     border-bottom: none;
   }
   .navItem a,
-  #aboutItem {
+  #aboutItem, #tattooItem {
     border-bottom: 1px solid var(--wildGreen);
   }
   .link {
@@ -260,6 +272,17 @@ nav {
     position: absolute;
     top: 17%;
     left: 48%;
+    margin: 0.5rem;
+    background-color: white;
+    border: 1px solid var(--wildGreen);
+    display: none;
+    z-index: 1000;
+  }
+
+  .droptats {
+    position: absolute;
+    top: 27.5%;
+    left: 7%;
     margin: 0.5rem;
     background-color: white;
     border: 1px solid var(--wildGreen);
