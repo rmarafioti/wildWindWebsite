@@ -80,11 +80,19 @@ export default function Navbar() {
               onClick={toggleDropDown}
             />
           </li>
-          <li className="navItem">
+          <li id="tattooItem">
             <NavLink className="navContainer" to="/tattoos">
               <IoSkullOutline className="linkIcon" />
-              <h4 className="link">TATTOOS</h4>
+              <h4 className="link" id="tats">
+                TATTOOS
+              </h4>
             </NavLink>
+            {/*drop down menu togglebutton*/}
+            <IoIosArrowDown
+              className="aboutLink"
+              id="dropIcon"
+              onClick={toggleDropDown}
+            />
           </li>
           <li className="navItem">
             <NavLink className="navContainer" to="/contact">
@@ -118,6 +126,19 @@ export default function Navbar() {
             </NavLink>
             <NavLink className="dropLink" to="/faqs">
               <h4 className="dropLinkName">FAQs</h4>
+              <FaPlus />
+            </NavLink>
+          </menu>
+        </div>
+        {/*drop down menu open*/}
+        <div id="dropDownContainer">
+          <menu className={`droptats ${dropDown ? "active" : ""}`}>
+            <NavLink className="dropLink" id="dropLinkTop" to="/richtats">
+              <h4 className="dropLinkName">Rich Marafioti</h4>
+              <FaPlus />
+            </NavLink>
+            <NavLink className="dropLink" to="/mercedestats">
+              <h4 className="dropLinkName">Mercedes Wright</h4>
               <FaPlus />
             </NavLink>
           </menu>
