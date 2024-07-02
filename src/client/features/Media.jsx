@@ -53,8 +53,8 @@ export default function Media() {
         <Link to="/reviews" className="mediaLinks">
           <h3>Reviews</h3>
         </Link>
-        <Link to="/shop" className="mediaLinks">
-          <h3>About</h3>
+        <Link to="/aboutus" className="mediaLinks">
+          <h3>About Us</h3>
         </Link>
       </div>
     </main>

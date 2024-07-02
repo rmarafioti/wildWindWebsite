@@ -13,7 +13,7 @@ import Footer from "./layout/Footer";
 import Home from "./features/Home";
 import Contact from "./features/Contact";
 import RequestAppt from "./features/RequestAppt";
-import Shop from "./features/Shop";
+import AboutUs from "./features/AboutUs";
 import Tattoos from "./features/Tattoos";
 import GiftCards from "./features/GiftCards";
 import Care from "./features/Care";
@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/requestappt" element={<RequestAppt />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/tattoos" element={<Tattoos />} />
           <Route path="/giftcards" element={<GiftCards />} />
           <Route path="/aftercare" element={<Care />} />

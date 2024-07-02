@@ -67,7 +67,7 @@ export default function Navbar() {
       <div id="menuContainer">
         <menu className={`menu ${menuOpen ? "active" : ""}`}>
           <li id="aboutItem">
-            <NavLink className="navContainer" to="/shop">
+            <NavLink className="navContainer" to="/aboutus">
               <GoBook className="linkIcon" />
               <h4 className="link" id="aboutUs">
                 ABOUT US

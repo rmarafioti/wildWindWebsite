@@ -57,8 +57,8 @@ export default function Reviews() {
         >
           <h3>Read more reviews</h3>
         </a>
-        <Link to="/shop" className="reviewLink">
-          <h3>About</h3>
+        <Link to="/aboutus" className="reviewLink">
+          <h3>About Us</h3>
         </Link>
       </div>
     </main>
