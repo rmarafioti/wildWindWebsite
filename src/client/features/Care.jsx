@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../content/popUp";
 
@@ -50,6 +51,13 @@ export default function Care() {
 
   return (
     <main id="afterCare">
+      <Helmet>
+        <title>Aftercare Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the aftercare page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="afterHeader">Aftercare</h1>
       <h3 id="afterTagline">
         everything you need to know about taking care of your tattoo.

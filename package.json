@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.2.1",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.16.0",

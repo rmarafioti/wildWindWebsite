@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import "./styles/media.css";
@@ -9,6 +10,13 @@ import "./styles/media.css";
 export default function Media() {
   return (
     <main id="media">
+      <Helmet>
+        <title>Media Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the media page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="mediaHeader">MEDIA</h1>
       <h3 className="mediaHeader">
         Harley-Davidson <b className="targetText">X</b> Wild Wind Tattoo

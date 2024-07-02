@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
@@ -48,6 +49,13 @@ export default function Tattoos() {
 
   return (
     <main id="tattoos">
+      <Helmet>
+        <title>Tattoos Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the tattoos page of wildwindtattoo.com."
+        />
+      </Helmet>
       <div id="artistContainer">
         <h1 id="artistHeader">
           Rich Marafioti

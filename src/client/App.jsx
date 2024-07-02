@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import {
   BrowserRouter as Router,
   Route,
@@ -40,27 +41,29 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          {/*<Route path="/" element={<Root />} />*/}
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/requestappt" element={<RequestAppt />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/tattoos" element={<Tattoos />} />
-          <Route path="/giftcards" element={<GiftCards />} />
-          <Route path="/aftercare" element={<Care />} />
-          <Route path="/faqs" element={<Faq />} />
-          <Route path="/checkout" element={<CheckoutForm />} />
-          <Route path="/return" element={<Return />} />
-          <Route path="/requestsent" element={<RequestSent />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/media" element={<Media />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <HelmetProvider>
+        <Router>
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            {/*<Route path="/" element={<Root />} />*/}
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/requestappt" element={<RequestAppt />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/tattoos" element={<Tattoos />} />
+            <Route path="/giftcards" element={<GiftCards />} />
+            <Route path="/aftercare" element={<Care />} />
+            <Route path="/faqs" element={<Faq />} />
+            <Route path="/checkout" element={<CheckoutForm />} />
+            <Route path="/return" element={<Return />} />
+            <Route path="/requestsent" element={<RequestSent />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/media" element={<Media />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </HelmetProvider>
     </div>
   );
 };

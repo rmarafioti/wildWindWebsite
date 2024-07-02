@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 import CheckoutForm from "./CheckoutForm";
 
 import "./styles/giftcards.css";
@@ -11,6 +11,13 @@ import "./styles/giftcards.css";
 export default function GiftCards() {
   return (
     <main id="giftCards">
+      <Helmet>
+        <title>Gift Cards Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the gift cards page of wildwindtattoo.com."
+        />
+      </Helmet>
       <h1 id="giftCardHeader">GIFT CARDS</h1>
       <CheckoutForm />
     </main>
