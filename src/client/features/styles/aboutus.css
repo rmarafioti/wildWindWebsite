@@ -47,28 +47,9 @@
 }
 
 #firstParagraph,
-.shopParagraphs/*,
-.shopMiddleParagraphs*/ {
+.shopParagraphs {
   max-width: 480px;
 }
-
-/*.shopMiddleParagraphs {
-  margin-bottom: 1rem;
-  text-align: justify;
-}
-
-#bottomParagraph {
-  margin-bottom: 0;
-}
-
-.missionItem {
-  color: var(--wildGreen);
-  font-weight: bold;
-  font-size: 18px;
-  font-style: italic;
-  padding: 0rem 1rem 0rem 1rem;
-  margin-bottom: 1rem;
-}*/
 
 #shopLinksContainer {
   display: flex;

@@ -38,12 +38,14 @@ export default function Tattoos() {
         creative, and artistic environment.
       </p>
       <h1 id="artistHeader">Our Artists</h1>
-      <Link to="/richtats">
-        <h3>Rich Marafioti</h3>
-      </Link>
-      <Link to="/mercedestats">
-        <h3>Mercedes Wright</h3>
-      </Link>
+      <div id="artistLinksContainer">
+        <Link to="/richtats" className="artistLink">
+          <h3>Rich Marafioti</h3>
+        </Link>
+        <Link to="/mercedestats" className="artistLink">
+          <h3>Mercedes Wright</h3>
+        </Link>
+      </div>
     </main>
   );
 }

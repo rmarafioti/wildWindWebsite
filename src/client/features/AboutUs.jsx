@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import { shopPhotos } from "../content/shopPhotos";
 
-import "./styles/shop.css";
+import "./styles/aboutus.css";
 
 /**
  *
