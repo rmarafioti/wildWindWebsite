@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
-import { tattooPhotos } from "../content/tattooPhotos";
+import { richPhotos } from "../content/tattooPhotos";
 
 import "./styles/tattoo.css";
 
@@ -15,17 +15,17 @@ export default function RichTats() {
   const [currentIndex, setCurrentIndex] = useState(0);
   // functionality for the user to navigate forward and backward through tattoo photos
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % tattooPhotos.length);
+    setCurrentIndex((prev) => (prev + 1) % richPhotos.length);
   };
 
   const handlePrev = () => {
     setCurrentIndex(
-      (prev) => (prev - 1 + tattooPhotos.length) % tattooPhotos.length
+      (prev) => (prev - 1 + richPhotos.length) % richPhotos.length
     );
   };
 
   const currentImageObj =
-    tattooPhotos.length > 0 ? tattooPhotos[currentIndex] : null;
+    richPhotos.length > 0 ? richPhotos[currentIndex] : null;
 
   const imageurl = currentImageObj
     ? new URL(currentImageObj.image, import.meta.url).href
@@ -42,7 +42,7 @@ export default function RichTats() {
         className="indicator"
         src={imageUrl}
         alt="Tattoo"
-        onClick={() => onClick(tattooPhotos.indexOf(tattoo))}
+        onClick={() => onClick(richPhotos.indexOf(tattoo))}
       />
     );
   }
@@ -86,7 +86,7 @@ export default function RichTats() {
           </div>
         </div>
         <ul id="tattooGallery">
-          {tattooPhotos.map((tattoo, index) => (
+          {richPhotos.map((tattoo, index) => (
             <TattooCard
               key={index}
               tattoo={tattoo}

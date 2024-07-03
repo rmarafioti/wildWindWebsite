@@ -1,4 +1,4 @@
-export const tattooPhotos = [
+export const richPhotos = [
   {
     id: 1,
     image:
