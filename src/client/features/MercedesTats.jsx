@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
-import { mercedesPhotos } from "../content/mercedesTats";
+import { mercedesPhotos } from "../content/tattooPhotos";
 
 import "./styles/tattoo.css";
 
