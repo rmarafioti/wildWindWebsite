@@ -1,5 +1,11 @@
 import { useState } from "react";
 
+/**
+ *
+ * @function usePhotoGallery
+ * @param photos
+ * @returns functionality for the user to navigate forward and backward through tattoo photos
+ */
 const usePhotoGallery = (photos) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
