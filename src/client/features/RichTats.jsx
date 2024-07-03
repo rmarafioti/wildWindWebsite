@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
+import usePhotoGallery from "../content/photoGallery";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
@@ -12,24 +13,9 @@ import "./styles/tattoo.css";
  * @component RichTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
  */
 export default function RichTats() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  // functionality for the user to navigate forward and backward through tattoo photos
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % richPhotos.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + richPhotos.length) % richPhotos.length
-    );
-  };
-
-  const currentImageObj =
-    richPhotos.length > 0 ? richPhotos[currentIndex] : null;
-
-  const imageurl = currentImageObj
-    ? new URL(currentImageObj.image, import.meta.url).href
-    : "";
+  //usePhotoGallery hook imported from photoGallery.js
+  const { setCurrentIndex, handleNext, handlePrev, imageUrl } =
+    usePhotoGallery(richPhotos);
 
   /**
    *
@@ -78,7 +64,7 @@ export default function RichTats() {
           </div>
           <img
             className="tattoo"
-            src={imageurl}
+            src={imageUrl}
             alt="tattoo portfolio images"
           />
           <div id="arrowSection">
