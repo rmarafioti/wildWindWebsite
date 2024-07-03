@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaPlus } from "react-icons/fa6";
-import { PopUp, usePopUp } from "../content/popUp";
+import { PopUp, usePopUp } from "../hooks/popUp";
 
 import { aftercare } from "../content/aftercareInstructions";
 
