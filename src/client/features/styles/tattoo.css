@@ -6,7 +6,60 @@
   align-items: center;
   text-align: center;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
+
+/* main tattoo page */
+
+#tattooHeader, #artistHeader {
+  font-weight: bold;
+}
+
+#artistHeader {
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+.shopMiddleParagraphs {
+  max-width: 480px;
+}
+
+.shopMiddleParagraphs {
+  color: black;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+#bottomParagraph {
+  margin-bottom: 0;
+}
+
+.missionItem {
+  color: black;
+  font-size: 18px;
+  font-style: italic;
+  padding: 0rem 1rem 1rem 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+#artistLinksContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.artistLink {
+  margin: 1rem;
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
+}
+
+/* artist pages */
 
 #artistContainer {
   display: flex;

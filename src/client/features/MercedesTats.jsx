@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import usePhotoGallery from "../content/photoGallery";
+import usePhotoGallery from "../hooks/photoGallery";
 import TattooCard from "./TattooCard";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";

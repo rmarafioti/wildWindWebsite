@@ -9,6 +9,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
+import useDropdown from "../hooks/dropDown";
 
 import "./navBar.css";
 
@@ -17,13 +18,15 @@ import "./navBar.css";
  */
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
+  const aboutDropdown = useDropdown();
+  const tattooDropdown = useDropdown();
   const location = useLocation();
 
   //reset menu and dropdown to closed on state change
   useEffect(() => {
     setMenuOpen(false);
-    setDropDown(false);
+    aboutDropdown.closeDropdown();
+    tattooDropdown.closeDropdown();
   }, [location.pathname]);
 
   /**
@@ -31,14 +34,8 @@ export default function Navbar() {
    */
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    setDropDown(false);
-  };
-
-  /**
-   * @toggleDropDown open and close drop down menu
-   */
-  const toggleDropDown = () => {
-    setDropDown(!dropDown);
+    aboutDropdown.closeDropdown();
+    tattooDropdown.closeDropdown();
   };
 
   return (
@@ -77,7 +74,7 @@ export default function Navbar() {
             <IoIosArrowDown
               className="aboutLink"
               id="dropIcon"
-              onClick={toggleDropDown}
+              onClick={aboutDropdown.toggleDropdown}
             />
           </li>
           <li id="tattooItem">
@@ -91,7 +88,7 @@ export default function Navbar() {
             <IoIosArrowDown
               className="aboutLink"
               id="dropIcon"
-              onClick={toggleDropDown}
+              onClick={tattooDropdown.toggleDropdown}
             />
           </li>
           <li className="navItem">
@@ -115,7 +112,7 @@ export default function Navbar() {
         </menu>
         {/*drop down menu open*/}
         <div id="dropDownContainer">
-          <menu className={`drop ${dropDown ? "active" : ""}`}>
+          <menu className={`drop ${aboutDropdown.isOpen ? "active" : ""}`}>
             <NavLink className="dropLink" id="dropLinkTop" to="/reviews">
               <h4 className="dropLinkName">REVIEWS</h4>
               <FaPlus />
@@ -132,7 +129,7 @@ export default function Navbar() {
         </div>
         {/*drop down menu open*/}
         <div id="dropDownContainer">
-          <menu className={`droptats ${dropDown ? "active" : ""}`}>
+          <menu className={`droptats ${tattooDropdown.isOpen ? "active" : ""}`}>
             <NavLink className="dropLink" id="dropLinkTop" to="/richtats">
               <h4 className="dropLinkName">Rich Marafioti</h4>
               <FaPlus />

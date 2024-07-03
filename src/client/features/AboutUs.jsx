@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import { shopPhotos } from "../content/shopPhotos";
 
-import "./styles/shop.css";
+import "./styles/aboutus.css";
 
 /**
  *
@@ -79,7 +79,7 @@ export default function Shop() {
         tattoo.
       </p>
       <h2 className="shopHeader">OUR MISSION</h2>
-      <ul>
+      {/*<ul>
         <li className="missionItem">Variety</li>
         <li className="missionItem">Comfort</li>
         <li className="missionItem">Professionalism</li>
@@ -97,7 +97,7 @@ export default function Shop() {
         Our community is important to us. We are here to give you the tattoo you
         want in an inclusive, safe space. While you get tattooed, enjoy a clean,
         creative, and artistic environment.
-      </p>
+      </p>*/}
       <h2 className="shopHeader">COMMUNITY</h2>
       <p className="shopParagraphs">
         Wild Wind Tattoo is proud to serve and work with our strong community.
