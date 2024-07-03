@@ -17,7 +17,7 @@ export default function Tattoos() {
           content="This is the tattoos page of wildwindtattoo.com."
         />
       </Helmet>
-      <h1>TATTOOS</h1>
+      <h1 id="tattooHeader">TATTOOS</h1>
       <ul>
         <li className="missionItem">Variety</li>
         <li className="missionItem">Comfort</li>
@@ -37,6 +37,7 @@ export default function Tattoos() {
         want in an inclusive, safe space. While you get tattooed, enjoy a clean,
         creative, and artistic environment.
       </p>
+      <h1 id="artistHeader">Our Artists</h1>
       <Link to="/richtats">
         <h3>Rich Marafioti</h3>
       </Link>

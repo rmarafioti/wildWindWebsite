@@ -78,8 +78,8 @@ export default function Shop() {
         you will enjoy a positive experience, staying with you as long as your
         tattoo.
       </p>
-      {/* <h2 className="shopHeader">OUR MISSION</h2>
-      <ul>
+      <h2 className="shopHeader">OUR MISSION</h2>
+      {/*<ul>
         <li className="missionItem">Variety</li>
         <li className="missionItem">Comfort</li>
         <li className="missionItem">Professionalism</li>

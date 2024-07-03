@@ -47,12 +47,12 @@
 }
 
 #firstParagraph,
-.shopParagraphs,
-.shopMiddleParagraphs {
+.shopParagraphs/*,
+.shopMiddleParagraphs*/ {
   max-width: 480px;
 }
 
-.shopMiddleParagraphs {
+/*.shopMiddleParagraphs {
   margin-bottom: 1rem;
   text-align: justify;
 }
@@ -68,7 +68,7 @@
   font-style: italic;
   padding: 0rem 1rem 0rem 1rem;
   margin-bottom: 1rem;
-}
+}*/
 
 #shopLinksContainer {
   display: flex;
