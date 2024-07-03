@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import usePhotoGallery from "../content/photoGallery";
+import TattooCard from "./TattooCard";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
@@ -17,21 +18,6 @@ export default function MercedesTats() {
   const { setCurrentIndex, handleNext, handlePrev, imageUrl } =
     usePhotoGallery(mercedesPhotos);
 
-  /**
-   *
-   * @TattooCard holds each individual tattoo to be mapped through for the thumbnail gallery
-   */
-  function TattooCard({ tattoo, onClick }) {
-    const imageUrl = new URL(tattoo.image, import.meta.url).href;
-    return (
-      <img
-        className="indicator"
-        src={imageUrl}
-        alt="Tattoo"
-        onClick={() => onClick(mercedesPhotos.indexOf(tattoo))}
-      />
-    );
-  }
   return (
     <main id="tattoos">
       <Helmet>
@@ -67,9 +53,9 @@ export default function MercedesTats() {
         <ul id="tattooGallery">
           {mercedesPhotos.map((tattoo, index) => (
             <TattooCard
-              key={index}
               tattoo={tattoo}
-              onClick={() => setCurrentIndex(index)}
+              onClick={setCurrentIndex}
+              photos={mercedesPhotos}
             />
           ))}
         </ul>

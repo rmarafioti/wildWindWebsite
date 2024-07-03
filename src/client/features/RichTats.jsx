@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import usePhotoGallery from "../content/photoGallery";
+import TattooCard from "./TattooCard";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
@@ -16,22 +17,6 @@ export default function RichTats() {
   //usePhotoGallery hook imported from photoGallery.js
   const { setCurrentIndex, handleNext, handlePrev, imageUrl } =
     usePhotoGallery(richPhotos);
-
-  /**
-   *
-   * @TattooCard holds each individual tattoo to be mapped through for the thumbnail gallery
-   */
-  function TattooCard({ tattoo, onClick }) {
-    const imageUrl = new URL(tattoo.image, import.meta.url).href;
-    return (
-      <img
-        className="indicator"
-        src={imageUrl}
-        alt="Tattoo"
-        onClick={() => onClick(richPhotos.indexOf(tattoo))}
-      />
-    );
-  }
 
   return (
     <main id="tattoos">
@@ -74,9 +59,9 @@ export default function RichTats() {
         <ul id="tattooGallery">
           {richPhotos.map((tattoo, index) => (
             <TattooCard
-              key={index}
               tattoo={tattoo}
-              onClick={() => setCurrentIndex(index)}
+              onClick={setCurrentIndex}
+              photos={richPhotos}
             />
           ))}
         </ul>
