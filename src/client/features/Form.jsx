@@ -296,6 +296,31 @@ export default function Form() {
         value={isLoading ? "Sending..." : "Send"}
         disabled={isLoading || !isFormValid()}
       />
+      {validationError.user_name && (
+        <p className="error">**Please enter your name.</p>
+      )}
+      {validationError.user_email && (
+        <p className="error">*Please enter a valid email address.</p>
+      )}
+      {validationError.user_phone && (
+        <p className="error">*Please enter a valid phone number.</p>
+      )}
+      {validationError.user_size && (
+        <p className="error">*Please select a tattoo size.</p>
+      )}
+      {validationError.user_location && (
+        <p className="error">
+          Please enter the desired location of your tattoo.
+        </p>
+      )}
+      {validationError.user_times && (
+        <p className="error">*Please provide your availability.</p>
+      )}
+      {fileSizeError && (
+        <p className="error">
+          Attachment file error. The maximum allowed attachments size is 500Kb.
+        </p>
+      )}
       {messageStatus === "error" && (
         <p id="errorMessage">Message failed to send. Please try again.</p>
       )}
