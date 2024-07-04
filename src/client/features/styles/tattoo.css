@@ -11,12 +11,13 @@
 
 /* main tattoo page */
 
-#tattooHeader, #artistHeader {
+#tattooHeader,
+#artistHeader {
   font-weight: bold;
 }
 
 #artistHeader {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--wildGreen);
 }
 
@@ -110,6 +111,11 @@ a:link {
   height: 500px;
 }
 
+.mercedesTattoo {
+  border-radius: 5px;
+  height: 400px;
+}
+
 #arrowSection {
   display: flex;
   align-items: center;
@@ -124,7 +130,8 @@ a:link {
   cursor: pointer;
 }
 
-#tattooGallery {
+#tattooGallery,
+#mercedesGallery {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -138,6 +145,12 @@ a:link {
   height: 120px;
 }
 
+#mercedesGallery img {
+  margin: 0rem 0.2rem 0.2rem 0.2rem;
+  max-width: 100%;
+  height: 100px;
+}
+
 .indicator {
   border-radius: 5px;
   padding: 0.3rem;
@@ -148,7 +161,7 @@ a:link {
   border: 2px solid var(--wildGreen);
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1400px) {
   #tattoos {
     margin: 1rem;
   }
@@ -161,7 +174,8 @@ a:link {
     margin: 1rem 0rem 2rem 0rem;
   }
 
-  .tattoo {
+  .tattoo,
+  .mercedesTattoo {
     width: 300px;
     height: auto;
   }
@@ -170,7 +184,8 @@ a:link {
     margin-left: -1.3rem;
     text-align: center;
   }
-  #tattooGallery {
+  #tattooGallery,
+  #mercedesGallery {
     display: none;
   }
 }

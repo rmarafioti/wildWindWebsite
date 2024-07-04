@@ -42,7 +42,7 @@ export default function MercedesTats() {
             <PiArrowSquareLeft className="arrow" onClick={handlePrev} />
           </div>
           <img
-            className="tattoo"
+            className="mercedesTattoo"
             src={imageUrl}
             alt="tattoo portfolio images"
           />
@@ -50,7 +50,7 @@ export default function MercedesTats() {
             <PiArrowSquareRight className="arrow" onClick={handleNext} />
           </div>
         </div>
-        <ul id="tattooGallery">
+        <ul id="mercedesGallery">
           {mercedesPhotos.map((tattoo, index) => (
             <TattooCard
               tattoo={tattoo}

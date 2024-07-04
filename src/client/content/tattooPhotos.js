@@ -105,76 +105,101 @@ export const mercedesPhotos = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978272/wildWindSite/mercedesTats/skull_lamveu.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058325/wildWindSite/mercedesTats/mercedesOne_oyn8u0.jpg",
   },
   {
     id: 2,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/lisaSimpson_h2yquh.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058329/wildWindSite/mercedesTats/mercedesTwo_clbmtt.jpg",
   },
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/numbers_p1isy7.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058328/wildWindSite/mercedesTats/mercedesThree_g5cw7v.jpg",
   },
   {
     id: 4,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978271/wildWindSite/mercedesTats/owl_fuumag.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058323/wildWindSite/mercedesTats/mercedesFour_iyuymn.jpg",
   },
   {
     id: 5,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978272/wildWindSite/mercedesTats/starWars_kzvq5i.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058323/wildWindSite/mercedesTats/mercedesFive_x4bxe2.jpg",
   },
   {
     id: 6,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/heart_iqogda.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058326/wildWindSite/mercedesTats/mercedesSix_a3vipa.jpg",
   },
   {
     id: 7,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/needleThread_zwj2rn.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058325/wildWindSite/mercedesTats/mercedesSeven_h2ygvd.jpg",
   },
   {
     id: 8,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978271/wildWindSite/mercedesTats/simpsons_bqontb.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058322/wildWindSite/mercedesTats/mercedesEight_tka6bo.jpg",
   },
   {
     id: 9,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978272/wildWindSite/mercedesTats/wristTat_ixv9zj.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058324/wildWindSite/mercedesTats/mercedesNine_suhz1y.jpg",
   },
   {
     id: 10,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978271/wildWindSite/mercedesTats/pokemon_e7thyk.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058327/wildWindSite/mercedesTats/mercedesTen_nwvfps.jpg",
   },
   {
     id: 11,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/marg_st1jxw.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058322/wildWindSite/mercedesTats/mercedesEleven_yb6dvn.jpg",
   },
   {
     id: 12,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978271/wildWindSite/mercedesTats/scriptChest_rvlw3h.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058328/wildWindSite/mercedesTats/mercedesTwelve_dlqann.jpg",
   },
   {
     id: 13,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/anime_eb50jh.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058327/wildWindSite/mercedesTats/mercedesThirteen_sde7ax.jpg",
   },
   {
     id: 14,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/initials_ummetq.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058323/wildWindSite/mercedesTats/mercedesFourteen_rkwndl.jpg",
   },
   {
     id: 15,
     image:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1719978270/wildWindSite/mercedesTats/lisaSimpson_h2yquh.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058323/wildWindSite/mercedesTats/mercedesFifteen_a47pjb.jpg",
+  },
+  {
+    id: 16,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058326/wildWindSite/mercedesTats/mercedesSixteenjpeg_jzewwi.jpg",
+  },
+  {
+    id: 17,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058325/wildWindSite/mercedesTats/mercedesSeventeen_t06lbp.jpg",
+  },
+  {
+    id: 18,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058322/wildWindSite/mercedesTats/mercedesEighteen_zqtenc.jpg",
+  },
+  {
+    id: 19,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058325/wildWindSite/mercedesTats/mercedesNineteen_bxqhgy.jpg",
+  },
+  {
+    id: 20,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1720058329/wildWindSite/mercedesTats/mercedesTwenty_gtvwji.jpg",
   },
 ];

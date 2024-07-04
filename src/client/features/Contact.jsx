@@ -61,13 +61,13 @@ export default function Contact() {
         </section>
         <div className="contactInfo">
           PHONE:
-          <p className="contactInfoValue">
+          <p className="contactInfoValue" id="phone">
             <a href="tel:+7732272027"> 773.227.2027</a>
           </p>
         </div>
         <div className="contactInfo">
           EMAIL:
-          <p className="contactInfoValue">
+          <p className="contactInfoValue" id="email">
             <a href="mailto:wildwindtattoo@gmail.com">
               wildwindtattoo@gmail.com
             </a>

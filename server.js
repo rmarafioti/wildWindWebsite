@@ -1,10 +1,17 @@
-// This is your test secret API key.
+// Stripe API
 require("dotenv").config();
-
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const { renderToString } = require("react-dom/server");
+const { StaticRouter } = require("react-router-dom/server");
+const { HelmetProvider } = require("react-helmet-async");
+const React = require("react");
+const App = require("./src/client/App").default;
+
 const app = express();
-app.use(express.static("public"));
+app.use(express.static(path.resolve(__dirname, "public")));
 
 const YOUR_DOMAIN = "http://localhost:3000";
 
@@ -31,6 +38,37 @@ app.get("/session-status", async (req, res) => {
   res.send({
     status: session.status,
     customer_email: session.customer_details.email,
+  });
+});
+
+app.get("/*", (req, res) => {
+  const helmetContext = {};
+  const appHtml = renderToString(
+    <HelmetProvider context={helmetContext}>
+      <StaticRouter location={req.url}>
+        <App />
+      </StaticRouter>
+    </HelmetProvider>
+  );
+
+  const { helmet } = helmetContext;
+
+  const indexFile = path.resolve(__dirname, "public/index.html");
+  fs.readFile(indexFile, "utf8", (err, data) => {
+    if (err) {
+      console.error("Something went wrong:", err);
+      return res.status(500).send("Oops, better luck next time!");
+    }
+
+    const html = data
+      .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+      .replace("<title>My App</title>", helmet.title.toString())
+      .replace(
+        '<meta name="description" content="My App">',
+        helmet.meta.toString()
+      );
+
+    return res.send(html);
   });
 });
 
