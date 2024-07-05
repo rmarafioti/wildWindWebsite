@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 /**
  * @function useDropdown open and close drop down menu
@@ -6,13 +6,13 @@ import { useState } from "react";
 const useDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleDropdown = useCallback(() => {
+    setIsOpen((prevState) => !prevState);
+  }, []);
 
-  const closeDropdown = () => {
+  const closeDropdown = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
   return {
     isOpen,

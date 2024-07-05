@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { TbMessageCircleQuestion } from "react-icons/tb";
@@ -22,11 +22,15 @@ export default function Navbar() {
   const tattooDropdown = useDropdown();
   const location = useLocation();
 
+  const aboutDropdownRef = useRef(aboutDropdown);
+  const tattooDropdownRef = useRef(tattooDropdown);
+
   //reset menu and dropdown to closed on state change
+  // Reset menu and dropdown to closed on state change
   useEffect(() => {
     setMenuOpen(false);
-    aboutDropdown.closeDropdown();
-    tattooDropdown.closeDropdown();
+    aboutDropdownRef.current.closeDropdown();
+    tattooDropdownRef.current.closeDropdown();
   }, [location.pathname]);
 
   /**
@@ -34,8 +38,8 @@ export default function Navbar() {
    */
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    aboutDropdown.closeDropdown();
-    tattooDropdown.closeDropdown();
+    aboutDropdownRef.current.closeDropdown();
+    tattooDropdownRef.current.closeDropdown();
   };
 
   return (
