@@ -161,7 +161,7 @@ a:link {
   border: 2px solid var(--wildGreen);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1380px) {
   #tattoos {
     margin: 1rem;
   }

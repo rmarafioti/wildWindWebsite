@@ -53,6 +53,7 @@ export default function MercedesTats() {
         <ul id="mercedesGallery">
           {mercedesPhotos.map((tattoo, index) => (
             <TattooCard
+              key={index}
               tattoo={tattoo}
               onClick={setCurrentIndex}
               photos={mercedesPhotos}

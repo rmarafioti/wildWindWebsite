@@ -94,6 +94,38 @@ button:hover {
   font-weight: bold;
 }
 
+.headerTwo {
+  color: black;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+#tattooServices, #whyChoose {
+  display: flex;
+  flex-direction: column;
+}
+
+#whyChoose {
+  text-align: justify;
+}
+
+.listItemContainer {
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  padding: 1rem;
+  margin: .5rem;
+}
+
+.headerThree {
+  font-weight: bold;
+  padding-bottom: .5rem;
+}
+
+.homeParagraph {
+  max-width: 480px;
+}
+
 #contactHomeButton {
   display: none;
   font-size: 16px;
