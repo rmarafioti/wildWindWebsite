@@ -59,6 +59,7 @@ export default function RichTats() {
         <ul id="tattooGallery">
           {richPhotos.map((tattoo, index) => (
             <TattooCard
+              key={index}
               tattoo={tattoo}
               onClick={setCurrentIndex}
               photos={richPhotos}
