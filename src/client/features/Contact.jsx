@@ -9,7 +9,7 @@ import "./styles/contact.css";
  */
 export default function Contact() {
   return (
-    <main id="contact">
+    <div id="contact">
       <Helmet>
         <title>Contact Page - wildwindtattoo.com</title>
         <meta
@@ -74,6 +74,6 @@ export default function Contact() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { HelmetProvider } from "react-helmet-async";
 import {
   BrowserRouter as Router,
   Route,
@@ -27,7 +26,7 @@ import RequestSent from "./features/RequestSent";
 import Reviews from "./features/Reviews";
 import Media from "./features/Media";
 
-const App = () => {
+export default function App() {
   /**
    * @ScrollToTop viewport shows top of navigated route if user scrolled down on previous route
    */
@@ -42,34 +41,28 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <HelmetProvider>
-        <Router>
-          <Navbar />
-          <ScrollToTop />
-          <Routes>
-            {/*<Route path="/" element={<Root />} />*/}
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/requestappt" element={<RequestAppt />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/tattoos" element={<Tattoos />} />
-            <Route path="/mercedestats" element={<MercedesTats />} />
-            <Route path="/richtats" element={<RichTats />} />
-            <Route path="/giftcards" element={<GiftCards />} />
-            <Route path="/aftercare" element={<Care />} />
-            <Route path="/faqs" element={<Faq />} />
-            <Route path="/checkout" element={<CheckoutForm />} />
-            <Route path="/return" element={<Return />} />
-            <Route path="/requestsent" element={<RequestSent />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/media" element={<Media />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </HelmetProvider>
-    </div>
+    <Router>
+      <Navbar />
+      <ScrollToTop />
+      <Routes>
+        {/*<Route path="/" element={<Root />} />*/}
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/requestappt" element={<RequestAppt />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/tattoos" element={<Tattoos />} />
+        <Route path="/mercedestats" element={<MercedesTats />} />
+        <Route path="/richtats" element={<RichTats />} />
+        <Route path="/giftcards" element={<GiftCards />} />
+        <Route path="/aftercare" element={<Care />} />
+        <Route path="/faqs" element={<Faq />} />
+        <Route path="/checkout" element={<CheckoutForm />} />
+        <Route path="/return" element={<Return />} />
+        <Route path="/requestsent" element={<RequestSent />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/media" element={<Media />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
-};
-
-export default App;
+}
