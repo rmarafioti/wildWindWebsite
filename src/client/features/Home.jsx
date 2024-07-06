@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main id="home">
       <Helmet>
-        <title>Home Page - wildwindtattoo.com</title>
+        <title>Wild Wind Tattoo - wildwindtattoo.com</title>
         <meta
           name="description"
           content="This is the home page of wildwindtattoo.com."

@@ -9,8 +9,7 @@ import "./client/index.css";
 
 ReactDOM.render(
   <HelmetProvider>
-    {" "}
-    <App />{" "}
+    {/*context={helmetContext}*/} <App />{" "}
   </HelmetProvider>,
   document.getElementById("root")
 );
