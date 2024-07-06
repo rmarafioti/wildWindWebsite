@@ -5,11 +5,11 @@ import App from "./client/App";
 
 import "./client/index.css";
 
-/*const helmetContext = {};*/
+const helmetContext = {};
 
 ReactDOM.render(
-  <HelmetProvider>
-    {/*context={helmetContext}*/} <App />{" "}
+  <HelmetProvider context={helmetContext}>
+    <App />{" "}
   </HelmetProvider>,
   document.getElementById("root")
 );
