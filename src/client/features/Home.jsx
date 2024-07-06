@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { IoCheckmark } from "react-icons/io5";
+import { FaStar } from "react-icons/fa";
 
 /**
  *
@@ -17,11 +19,14 @@ export default function Home() {
         />
       </Helmet>
       <Link id="contactContainer" to="/contact">
+        <p id="contactParagraph">
+          Book your appointment today or visit us at 1452 N. Western Ave.
+          Chicago IL 60622.
+        </p>
         <button id="contactHomeButton">Contact Us</button>
-        <p className="homeParagraph">
-          Ready to get inked? Book your appointment today or visit us at 1452 N.
-          Western Ave. Chicago IL 60622. Have questions? Contact us at
-          773.230.0223 or wildwindtattoo@gmail.com.
+        <p id="contactParagraph">
+          Have questions? Contact us at 773.230.0223 or
+          wildwindtattoo@gmail.com.
         </p>
       </Link>
       <h1 id="headerHome">Welcome to Wild Wind Tattoo</h1>
@@ -37,7 +42,9 @@ export default function Home() {
         environment where you will enjoy a positive experience that stays with
         you as long as your tattoo.
       </p>
+
       <h2 className="headerTwo">Community Engagement</h2>
+
       <p className="homeParagraph">
         Wild Wind Tattoo proudly serves and works with our strong community.
         Over the years, we have held fundraisers supporting families of Pulse
@@ -46,9 +53,13 @@ export default function Home() {
         Hire Trans Now initiative. Our commitment to community and inclusivity
         is at the core of our mission.
       </p>
+
+      <Link to="/aboutus" className="homeLink">
+        <h4>Learn more</h4>
+      </Link>
       <h2 className="headerTwo">Expert Tattoo Services</h2>
       <ul id="tattooServices">
-        <li className="listItemContainer">
+        <li>
           <h3 className="headerThree">Variety and Customization:</h3>
           <p className="homeParagraph">
             We offer various tattoo styles, from small walk-ins to larger custom
@@ -56,7 +67,7 @@ export default function Home() {
             talented artists are here to bring your vision to life. Just ask!
           </p>
         </li>
-        <li className="listItemContainer">
+        <li>
           <h3 className="headerThree">Comfort and Professionalism:</h3>
           <p className="homeParagraph">
             At Wild Wind Tattoo, you can expect to be treated with respect and
@@ -66,25 +77,38 @@ export default function Home() {
           </p>
         </li>
       </ul>
+
+      <Link to="/tattoos" className="homeLink">
+        <h4>View tattoos</h4>
+      </Link>
+
       <h2 className="headerTwo">Why Choose Wild Wind Tattoo?</h2>
 
       <ul id="whyChoose">
-        <li className="whyChooseItem">
-          <h3 className="headerThree">Experienced Artists:</h3>
+        <li>
+          <h3 className="headerThree">
+            <IoCheckmark className="checkmark" />
+            Experienced Artists:
+          </h3>
           <p className="homeParagraph">
-            Our team, led by founder Rich Marafioti, brings years of expertise
-            and passion to every tattoo.
+            Our team brings years of expertise and passion to every tattoo.
           </p>
         </li>
         <li>
-          <h3 className="headerThree">Community Focus:</h3>
+          <h3 className="headerThree">
+            <IoCheckmark className="checkmark" />
+            Community Focus:
+          </h3>
           <p className="homeParagraph">
             We actively engage with and support our local community through
             various initiatives and partnerships.
           </p>
         </li>
         <li>
-          <h3 className="headerThree">Inclusive Space:</h3>
+          <h3 className="headerThree">
+            <IoCheckmark className="checkmark" />
+            Inclusive Space:
+          </h3>
           <p className="homeParagraph">
             We are committed to providing a welcoming environment for all
             clients, ensuring everyone feels comfortable and respected.
@@ -93,6 +117,35 @@ export default function Home() {
       </ul>
 
       <h2 className="headerTwo">Client Testimonials</h2>
+      <li className="homeReview">
+        <h2>Margaux S.</h2>
+        <div id="ratingSection">
+          <h3 className="rating">Rating: </h3>
+          <h3 className="stars">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </h3>
+        </div>
+        <p className="homeParagraph" id="homeParagraphReview">
+          {" "}
+          "This place is fantastic! I loved my experience working with Rich. He
+          had such passion and he's very helpful guiding the experience. I
+          relied on his expertise when I was getting two tattoos covered up with
+          a bigger tattoo. He was great to talk with, I loved the relaxing jazz
+          music in the shop and the vibrant art was so cheerful, so inviting.
+          Rich and I kept in touch and he checked my tattoo out a month later to
+          see how it healed. I've told my friends to go see Rich and I can't
+          recommend enough! Thank you!"
+        </p>
+      </li>
+      <div id="homeLinksContainer">
+        <Link to="/reviews" className="homeLink">
+          <h4>Read more reviews</h4>
+        </Link>
+      </div>
     </main>
   );
 }
