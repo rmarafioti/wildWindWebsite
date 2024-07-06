@@ -87,7 +87,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 #headerHome {
@@ -101,29 +101,40 @@ button:hover {
   margin: 1rem 0rem 1rem 0rem;
 }
 
-#tattooServices, #whyChoose {
+#comEngagement, #tattooServices, #whyChoose, .homeReview {
   display: flex;
   flex-direction: column;
-}
-
-#whyChoose {
-  text-align: justify;
-}
-
-.listItemContainer {
   border-radius: 8px;
   border: 1px solid lightgray;
   padding: 1rem;
   margin: .5rem;
 }
 
+#whyChoose {
+  text-align: justify;
+}
+
 .headerThree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   padding-bottom: .5rem;
 }
 
+.checkmark {
+  font-size: 20px;
+  color: black;
+  margin-right: .5rem;
+}
+
 .homeParagraph {
+  margin: .25rem 1rem 1rem 1rem;
   max-width: 480px;
+}
+
+#contactParagraph {
+  display: none;
 }
 
 #contactHomeButton {
@@ -139,9 +150,69 @@ button:hover {
   border: 2.5px solid var(--wildGreen);
 }
 
+#homeParagraphReview {
+  color: black;
+}
+
+#ratingSection {
+  color: var(--wildGreen);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--wildGreen);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating {
+  margin-right: 0.5rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  color: var(--wildGreen);
+}
+
+.homeReview {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#homeLinksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeLink {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
+  width: 480px
+}
+
 @media (max-width: 586px) {
+  #contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   #contactHomeButton {
+    margin: 1rem;
+    width: 100%;
     display: block;
+  }
+  #contactParagraph {
+    color: black;
+    display: block;
+  }
+  .homeLink {
+    width: 100%
   }
 }
 
