@@ -80,26 +80,30 @@ export default function Shop() {
         you will enjoy a positive experience, staying with you as long as your
         tattoo.
       </p>
-      <h2 className="shopHeader">OUR MISSION</h2>
-      {/*<ul>
+      <h2 className="shopHeader" id="ourMission">
+        OUR MISSION
+      </h2>
+      <ul>
         <li className="missionItem">Variety</li>
         <li className="missionItem">Comfort</li>
         <li className="missionItem">Professionalism</li>
       </ul>
-      <p className="shopMiddleParagraphs">
-        You can expect to be treated with respect and care at WWT. We will
-        communicate all aspects of your tattoo experience, from consultation to
-        caring for your new tattoo.
-      </p>
-      <p className="shopMiddleParagraphs">
-        We offer various tattoo styles, from small walk-ins to larger custom
-        pieces. Have something in mind? Just ask!
-      </p>
-      <p className="shopMiddleParagraphs" id="bottomParagrah">
-        Our community is important to us. We are here to give you the tattoo you
-        want in an inclusive, safe space. While you get tattooed, enjoy a clean,
-        creative, and artistic environment.
-      </p>*/}
+      <section id="shopMiddleParagraphs">
+        <p className="middleParagraph">
+          You can expect to be treated with respect and care at WWT. We will
+          communicate all aspects of your tattoo experience, from consultation
+          to caring for your new tattoo.
+        </p>
+        <p className="middleParagraph" id="midParagraph">
+          We offer various tattoo styles, from small walk-ins to larger custom
+          pieces. Have something in mind? Just ask!
+        </p>
+        <p className="middleParagraph" id="bottomParagraph">
+          Our community is important to us. We are here to give you the tattoo
+          you want in an inclusive, safe space. While you get tattooed, enjoy a
+          clean, creative, and artistic environment.
+        </p>
+      </section>
       <h2 className="shopHeader">COMMUNITY</h2>
       <p className="shopParagraphs">
         Wild Wind Tattoo is proud to serve and work with our strong community.

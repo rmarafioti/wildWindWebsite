@@ -17,7 +17,12 @@
   font-weight: bold;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--wildGreen);
-  margin: 1rem 0rem 1rem 0rem;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+#ourMission {
+  border-bottom: none;
+  margin-bottom: 0rem;
 }
 
 #shopIconContainer {
@@ -44,24 +49,51 @@
   border-top: 1px solid var(--wildGreen);
   padding-top: 1rem;
   max-width: 480px;
+  text-align: center;
 }
 
-#firstParagraph,
 .shopParagraphs {
+  text-align: center;
   max-width: 480px;
+}
+
+#shopMiddleParagraphs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 480px;
+}
+
+.middleParagraph {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+#bottomParagraph, #midParagraph {
+  margin-top: 0rem;
 }
 
 #shopLinksContainer {
   display: flex;
-  margin-top: 2rem;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .shopLinks {
-  margin: 1rem;
-  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
+  width: 300px;
+}
+
+@media (max-width: 586px){
+  #shopLinksContainer {
+    width: 100%;
+  }
+  .shopLinks {
+    width: 100%;
+  }
 }
