@@ -35,7 +35,15 @@ export default function MercedesTats() {
           </a>
         </h1>
       </div>
-      <p id="artistAbout">Mercedes Wright Bio</p>
+      <p id="artistAbout">
+        Driven by a passion for art, Mercedes' interest in tattooing began at a
+        young age. She takes immense pride in every piece she creates,
+        consistently striving to deliver her best effort in all her work. With a
+        broad range of tattoo styles, Mercedes is always eager to take on new
+        challenges. She has honed her craft to ensure her tattoos are
+        consistently clean and meticulous, dedicating the time necessary to
+        achieve this standard.
+      </p>
       <section id="tattooSection">
         <div id="tattooSlide">
           <div id="arrowSection">
