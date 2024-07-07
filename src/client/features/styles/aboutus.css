@@ -39,6 +39,9 @@
   margin-bottom: 1rem;
   transition: opacity 1s ease-in-out;
   opacity: 1;
+  max-width: 480px;
+  max-height: 480px;
+  border-radius: 8px;
 }
 
 #shopImages.fade-out {
@@ -94,6 +97,9 @@
     width: 100%;
   }
   .shopLinks {
+    width: 100%;
+  }
+  #shopImages {
     width: 100%;
   }
 }

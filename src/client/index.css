@@ -209,7 +209,7 @@ button:hover {
     color: black;
     display: block;
   }
-  .homeLink {
+  .homeLink, #homeLinksContainer {
     width: 100%
   }
 }

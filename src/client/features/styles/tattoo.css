@@ -47,17 +47,26 @@
 #artistLinksContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
 }
 
 .artistLink {
-  margin: 1rem;
-  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
+  width: 300px;
+}
+
+@media (max-width: 586px) {
+  #artistLinksContainer {
+    width: 100%;
+  }
+  .artistLink {
+    width: 100%;
+  }
 }
 
 /* artist pages */
