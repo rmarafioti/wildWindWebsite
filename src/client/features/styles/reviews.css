@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 #reviewHeader {
@@ -30,7 +30,7 @@
 
 .review {
   color: black;
-  margin: 0.5rem 1rem 1rem 1rem;
+  margin: 0.5rem 0rem 1rem 0rem;
   padding: 1rem;
   border: 1px solid lightgrey;
   border-radius: 8px;
@@ -62,15 +62,26 @@
 
 #reviewLinksContainer {
   display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
 }
 
-.reviewLink {
-  margin: 1rem;
-  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+.reviewLinks {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
+  width: 300px;
+}
+
+@media (max-width: 586px){
+  #reviewLinksContainer {
+    width: 100%;
+  }
+  .reviewLinks {
+    width: 100%;
+  }
 }

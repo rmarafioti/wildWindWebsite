@@ -59,15 +59,15 @@ export default function Reviews() {
         ))}
       </ul>
       <div id="reviewLinksContainer">
-        <a
-          className="reviewLink"
-          href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082771,-87.6899845,16z/data=!4m8!3m7!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!9m1!1b1!16s%2Fg%2F11bw5xqdp7?entry=ttu"
-        >
-          <h3>Read more reviews</h3>
-        </a>
-        <Link to="/aboutus" className="reviewLink">
+        <Link to="/aboutus" className="reviewLinks">
           <h3>About Us</h3>
         </Link>
+        <a
+          className="reviewLinks"
+          href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082771,-87.6899845,16z/data=!4m8!3m7!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!9m1!1b1!16s%2Fg%2F11bw5xqdp7?entry=ttu"
+        >
+          <h3>Read Google Reviews</h3>
+        </a>
       </div>
     </main>
   );

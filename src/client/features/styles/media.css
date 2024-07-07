@@ -4,7 +4,7 @@
   justify-content: center;
   color: var(--wildGreen);
   align-items: center;
-  margin: 1rem 0rem 2rem 0rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 #mediaHeader {
@@ -19,12 +19,16 @@
   margin: 0rem 1rem 0rem 1rem;
 }
 
+#mediaHeaderBottom {
+  margin-top: 1rem;
+}
+
 .mediaContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin-top: 1rem;
   border-bottom: 1px solid var(--wildGreen);
 }
 
@@ -54,16 +58,18 @@
 
 #mediaLinksContainer {
   display: flex;
+  flex-direction: column;
 }
 
 .mediaLinks {
-  margin: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
   text-align: center;
-  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
   text-decoration: none;
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
+  width: 300px;
 }
 
 @media (max-width: 586px) {
@@ -71,6 +77,12 @@
     width: 100%;
   }
   #atBayPhoto {
+    width: 100%;
+  }
+  #mediaLinksContainer {
+    width: 100%;
+  }
+  .mediaLinks {
     width: 100%;
   }
 }
