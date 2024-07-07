@@ -34,7 +34,7 @@ export default function Media() {
           allowFullScreen
         ></iframe>
       </div>
-      <h3 className="mediaHeader">
+      <h3 className="mediaHeader" id="mediaHeaderBottom">
         Breakfast for Dinner <b className="targetText">X</b> Wild Wind Tattoo{" "}
         <b className="targetText">X</b> At-Bay
       </h3>

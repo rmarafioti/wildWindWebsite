@@ -66,7 +66,7 @@
   margin-bottom: 2rem;
 }
 
-.reviewLink {
+.reviewLinks {
   margin: 1rem 0rem 1rem 0rem;
   padding: 0.5rem;
   text-align: center;
@@ -81,7 +81,7 @@
   #reviewLinksContainer {
     width: 100%;
   }
-  .reviewLink {
+  .reviewLinks {
     width: 100%;
   }
 }
