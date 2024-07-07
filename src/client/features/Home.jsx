@@ -18,18 +18,19 @@ export default function Home() {
           content="This is the home page of wildwindtattoo.com."
         />
       </Helmet>
-      <Link id="contactContainer" to="/contact">
-        <p id="contactParagraph">
-          Book your appointment today or visit us at 1452 N. Western Ave.
-          Chicago IL 60622.
-        </p>
-        <button id="contactHomeButton">Contact Us</button>
-        <p id="contactParagraph">
-          Have questions? Contact us at 773.230.0223 or
-          wildwindtattoo@gmail.com.
-        </p>
-      </Link>
       <h1 id="headerHome">Welcome to Wild Wind Tattoo</h1>
+      <img
+        id="shopPhoto"
+        src="https://res.cloudinary.com/dzpne110u/image/upload/v1720321542/wildWindSite/shopPhotos/shopFront_j9y8hf.jpg"
+      />
+      <p className="contactParagraph">
+        Book your appointment today or visit us at 1452 N. Western Ave. Chicago
+        IL 60622.
+      </p>
+      <button id="contactHomeButton">Contact Us</button>
+      <p className="contactParagraph" id="contactParagraphBottom">
+        Have questions? Contact us at 773.230.0223 or wildwindtattoo@gmail.com.
+      </p>
       <h2 className="headerTwo">
         Expert Tattooing in Chicago's Vibrant Wicker Park
       </h2>

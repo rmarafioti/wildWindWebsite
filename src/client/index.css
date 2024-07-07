@@ -94,6 +94,12 @@ button:hover {
   font-weight: bold;
 }
 
+#shopPhoto {
+  max-width: 800px;
+  border-radius: 8px;
+  margin: 1rem 0rem 2rem 0rem;
+}
+
 .headerTwo {
   color: black;
   padding-bottom: .5rem;
@@ -133,7 +139,7 @@ button:hover {
   max-width: 480px;
 }
 
-#contactParagraph {
+.contactParagraph {
   display: none;
 }
 
@@ -194,6 +200,9 @@ button:hover {
 }
 
 @media (max-width: 586px) {
+  #shopPhoto {
+    width: 100%;
+  }
   #contactContainer {
     display: flex;
     flex-direction: column;
@@ -205,9 +214,16 @@ button:hover {
     width: 100%;
     display: block;
   }
-  #contactParagraph {
+  .contactParagraph {
     color: black;
     display: block;
+  }
+  #contactParagraphBottom {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--wildGreen);
+  }
+  .headerTwo {
+    padding-bottom: 1rem;
   }
   .homeLink, #homeLinksContainer {
     width: 100%
