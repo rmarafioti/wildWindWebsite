@@ -190,7 +190,7 @@ button:hover {
   color: var(--wildGreen);
   border-radius: 5px;
   border: 2px solid var(--wildGreen);
-  width: 300px
+  width: 300px;
 }
 
 @media (max-width: 586px) {
