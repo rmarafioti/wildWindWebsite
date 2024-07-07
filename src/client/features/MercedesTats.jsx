@@ -30,7 +30,7 @@ export default function MercedesTats() {
       <div id="artistContainer">
         <h1 id="artistHeader">
           Mercedes Wright
-          <a id="artistIgIcon" href="https://www.instagram.com/wild_coma/">
+          <a id="artistIgIcon" href="https://www.instagram.com/tattoomercy/">
             <FaInstagram />
           </a>
         </h1>
