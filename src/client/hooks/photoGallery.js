@@ -19,9 +19,11 @@ const usePhotoGallery = (photos) => {
 
   const currentImageObj = photos.length > 0 ? photos[currentIndex] : null;
 
-  const imageUrl = currentImageObj
+  /*const imageUrl = currentImageObj
     ? new URL(currentImageObj.image, import.meta.url).href
-    : "";
+    : "";*/
+
+  const imageUrl = currentImageObj ? currentImageObj.image : "";
 
   return {
     currentIndex,
