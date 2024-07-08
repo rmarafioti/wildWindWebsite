@@ -17,6 +17,7 @@ export default function RequestAppt() {
           name="description"
           content="This is the request appointmnet page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/requestappt" />
       </Helmet>
       <h1 id="requestHeader">Request An Appointment</h1>
       <Form />

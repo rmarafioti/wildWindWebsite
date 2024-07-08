@@ -16,6 +16,7 @@ export default function Contact() {
           name="description"
           content="This is the contact page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/contact" />
       </Helmet>
       <h1 id="header">Contact Us</h1>
       <section id="contactHeader">

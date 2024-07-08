@@ -39,6 +39,7 @@ export default function Return() {
             name="description"
             content="This is the return page of wildwindtattoo.com."
           />
+          <link rel="canonical" href="/return" />
         </Helmet>
         <h1 id="successHeader">Payment Recieved!</h1>
         <div id="successContainer">

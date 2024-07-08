@@ -21,7 +21,7 @@ import GiftCards from "./features/GiftCards";
 import Care from "./features/Care";
 import Faq from "./features/Faq";
 import Return from "./features/Return";
-import CheckoutForm from "./features/CheckoutForm";
+/*import CheckoutForm from "./features/CheckoutForm";*/
 import RequestSent from "./features/RequestSent";
 import Reviews from "./features/Reviews";
 import Media from "./features/Media";
@@ -58,7 +58,7 @@ export default function App() {
         <Route path="/giftcards" element={<GiftCards />} />
         <Route path="/aftercare" element={<Care />} />
         <Route path="/faqs" element={<Faq />} />
-        <Route path="/checkout" element={<CheckoutForm />} />
+        {/*<Route path="/checkout" element={<CheckoutForm />} />*/}
         <Route path="/return" element={<Return />} />
         <Route path="/requestsent" element={<RequestSent />} />
         <Route path="/reviews" element={<Reviews />} />

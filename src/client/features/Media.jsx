@@ -16,6 +16,7 @@ export default function Media() {
           name="description"
           content="This is the media page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/media" />
       </Helmet>
       <h1 id="mediaHeader">MEDIA</h1>
       <h3 className="mediaHeader">
