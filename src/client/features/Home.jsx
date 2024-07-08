@@ -22,6 +22,7 @@ export default function Home() {
       <img
         id="shopPhoto"
         src="https://res.cloudinary.com/dzpne110u/image/upload/v1720321542/wildWindSite/shopPhotos/shopFront_j9y8hf.jpg"
+        alt="Wild Wind Tattoo's storefront"
       />
       <p className="contactParagraph">
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
