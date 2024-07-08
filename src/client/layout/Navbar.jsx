@@ -8,7 +8,8 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoGiftOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { FaPlus } from "react-icons/fa6";
+import { IoCloseOutline } from "react-icons/io5";
+import { IoIosArrowForward } from "react-icons/io";
 import useDropdown from "../hooks/dropDown";
 
 import "./navBar.css";
@@ -75,11 +76,13 @@ export default function Navbar() {
               </h4>
             </NavLink>
             {/*drop down menu togglebutton*/}
-            <IoIosArrowDown
+            <div
               className="aboutLink"
               id="dropIcon"
               onClick={aboutDropdown.toggleDropdown}
-            />
+            >
+              {aboutDropdown.isOpen ? <IoCloseOutline /> : <IoIosArrowDown />}
+            </div>
           </li>
           <li id="tattooItem">
             <NavLink className="navContainer" to="/tattoos">
@@ -89,11 +92,13 @@ export default function Navbar() {
               </h4>
             </NavLink>
             {/*drop down menu togglebutton*/}
-            <IoIosArrowDown
+            <div
               className="aboutLink"
               id="dropIcon"
               onClick={tattooDropdown.toggleDropdown}
-            />
+            >
+              {tattooDropdown.isOpen ? <IoCloseOutline /> : <IoIosArrowDown />}
+            </div>
           </li>
           <li className="navItem">
             <NavLink className="navContainer" to="/contact">
@@ -118,16 +123,16 @@ export default function Navbar() {
         <div id="dropDownContainer">
           <menu className={`drop ${aboutDropdown.isOpen ? "active" : ""}`}>
             <NavLink className="dropLink" id="dropLinkTop" to="/reviews">
-              <h4 className="dropLinkName">REVIEWS</h4>
-              <FaPlus />
+              <h4 className="dropLinkName">Reviews</h4>
+              <IoIosArrowForward />
             </NavLink>
             <NavLink className="dropLink" id="dropLinkMiddle" to="/media">
-              <h4 className="dropLinkName">MEDIA</h4>
-              <FaPlus />
+              <h4 className="dropLinkName">Media</h4>
+              <IoIosArrowForward />
             </NavLink>
             <NavLink className="dropLink" to="/faqs">
               <h4 className="dropLinkName">FAQs</h4>
-              <FaPlus />
+              <IoIosArrowForward />
             </NavLink>
           </menu>
         </div>
@@ -136,11 +141,11 @@ export default function Navbar() {
           <menu className={`droptats ${tattooDropdown.isOpen ? "active" : ""}`}>
             <NavLink className="dropLink" id="dropLinkTop" to="/richtats">
               <h4 className="dropLinkName">Rich Marafioti</h4>
-              <FaPlus />
+              <IoIosArrowForward />
             </NavLink>
             <NavLink className="dropLink" to="/mercedestats">
               <h4 className="dropLinkName">Mercedes Wright</h4>
-              <FaPlus />
+              <IoIosArrowForward />
             </NavLink>
           </menu>
         </div>
