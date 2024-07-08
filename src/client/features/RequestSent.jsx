@@ -16,6 +16,7 @@ export default function RequestSent() {
           name="description"
           content="This is the request sent page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/requestsent" />
       </Helmet>
       <div id="requestSentContainer">
         <h1 id="requestSentMessage">Thank you for your message!</h1>

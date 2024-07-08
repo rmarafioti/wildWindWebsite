@@ -37,6 +37,7 @@ export default function Faq() {
           name="description"
           content="This is the FAQs page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/faqs" />
       </Helmet>
       <h1 id="headerFaqs">FAQs</h1>
       <h3 id="faqTagline">

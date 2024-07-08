@@ -137,12 +137,14 @@ nav {
 }
 
 .navItem,
-#aboutItem, #tattooItem {
+#aboutItem,
+#tattooItem {
   list-style-type: none;
 }
 
 .navItem a,
-#aboutItem a, #tattooItem a {
+#aboutItem a,
+#tattooItem a {
   align-items: center;
   font-size: 16px;
 }
@@ -150,8 +152,9 @@ nav {
 .navItem a:link,
 .navItem a:visited,
 #aboutItem a:link,
-#aboutItem a:visited, #tattooItem a:link,
-#tattooItem a:visited  {
+#aboutItem a:visited,
+#tattooItem a:link,
+#tattooItem a:visited {
   color: var(--wildGreen);
 }
 
@@ -171,17 +174,20 @@ nav {
   transition: background-color 0.5s ease;
 }
 
-#aboutUs, #tats {
+#aboutUs,
+#tats {
   position: relative;
   margin-right: 0.5rem;
 }
 
-#aboutItem, #tattooItem {
+#aboutItem,
+#tattooItem {
   display: flex;
   align-items: center;
 }
 
 #dropIcon {
+  display: flex;
   font-size: 20px;
   border: 1px solid var(--wildGreen);
   border-radius: 4px;
@@ -202,7 +208,7 @@ nav {
 .droptats {
   position: absolute;
   top: 25%;
-  left: 25%;
+  left: 26%;
   margin: 0.5rem;
   background-color: white;
   display: none;
@@ -211,7 +217,8 @@ nav {
   border-radius: 5px;
 }
 
-.drop.active, .droptats.active {
+.drop.active,
+.droptats.active {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -221,8 +228,8 @@ nav {
 .dropLink {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 130px;
   text-decoration: none;
   border-radius: 5px;
   padding: 0.5rem;
@@ -236,7 +243,8 @@ nav {
   background-color: lightgrey;
 }
 
-#dropLinkTop, #dropLinkMiddle {
+#dropLinkTop,
+#dropLinkMiddle {
   margin-bottom: 0;
 }
 
@@ -262,7 +270,8 @@ nav {
     border-bottom: none;
   }
   .navItem a,
-  #aboutItem, #tattooItem {
+  #aboutItem,
+  #tattooItem {
     border-bottom: 1px solid var(--wildGreen);
   }
   .link {
@@ -282,8 +291,9 @@ nav {
   .droptats {
     position: absolute;
     top: 27.5%;
-    left: 7%;
+    left: 2%;
     margin: 0.5rem;
+    width: 150px;
     background-color: white;
     border: 1px solid var(--wildGreen);
     display: none;

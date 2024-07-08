@@ -18,20 +18,27 @@ export default function Shop() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
+  /**
+   *@function interval creates a slideshow of shop photos looping through by the photos index at a set timeout of 3 seconds
+   */
+
   useEffect(() => {
-    /**
-     *@function interval creates a slideshow of shop photos looping through by the photos index at a set timeout of 3 seconds
-     */
+    let isMounted = true; // Track if the component is mounted
+
     const interval = setInterval(() => {
-      setIsFading(true);
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
-        setIsFading(false);
-        // Match this duration with the CSS transition duration
-      }, 1000);
+      if (isMounted) {
+        setIsFading(true);
+        setTimeout(() => {
+          if (isMounted) {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
+            setIsFading(false);
+          }
+        }, 1000);
+      }
     }, 3000);
 
     return () => {
+      isMounted = false; // Cleanup function to set the mounted flag to false
       clearInterval(interval);
     };
   }, []);
@@ -39,9 +46,7 @@ export default function Shop() {
   const currentImageObj =
     shopPhotos.length > 0 ? shopPhotos[currentIndex] : null;
 
-  const imageurl = currentImageObj
-    ? new URL(currentImageObj.image, import.meta.url).href
-    : "";
+  const imageurl = currentImageObj ? currentImageObj.image : "";
 
   return (
     <main id="shopAbout">
@@ -51,6 +56,7 @@ export default function Shop() {
           name="description"
           content="This is the about page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/aboutus" />
       </Helmet>
       <h1 id="mainShopHeader">About Us</h1>
       <img

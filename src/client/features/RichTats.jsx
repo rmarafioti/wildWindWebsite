@@ -26,6 +26,7 @@ export default function RichTats() {
           name="description"
           content="This is the Rich Marafioti tattoo page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/richtats" />
       </Helmet>
       <div id="artistContainer">
         <h1 id="artistHeader">

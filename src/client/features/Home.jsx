@@ -17,11 +17,13 @@ export default function Home() {
           name="description"
           content="This is the home page of wildwindtattoo.com."
         />
+        <link rel="canonical" href="/" />
       </Helmet>
       <h1 id="headerHome">Welcome to Wild Wind Tattoo</h1>
       <img
         id="shopPhoto"
         src="https://res.cloudinary.com/dzpne110u/image/upload/v1720321542/wildWindSite/shopPhotos/shopFront_j9y8hf.jpg"
+        alt="Wild Wind Tattoo's storefront"
       />
       <p className="contactParagraph">
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
