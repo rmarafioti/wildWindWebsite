@@ -1,51 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 import { shopPhotos } from "../content/shopPhotos";
-
 import "./styles/aboutus.css";
 
-/**
- *
- * @component Shop features static information about the business as well as a slideshow of shop photos by way of shopPhotos.js
- */
-export default function Shop() {
+const AboutUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
-  /**
-   *@function interval creates a slideshow of shop photos looping through by the photos index at a set timeout of 3 seconds
-   */
-
   useEffect(() => {
-    let isMounted = true; // Track if the component is mounted
+    let isMounted = true;
 
-    const interval = setInterval(() => {
-      if (isMounted) {
-        setIsFading(true);
-        setTimeout(() => {
-          if (isMounted) {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
-            setIsFading(false);
-          }
-        }, 1000);
-      }
-    }, 3000);
+    if (typeof window !== "undefined") {
+      const interval = setInterval(() => {
+        if (isMounted) {
+          setIsFading(true);
+          setTimeout(() => {
+            if (isMounted) {
+              setCurrentIndex(
+                (prevIndex) => (prevIndex + 1) % shopPhotos.length
+              );
+              setIsFading(false);
+            }
+          }, 1000);
+        }
+      }, 3000);
 
-    return () => {
-      isMounted = false; // Cleanup function to set the mounted flag to false
-      clearInterval(interval);
-    };
+      return () => {
+        isMounted = false;
+        clearInterval(interval);
+      };
+    }
   }, []);
 
   const currentImageObj =
     shopPhotos.length > 0 ? shopPhotos[currentIndex] : null;
-
   const imageurl = currentImageObj ? currentImageObj.image : "";
 
   return (
@@ -128,4 +118,6 @@ export default function Shop() {
       </div>
     </main>
   );
-}
+};
+
+export default AboutUs;

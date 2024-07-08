@@ -29,9 +29,11 @@ export default function Navbar() {
   //reset menu and dropdown to closed on state change
   // Reset menu and dropdown to closed on state change
   useEffect(() => {
-    setMenuOpen(false);
-    aboutDropdownRef.current.closeDropdown();
-    tattooDropdownRef.current.closeDropdown();
+    if (typeof window !== "undefined") {
+      setMenuOpen(false);
+      aboutDropdownRef.current.closeDropdown();
+      tattooDropdownRef.current.closeDropdown();
+    }
   }, [location.pathname]);
 
   /**

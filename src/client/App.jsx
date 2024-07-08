@@ -1,10 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
@@ -43,7 +38,7 @@ export default function App() {
   };
 
   return (
-    <Router>
+    <>
       <Navbar />
       <ScrollToTop />
       <Routes>
@@ -65,6 +60,6 @@ export default function App() {
         <Route path="/media" element={<Media />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }

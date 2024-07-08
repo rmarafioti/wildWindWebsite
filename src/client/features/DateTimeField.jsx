@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { IoClose } from "react-icons/io5";
-import { IoAdd } from "react-icons/io5";
+import { IoClose, IoAdd } from "react-icons/io5";
 
 /**
  * @component DateTimeField features functionality for a user to select available days and times and add them or delete them. DateTimeField component is imported and set in Form.jsx
