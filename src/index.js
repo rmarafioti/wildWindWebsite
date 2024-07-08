@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./client/App";
 import "./client/index.css";
@@ -11,6 +12,8 @@ const root = createRoot(container);
 
 root.render(
   <HelmetProvider context={helmetContext}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </HelmetProvider>
 );
